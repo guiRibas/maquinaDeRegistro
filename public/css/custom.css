@@ -1,0 +1,104 @@
+#login-dp{
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(255,255,255,.8);
+}
+#login-dp .help-block{
+    font-size:12px    
+}
+#login-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+#login-dp .social-buttons{
+    margin:12px 0    
+}
+#login-dp .social-buttons a{
+    width: 49%;
+}
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+.btn-fb{
+    color: #fff;
+    background-color:#3b5998;
+}
+.btn-fb:hover{
+    color: #fff;
+    background-color:#496ebc 
+}
+.btn-tw{
+    color: #fff;
+    background-color:#55acee;
+}
+.btn-tw:hover{
+    color: #fff;
+    background-color:#59b5fa;
+}
+@media(max-width:768px){
+    #login-dp{
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+}
+
+.line {
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+    margin: 20px 0 30px;
+}
+
+.rowForm, .registerTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+span {
+    font-size: 0.8em;
+}
+
+#inputStatus {
+    height: 45px;
+    padding: 0px;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+
+#submitNewUser {
+    margin-left: 10px;
+}
+
+.form-control-label {
+    vertical-align: middle;
+}
+
+.required {
+    box-shadow: 0 0 3px #ff0000;
+    border: 1px solid #ff0000;
+}
+
+.verified {
+    box-shadow: 0 0 5px #179e27; 
+    border: 1px solid #179e27;
+}
+
+.rowForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.logo {
+    margin-left: 30px;
+}

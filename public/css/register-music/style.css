@@ -1,0 +1,35 @@
+.block {
+	display: block;
+}
+
+.required {
+    box-shadow: 0 0 3px #ff0000;
+    border: 1px solid #ff0000;
+}
+
+.verified {
+    box-shadow: 0 0 5px #179e27; 
+    border: 1px solid #179e27;
+}
+
+.hide {
+    display: none;
+}
+
+.blockUI {
+    border: 0px !important;
+}
+
+#mensagem {
+    box-shadow: 0px 0px 10px black;
+}
+
+#newMusic {
+    background-color: #17a7a6;
+    border-color: #17a7a6;
+}
+
+#newMusic:hover {
+    background-color: #076b6d;
+    border-color: #076b6d;
+}

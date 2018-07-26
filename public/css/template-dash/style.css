@@ -1,0 +1,45 @@
+.our-navbar {
+    padding-top: 55px;
+    padding-bottom: 0.5em!important;
+}
+
+.navbar-header {
+    padding: 20px;
+}
+
+.navbar-brand {
+    padding: 0!important;
+}
+
+#btn-toggle {
+    margin-top: 17px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #717f86;
+    font-size: 14px;
+}
+
+#logo-navbar {
+    /*margin-top: 1.4em;*/
+    width: 325px;
+    height: auto;
+    margin-left: 1.5em;
+}
+
+@media (max-width:767px){
+    #logo-navbar {
+        margin-top: 0;
+        width: 232px;
+        height: 86px;
+        margin-left: 0px;
+    }
+}
+
+.dropdown {
+    float: right!important;
+}
+
+.dropdown > a {
+    font-size: 1em!important;
+}

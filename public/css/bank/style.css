@@ -1,0 +1,76 @@
+.card-type-pgto {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    text-align: center;
+}
+
+.card-type-pgto:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card-type-pgto > .container {
+    width: 100%;
+    padding: 2px 16px;
+    text-align: center;
+}
+
+.card-type-pgto > img {
+    width: 50%;
+    height: 260px;
+}
+
+#formCreditsToBuyByCard, #formCreditsToBuyByTicket {
+    display: inline-block;
+}
+
+#modalCard, #modalTicket {
+    width: 400px;
+}
+
+#creditsToBuyByCard, #creditsToBuyByTicket {
+    height: 70px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#btnUpByCard, #btnDownByCard, #btnUpByTicket, #btnDownByTicket {
+    width: 100%;
+}
+
+#btnDownByCard, #btnDownByTicket {
+    margin-top: 9px;
+}
+
+#divSubmitBuyCreditByCard, #divSubmitBuyCreditByTicket {
+    padding: 0;
+}
+
+#submitBuyCreditByCard, #submitBuyCreditByTicket {
+    width: 100%;
+
+    background-color: #17a7a6;
+    border-color: #17a7a6;
+}
+
+#submitBuyCreditByCard:hover, #submitBuyCreditByTicket:hover {
+    background-color: #076b6d;
+    border-color: #076b6d;
+}
+
+#infoTicket, #infoCreditCard {
+    text-align: center;
+    font-size: 0.8em;
+}
+
+#pTotalOrderByCard, #pTotalOrderByTicket {
+    text-align: center;
+}
+
+input[id=creditsToBuyByCard]::-webkit-inner-spin-button, 
+input[id=creditsToBuyByCard]::-webkit-outer-spin-button,
+input[id=creditsToBuyByTicket]::-webkit-inner-spin-button, 
+input[id=creditsToBuyByTicket]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
