@@ -8,7 +8,7 @@
 @yield('specify-css')
 
 @section('content')
-  <div class="container-fluid">
+  <div id="container-margin" class="container-fluid">
 
     <div class="row profile">
       <div class="col-md-3">

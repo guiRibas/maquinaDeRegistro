@@ -268,6 +268,10 @@ function ticketMethod(completeName, cpf, email, total){
 }
 
 function creditCardMethod(email, total, qtdOfParts){
+  var now = new Date();
+  now.setMonth(now.getMonth() + 1);
+  var fullActualDate = now.getDate() + "/" + now.getMonth() + "/" + now.getFullYear();
+
   var settingsCreditCardMethod = {
     "async": true,
     "crossDomain": true,
@@ -307,6 +311,8 @@ function creditCardMethod(email, total, qtdOfParts){
     checked += "</div>";
 
     $("#modalCard > div > div.modal-body > div > div").append(checked);
+
+    registerPurchase(response.Id, 0, total, qtdOfParts, fullActualDate, fullActualDate, "");
   }).fail(function(data) { 
     console.log(data.responseText); 
 
@@ -323,7 +329,7 @@ function creditCardMethod(email, total, qtdOfParts){
   });
 }
 
-function registerPurchase(idPagueVeloz, type, value, deadline, actualDate, url){
+function registerPurchase(idPagueVeloz, type, value, qtdOfParts, deadline, actualDate, url){
   var username = currentUserName();
   var token = currentToken();
 
@@ -339,6 +345,7 @@ function registerPurchase(idPagueVeloz, type, value, deadline, actualDate, url){
       "PagueVelozId": idPagueVeloz,
       "Tipo": type,
       "Valor": value,
+      "QuantidadeDeParcelas": qtdOfParts,
       "DataVencimento": deadline,
       "DataEmissao": actualDate,
       "UserName": username,

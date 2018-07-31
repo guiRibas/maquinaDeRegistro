@@ -81,7 +81,7 @@ $(document).ready(function() {
 	$('#btnLogin').on('click', function () {
 		if($('#login-dp').is(':visible')){
 			$('#login-dp').slideUp("slow");
-		} else {
+		} else{
 			$('#login-dp').slideDown("slow");
 		}
 	});

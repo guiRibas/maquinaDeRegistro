@@ -243,6 +243,14 @@ h1 {
   text-align: center;
 }
 
+audio {
+  width: 100%;
+}
+
+.img-composer-of-music {
+  height: 54px;
+}
+
 /* COME TO*/
 .text-center {
   text-align: center;
@@ -259,3 +267,4 @@ h1 {
 .img-responsive {
   display: inline-block!important;
 }
+

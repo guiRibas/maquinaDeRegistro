@@ -120,6 +120,9 @@ function loadMusic(button){
   var mp3ToPlay = "http://www.brainsoftsistemas.com.br/Teste/api/musica/" + idMusic;
 
   audio.attr("src", mp3ToPlay);
+
+  var audio = document.getElementById('audio');
+  audio.addEventListener('timeupdate', atualizar , false);
 }
 
 function currentToken(){
@@ -149,4 +152,24 @@ function getCookie(){
       alert("Cookie não existe!!!");
     }
   }
+}
+
+function atualizar(){
+  document.getElementById('tempo_atual').innerHTML = secToStr(audio.currentTime);
+  document.getElementById('tempo_total').innerHTML = secToStr(audio.duration);
+}
+
+function secToStr(sec_num) {
+  sec_num = Math.floor(sec_num);
+  var horas = Math.floor(sec_num / 3600);
+  var minutos = Math.floor((sec_num - (horas * 3600)) / 60);
+  var segundos = sec_num - (horas * 3600) - (minutos * 60);
+   
+  if (horas < 10) horas = "0"+horas;
+  if (minutos < 10) minutos = "0"+minutos;
+  if (segundos < 10) segundos = "0"+segundos;
+   
+  var tempo = horas+':'+minutos+':'+segundos;
+   
+  return tempo;
 }

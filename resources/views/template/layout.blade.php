@@ -34,12 +34,20 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse our-navbar" id="bs-example-navbar-collapse-1">
             <ul id="menu" class="col-sm-12 col-md-9 col-lg-9 nav navbar-nav">
-              <li class="menu"><a href="#banner">HOME</a></li>
-              <li class="menu"><a href="#who-are-we">QUEM SOMOS</a></li>
-              <li class="menu"><a href="#our-differential">NOSSO DIFERENCIAL</a></li>
-              <li class="menu"><a href="#certificate">CONHEÇA O CERTIFICADO</a></li>
+              @if ($_SERVER["REQUEST_URI"] == "/usuario/novo")
+                <li class="menu"><a href="/#banner">HOME</a></li>
+                <li class="menu"><a href="/#who-are-we">QUEM SOMOS</a></li>
+                <li class="menu"><a href="/#our-differential">NOSSO DIFERENCIAL</a></li>
+                <li class="menu"><a href="/#certificate">CONHEÇA O CERTIFICADO</a></li>
+              @else      
+                <li class="menu"><a href="#banner">HOME</a></li>
+                <li class="menu"><a href="#who-are-we">QUEM SOMOS</a></li>
+                <li class="menu"><a href="#our-differential">NOSSO DIFERENCIAL</a></li>
+                <li class="menu"><a href="#certificate">CONHEÇA O CERTIFICADO</a></li>
+              @endif
+
               @if (!session()->exists('user.token'))
-                <li class="menu"><a href="#equip">CADASTRE-SE</a></li>
+                <li class="menu"><a href="usuario/novo">CADASTRE-SE</a></li>
               @endif
               <!--VERIFICANDO SE EXISTE TOKEN NA SESSÃO-->
               @if (!session()->exists('user.token'))

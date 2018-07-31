@@ -8,7 +8,7 @@
   <div class="profile-content">
     <div class="card">
       <div class="row filters">
-        <div class="col-lg-4">
+        <div class="col-lg-2">
           <select class="form-control" id="showQtd">
             <option>5</option>
             <option>10</option>
@@ -18,8 +18,8 @@
           </select>
           <span>Exibir por página</span>
         </div>
-        <div class="col-lg-offset-3 col-lg-4">
-          <input type="text" id="searchMusic" autofocus style="width: 300px;"/>
+        <div class="col-lg-offset-5 col-lg-3">
+          <input type="text" id="searchMusic" autofocus style="width: 480px;"/>
           <span>Pesquisa</span>
         </div>
       </div>
@@ -37,7 +37,9 @@
         </table>
         <div id="pagination"></div>
         <div id="music-controls">
-          <audio autoplay="autoplay" preload="none" controls="controls"></audio>
+          <audio id="audio" autoplay="autoplay" preload="none" controls="controls"></audio>
+          <span id="tempo_atual">00:00:00</span>
+          <span id="tempo_total">00:00:00</span>
         </div>
       </div>
     </div>

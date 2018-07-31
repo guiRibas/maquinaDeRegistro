@@ -13,6 +13,7 @@
         <div class="col-lg-5 header-section">
           <h2 id="header-title">Registre a sua obra.</h2>
           <p class="header-subtitle">Grave. Registre. Publique.</p>
+        <input type="hidden" value="{{$_SERVER['REMOTE_ADDR']}}">
         </div>
       </div>
     </div>
@@ -270,7 +271,36 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 col-lg-6 hidden-xs hidden-sm img-bg"></div>
+        <div class="col-md-4 col-lg-6">
+          <div class="cod-md-12 col-lg-12">
+            <div class="col-lg-2"><img class="img-composer-of-music" src="/images/banner.jpg" alt=""></div>
+            <div class="col-lg-10"><audio autoplay="autoplay" preload="none" controls="controls"></audio></div>
+          </div>
+          <div class="cod-md-12 col-lg-12">
+            <div class="col-lg-2"><img class="img-composer-of-music" src="/images/banner.jpg" alt=""></div>
+            <div class="col-lg-10"><audio autoplay="autoplay" preload="none" controls="controls"></audio></div>
+          </div>
+          <div class="cod-md-12 col-lg-12">
+            <div class="col-lg-2"><img class="img-composer-of-music" src="/images/banner.jpg" alt=""></div>
+            <div class="col-lg-10"><audio autoplay="autoplay" preload="none" controls="controls"></audio></div>
+          </div>
+          <div class="cod-md-12 col-lg-12">
+            <div class="col-lg-2"><img class="img-composer-of-music" src="/images/banner.jpg" alt=""></div>
+            <div class="col-lg-10"><audio autoplay="autoplay" preload="none" controls="controls"></audio></div>
+          </div>
+          <div class="cod-md-12 col-lg-12">
+            <div class="col-lg-2"><img class="img-composer-of-music" src="/images/banner.jpg" alt=""></div>
+            <div class="col-lg-10"><audio autoplay="autoplay" preload="none" controls="controls"></audio></div>
+          </div>
+          <div class="cod-md-12 col-lg-12">
+            <div class="col-lg-2"><img class="img-composer-of-music" src="/images/banner.jpg" alt=""></div>
+            <div class="col-lg-10"><audio autoplay="autoplay" preload="none" controls="controls"></audio></div>
+          </div>
+          <div class="cod-md-12 col-lg-12">
+            <div class="col-lg-2"><img class="img-composer-of-music" src="/images/banner.jpg" alt=""></div>
+            <div class="col-lg-10"><audio autoplay="autoplay" preload="none" controls="controls"></audio></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
