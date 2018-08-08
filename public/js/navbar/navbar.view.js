@@ -35,7 +35,7 @@ $(document).ready(function() {
 			var completeName = response.nome;
 			var email = response.email;
 
-      var url = "/login";
+      var url = "/maquinaDeRegistro/public/login";
       
       var settingsToPutInSesssion = {
         "async": true,
@@ -55,7 +55,7 @@ $(document).ready(function() {
       }
 
       $.ajax(settingsToPutInSesssion).done(function(response){
-				window.location.replace("/musicas");
+				window.location.replace("/maquinaDeRegistro/public/musicas");
       }).fail(function(data) { 
         if(data.responseText.indexOf("Usuário ou Senha inválido") != -1){
           $("#statusOfLogin").slideDown();
@@ -138,7 +138,7 @@ $(document).ready(function() {
 	});
 
 	function verifyCurrentToken(){
-		var url = "/user/auth/token/current";
+		var url = "/maquinaDeRegistro/public/user/auth/token/current";
 	
 		$.ajaxSetup({
 			headers: {
@@ -158,7 +158,7 @@ $(document).ready(function() {
   }
   
   function verifyCurrentUserName(){
-    var url = "/user/auth/username/current";
+    var url = "/maquinaDeRegistro/public/user/auth/username/current";
 
     $.ajaxSetup({
 			headers: {
