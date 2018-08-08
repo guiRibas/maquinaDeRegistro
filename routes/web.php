@@ -20,7 +20,7 @@ Route::get('/conta-corrente', 'AccountController@bank');
 Route::get('/musicas', 'MusicController@userMusics');
 Route::get('/musica/nova', 'MusicController@register');
 
-Route::post('/maquinaDeRegistro/login', 'SessionController@login');
+Route::post('/maquinaDeRegistro/public/login', 'SessionController@login');
 Route::get('/logout', 'SessionController@logout');
 Route::get('/user/auth/token/current', 'SessionController@getCurrentToken');
 Route::get('/user/auth/username/current', 'SessionController@getCurrentUserName');
