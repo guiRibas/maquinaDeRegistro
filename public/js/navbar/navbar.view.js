@@ -35,7 +35,7 @@ $(document).ready(function() {
 			var completeName = response.nome;
 			var email = response.email;
 
-      var url = "/login";
+      var url = "/maquinaDeRegistro/login";
       
       var settingsToPutInSesssion = {
         "async": true,
