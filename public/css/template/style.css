@@ -126,7 +126,6 @@
 
     .menu, .dropdown{
         padding-top: 20px;
-        margin-right: -5px;
     }
 
     #logo-navbar{
@@ -196,7 +195,7 @@
     }  
 }
 
-#menu {
+/*#menu {
     margin-left: 5%!important;
     margin-right: -5%!important;
-}
+}*/

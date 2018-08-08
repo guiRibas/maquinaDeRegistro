@@ -31,7 +31,9 @@ html {
 }
 
 .profile {
-  margin: 20px 0;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 /* Profile sidebar */
@@ -255,4 +257,12 @@ li.nav-item.active > a{
 #container-margin {
   width: 90%;
   margin-left: 5%;
+}
+
+#container-margin > div.row.profile > div.col-md-3 {
+  margin-top: 20px;
+}
+
+#container-margin > div.row.profile > div.col-md-9 {
+  margin-top: 20px;
 }

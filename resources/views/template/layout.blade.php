@@ -28,22 +28,22 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/"><img class="img-responsive" id="logo-navbar" src="/images/logo.jpg" alt="logo"></a>
+            <a class="navbar-brand" href="/"><img class="img-responsive" id="logo-navbar" src="images/logo.jpg" alt="logo"></a>
           </div>
   
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse our-navbar" id="bs-example-navbar-collapse-1">
             <ul id="menu" class="col-sm-12 col-md-9 col-lg-9 nav navbar-nav">
               @if ($_SERVER["REQUEST_URI"] == "/usuario/novo")
-                <li class="menu"><a href="/#banner">HOME</a></li>
                 <li class="menu"><a href="/#who-are-we">QUEM SOMOS</a></li>
                 <li class="menu"><a href="/#our-differential">NOSSO DIFERENCIAL</a></li>
                 <li class="menu"><a href="/#certificate">CONHEÇA O CERTIFICADO</a></li>
+                <li class="menu"><a href="/#talk-with-us">FALE CONOSCO</a></li>
               @else      
-                <li class="menu"><a href="#banner">HOME</a></li>
                 <li class="menu"><a href="#who-are-we">QUEM SOMOS</a></li>
                 <li class="menu"><a href="#our-differential">NOSSO DIFERENCIAL</a></li>
                 <li class="menu"><a href="#certificate">CONHEÇA O CERTIFICADO</a></li>
+                <li class="menu"><a href="#talk-with-us">FALE CONOSCO</a></li>
               @endif
 
               @if (!session()->exists('user.token'))
@@ -104,7 +104,7 @@
     <footer id="footer" class="footer">
       <div class="container text-center">      
         <div class="top-bar">
-          <p>Teste</p>
+          <p>Brainsoft Sistemas | Rua Dezessete de Julho, 1051 - Trianon - Guarapuava - PR | (42) 3622-6733 | www.brainsoftsistemas.com.br</p>
         </div>
       </div>
     </footer>

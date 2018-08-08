@@ -122,7 +122,9 @@ function loadMusic(button){
   audio.attr("src", mp3ToPlay);
 
   var audio = document.getElementById('audio');
-  audio.addEventListener('timeupdate', atualizar , false);
+  audio.addEventListener('play', addRealejo, false);
+  audio.addEventListener('pause', removeRealejo, false);
+  audio.addEventListener('timeupdate', atualizar, false);
 }
 
 function currentToken(){
@@ -172,4 +174,24 @@ function secToStr(sec_num) {
   var tempo = horas+':'+minutos+':'+segundos;
    
   return tempo;
+}
+
+function addRealejo(){
+  $("#div-realejo").remove();
+
+  var div = '<div id="div-realejo" class="col-lg-1">';
+  div += '<img id="realejo" src="/images/realejo.gif">';
+  div += '</div>';
+
+  $("#music-controls").prepend(div);
+
+  $("#div-audio").removeClass("col-lg-12");
+  $("#div-audio").addClass("col-lg-11");
+}
+
+function removeRealejo(){
+  $("#div-realejo").remove();
+
+  $("#div-audio").removeClass("col-lg-11");
+  $("#div-audio").addClass("col-lg-12");
 }

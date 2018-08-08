@@ -10,7 +10,7 @@
   <section id="banner" class="section-padding">
     <div class="container cont-banner">
       <div class="row">
-        <div class="col-lg-5 header-section">
+        <div class="col-lg-7 header-section">
           <h2 id="header-title">Registre a sua obra.</h2>
           <p class="header-subtitle">Grave. Registre. Publique.</p>
         <input type="hidden" value="{{$_SERVER['REMOTE_ADDR']}}">
@@ -31,7 +31,7 @@
           </div>
         </div>
         <div class="col-md-4 col-lg-2 hidden-xs hidden-sm img-bg-who-are-we">
-          <img src="/images/mini-logo.png" alt="">
+          <img src="images/mini-logo.png" alt="">
         </div>
       </div>
     </div>
@@ -65,8 +65,8 @@
   <section id="warranty">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-3 col-lg-2 hidden-xs hidden-sm img-bg-warranty">
-          <img src="/images/mini-logo.png" alt="">
+        <div class="col-md-3 col-lg-3 hidden-xs hidden-sm img-bg-warranty">
+          <img src="images/medalha.png" alt="">
         </div>
         <div class="col-md-9 col-lg-9">
           <div class="right">
@@ -102,7 +102,7 @@
           </div>
         </div>
         <div class="col-lg-4 hidden-xs hidden-sm hidden-md img-bg-certificate">
-          <img src="/images/mini-logo.png" alt="">
+          <img src="images/mini-logo.png" alt="">
         </div>
         <div class="col-lg-4">
           <div class="right">
@@ -137,21 +137,21 @@
       </div>
       <div class="row">
         <div class="col-lg-4 img-bg-who-use">
-          <img src="/images/mini-logo.png" alt="">
+          <img src="images/user1.png" alt="">
           <div class="col-lg-6 col-lg-offset-3">
             <p>Á máquina de registro é fantástica, simples, rápida, minha obra está registrada.</p>
             <p><strong>Rodriggo Vivazs</strong></p>
           </div>
         </div>
         <div class="col-lg-4 img-bg-who-use">
-          <img src="/images/mini-logo.png" alt="">
+          <img src="images/user2.png" alt="">
           <div class="col-lg-6 col-lg-offset-3">
             <p>Á máquina de registro é fantástica, simples, rápida, minha obra está registrada.</p>
             <p><strong>Rodriggo Vivazs</strong></p>
           </div>
         </div>
         <div class="col-lg-4 img-bg-who-use">
-          <img src="/images/mini-logo.png" alt="">
+          <img src="images/user3.png" alt="">
           <div class="col-lg-6 col-lg-offset-3">
             <p>Á máquina de registro é fantástica, simples, rápida, minha obra está registrada.</p>
             <p><strong>Rodriggo Vivazs</strong></p>
@@ -172,13 +172,13 @@
       </div>
       <div class="row">
         <div class="col-lg-4 hidden-xs hidden-sm hidden-md img-bg-our-price">
-          <img src="/images/mini-logo.png" alt="">
+          <img src="images/moeda1.png" alt="">
         </div>
         <div class="col-lg-4 hidden-xs hidden-sm hidden-md img-bg-our-price">
-          <img src="/images/mini-logo.png" alt="">
+          <img src="images/moeda2.png" alt="">
         </div>
         <div class="col-lg-4 hidden-xs hidden-sm hidden-md img-bg-our-price">
-          <img src="/images/mini-logo.png" alt="">
+          <img src="images/moeda3.png" alt="">
         </div>
       </div>
     </div>
@@ -273,32 +273,32 @@
         </div>
         <div class="col-md-4 col-lg-6">
           <div class="cod-md-12 col-lg-12">
-            <div class="col-lg-2"><img class="img-composer-of-music" src="/images/banner.jpg" alt=""></div>
-            <div class="col-lg-10"><audio autoplay="autoplay" preload="none" controls="controls"></audio></div>
+            <div class="col-lg-2"><img class="img-composer-of-music" src="images/banner.jpg" alt=""></div>
+            <div class="col-lg-offset-1 col-lg-9"><audio autoplay="autoplay" preload="none" controls="controls"></audio></div>
           </div>
           <div class="cod-md-12 col-lg-12">
-            <div class="col-lg-2"><img class="img-composer-of-music" src="/images/banner.jpg" alt=""></div>
-            <div class="col-lg-10"><audio autoplay="autoplay" preload="none" controls="controls"></audio></div>
+            <div class="col-lg-2"><img class="img-composer-of-music" src="images/banner.jpg" alt=""></div>
+            <div class="col-lg-offset-1 col-lg-9"><audio autoplay="autoplay" preload="none" controls="controls"></audio></div>
           </div>
           <div class="cod-md-12 col-lg-12">
-            <div class="col-lg-2"><img class="img-composer-of-music" src="/images/banner.jpg" alt=""></div>
-            <div class="col-lg-10"><audio autoplay="autoplay" preload="none" controls="controls"></audio></div>
+            <div class="col-lg-2"><img class="img-composer-of-music" src="images/banner.jpg" alt=""></div>
+            <div class="col-lg-offset-1 col-lg-9"><audio autoplay="autoplay" preload="none" controls="controls"></audio></div>
           </div>
           <div class="cod-md-12 col-lg-12">
-            <div class="col-lg-2"><img class="img-composer-of-music" src="/images/banner.jpg" alt=""></div>
-            <div class="col-lg-10"><audio autoplay="autoplay" preload="none" controls="controls"></audio></div>
+            <div class="col-lg-2"><img class="img-composer-of-music" src="images/banner.jpg" alt=""></div>
+            <div class="col-lg-offset-1 col-lg-9"><audio autoplay="autoplay" preload="none" controls="controls"></audio></div>
           </div>
           <div class="cod-md-12 col-lg-12">
-            <div class="col-lg-2"><img class="img-composer-of-music" src="/images/banner.jpg" alt=""></div>
-            <div class="col-lg-10"><audio autoplay="autoplay" preload="none" controls="controls"></audio></div>
+            <div class="col-lg-2"><img class="img-composer-of-music" src="images/banner.jpg" alt=""></div>
+            <div class="col-lg-offset-1 col-lg-9"><audio autoplay="autoplay" preload="none" controls="controls"></audio></div>
           </div>
           <div class="cod-md-12 col-lg-12">
-            <div class="col-lg-2"><img class="img-composer-of-music" src="/images/banner.jpg" alt=""></div>
-            <div class="col-lg-10"><audio autoplay="autoplay" preload="none" controls="controls"></audio></div>
+            <div class="col-lg-2"><img class="img-composer-of-music" src="images/banner.jpg" alt=""></div>
+            <div class="col-lg-offset-1 col-lg-9"><audio autoplay="autoplay" preload="none" controls="controls"></audio></div>
           </div>
           <div class="cod-md-12 col-lg-12">
-            <div class="col-lg-2"><img class="img-composer-of-music" src="/images/banner.jpg" alt=""></div>
-            <div class="col-lg-10"><audio autoplay="autoplay" preload="none" controls="controls"></audio></div>
+            <div class="col-lg-2"><img class="img-composer-of-music" src="images/banner.jpg" alt=""></div>
+            <div class="col-lg-offset-1 col-lg-9"><audio autoplay="autoplay" preload="none" controls="controls"></audio></div>
           </div>
         </div>
       </div>
@@ -316,11 +316,28 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-3 col-lg-3 text-center text-center-horizon"><img class="img-responsive" src="/images/pague-veloz.png" alt=""></div>
-        <div class="col-sm-1 col-lg-1 text-center text-center-horizon"><img class="img-responsive" src="/images/bry.png" alt=""></div>
-        <div id="img-come-to" class="col-sm-4 col-lg-4 text-center"><img class="img-responsive" src="/images/logo.jpg" alt=""></div>
-        <div class="col-sm-1 col-lg-1 text-center text-center-horizon"><img class="img-responsive" src="/images/bry.png" alt=""></div>
-        <div class="col-sm-3 col-lg-3 text-center text-center-horizon"><img class="img-responsive" src="/images/logo-brain.png" alt=""></div>
+        <div class="col-sm-3 col-lg-3 text-center text-center-horizon"><img class="img-responsive" src="images/pague-veloz.png" alt=""></div>
+        <div class="col-sm-1 col-lg-1 text-center text-center-horizon"><img class="img-responsive" src="images/bry.png" alt=""></div>
+        <div id="img-come-to" class="col-sm-4 col-lg-4 text-center"><img class="img-responsive" src="images/logo.jpg" alt=""></div>
+        <div class="col-sm-1 col-lg-1 text-center text-center-horizon"><img class="img-responsive" src="images/bry.png" alt=""></div>
+        <div class="col-sm-3 col-lg-3 text-center text-center-horizon"><img class="img-responsive" src="images/logo-brain.png" alt=""></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="talk-with-us">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div id="text-talk-with-us" class="header-section">
+            <h1 id="header-title">Fale Conosco</h1>
+            <h5>Nosso suporte técnico estará sempre à disposição em nossos canais de atendimento.</h5>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-offset-3 col-lg-3 text-center"><img class="img-responsive" src="images/email.png" alt=""></div>
+        <div class="col-lg-3 text-center"><img class="img-responsive" src="images/balao.png" alt=""></div>
       </div>
     </div>
   </section>

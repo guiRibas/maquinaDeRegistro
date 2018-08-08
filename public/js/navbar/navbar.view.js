@@ -29,16 +29,46 @@ $(document).ready(function() {
 		}
 
 		$.ajax(settingsToAuth).done(function(response){
-			console.log(response);
 			var token = response.access_token;
 			var userName = response.userName;
 			var cpf = response.cpf;
 			var completeName = response.nome;
 			var email = response.email;
 
-			var url = "/login";
+      var url = "/login";
+      
+      var settingsToPutInSesssion = {
+        "async": true,
+        "crossDomain": true,
+        "url": url,
+        "method": "POST",
+        "headers": {
+          'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+        },
+        "data": {
+          "token": token,
+					"userName": userName,
+					"cpf": cpf,
+					"completeName": completeName,
+					"email": email
+        }
+      }
 
-			$.ajaxSetup({
+      $.ajax(settingsToPutInSesssion).done(function(response){
+				window.location.replace("/musicas");
+      }).fail(function(data) { 
+        if(data.responseText.indexOf("Usuário ou Senha inválido") != -1){
+          $("#statusOfLogin").slideDown();
+          $("#statusOfLogin").addClass('alert-danger');
+          $("#statusOfLogin").append("<strong>Erro!</strong> Usuário ou Senha inválido!");
+          document.getElementById("userName").style.boxShadow = "0 0 5px #ff0000"; 
+          document.getElementById("userName").style.border = "1px solid #ff0000";
+          document.getElementById("password").style.boxShadow = "0 0 5px #ff0000"; 
+          document.getElementById("password").style.border = "1px solid #ff0000";
+        }
+      });
+
+			/*$.ajaxSetup({
 				headers: {
 					'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
 				}
@@ -60,9 +90,8 @@ $(document).ready(function() {
 					alert("Problema ocorrido: " + status + "\nDescrição: " + erro);
 					//Abaixo está listando os header do conteudo que você requisitou, só para confirmar se você setou os header e dataType corretos
 					alert("Informações da requisição: \n" + request.getAllResponseHeaders());
-				}
-			});
-		}).fail(function (data) { 
+				}*/
+		}).fail(function(data) { 
       if(data.responseText.indexOf("Usuário ou Senha inválido") != -1){
         $("#statusOfLogin").slideDown();
         $("#statusOfLogin").addClass('alert-danger');

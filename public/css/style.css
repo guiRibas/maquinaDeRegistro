@@ -22,9 +22,9 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-.section-padding{
+/*.section-padding{
     padding: 70px 0px;
-}
+}*/
 .padding-to-footer {
     padding-bottom: 50px;
 }
@@ -87,6 +87,7 @@ Navigation bar
 }
 .navbar {
     margin-bottom: 0px;
+    box-shadow: 5px 0.5px 3px #000;
 }
 .padding-zero{
     padding: 0px;
@@ -572,12 +573,11 @@ Footer
 ************************************/
 .footer {
     padding: 20px 0 20px 0;
-    background: #076b6d;
-    color: #ccc;
+    background: white;
 }
 
 #footer > div > div > p {
-    color: white;
+    color: #076b6d;
 }
 
 .footer a {
@@ -590,6 +590,10 @@ Footer
     margin: 0 0 20px;
     font-size: 24px;
     color: white;
+}
+
+#footer > div > div > p {
+    margin: 0px;
 }
 
 .btnClientArea {

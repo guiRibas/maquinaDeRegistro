@@ -2,13 +2,15 @@
  
 @section('title', 'Minhas Músicas')
 
-@section('css-view')
+@section('specify-css')
+  <link rel="stylesheet" type="text/css" href="{{asset('css/my-musics/style.css')}}">
+@endsection
 
 @section('root-content')
   <div class="profile-content">
     <div class="card">
       <div class="row filters">
-        <div class="col-lg-2">
+        <div class="col-lg-3">
           <select class="form-control" id="showQtd">
             <option>5</option>
             <option>10</option>
@@ -18,8 +20,8 @@
           </select>
           <span>Exibir por página</span>
         </div>
-        <div class="col-lg-offset-5 col-lg-3">
-          <input type="text" id="searchMusic" autofocus style="width: 480px;"/>
+        <div class="col-lg-offset-4 col-lg-5">
+          <input type="text" id="searchMusic" autofocus style="width: 100%"/>
           <span>Pesquisa</span>
         </div>
       </div>
@@ -37,7 +39,9 @@
         </table>
         <div id="pagination"></div>
         <div id="music-controls">
-          <audio id="audio" autoplay="autoplay" preload="none" controls="controls"></audio>
+          <div id="div-audio" class="col-lg-12">
+            <audio id="audio" autoplay="autoplay" preload="none" controls="controls"></audio>
+          </div>
           <span id="tempo_atual">00:00:00</span>
           <span id="tempo_total">00:00:00</span>
         </div>

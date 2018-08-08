@@ -400,15 +400,21 @@ function loadHistory(){
       cols += response[i].dataEmissao;
       cols += '</td>';
     
-      cols += '<td>';
-      cols += response[i].dataVencimento;
-      cols += '</td>';
+      if(response[i].tipo == "BOLETO"){
+        cols += '<td>';
+        cols += response[i].dataVencimento;
+        cols += '</td>';
 
-      cols += '<td>';
-      cols += '<a href="';
-      cols += response[i].urlBoleto;
-      cols += '"download="Boleto Máquina de Registro">Boleto</a>';
-      cols += '</td>';
+        cols += '<td>';
+        cols += '<a href="';
+        cols += response[i].urlBoleto;
+        cols += '"download="Boleto Máquina de Registro">Boleto</a>';
+        cols += '</td>';
+      } else{
+        cols += '<td></td>';
+
+        cols += '<td></td>';          
+      }
 
       newRow.append(cols);
 

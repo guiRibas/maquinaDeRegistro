@@ -74,7 +74,7 @@
                   <div class="line"></div>
 
                   <div class="form-group row">
-                      <div class="col-md-8 col-md-offset-7 col-sm-8 col-sm-offset-7 col-lg-2 col-lg-offset-9">
+                      <div class="col-md-8 col-md-offset-7 col-sm-8 col-sm-offset-7 col-lg-4 col-lg-offset-8">
                           <button type="reset" class="btn btn-secondary">Limpar</button>
                           <button type="submit" id="newMusic" name="newMusic" class="btn btn-success">Registrar!</button>
                       </div>

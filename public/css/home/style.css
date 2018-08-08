@@ -63,7 +63,7 @@ h1 {
 #banner {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(/images/banner.jpg);
+  background-image: url(/maquina-de-registro/public/images/banner.jpg);
   background-attachment: fixed;
 }
 
@@ -153,7 +153,8 @@ h1 {
 }
 
 .img-bg-warranty > img {
-  height: 330px;
+  margin-top: 55px;
+  height: 300px;
 }
 
 #text-warranty {
@@ -195,7 +196,7 @@ h1 {
 }
 
 .img-bg-who-use > img{
-  height: 460px;
+  height: 330px;
 }
 
 #who-use > div > div:nth-child(2) {
@@ -224,7 +225,7 @@ h1 {
 }
 
 .img-bg-our-price > img {
-  height: 420px;
+  height: 230px;
 }
 
 /*COMPOSERS PANEL*/
@@ -251,7 +252,7 @@ audio {
   height: 54px;
 }
 
-/* COME TO*/
+/*COME TO*/
 .text-center {
   text-align: center;
 }
@@ -268,3 +269,24 @@ audio {
   display: inline-block!important;
 }
 
+/*TALK WITH US*/
+#talk-with-us {
+  background-color: #076b6d;
+}
+
+#text-talk-with-us {
+  padding-top: 55px;
+}
+
+#text-talk-with-us > #header-title{
+  color: white;
+}
+
+#text-talk-with-us > h5 {
+  color: white;
+  text-align: center;
+}
+
+#talk-with-us > div > div:nth-child(2) > .text-center > img {
+  height: 140px;
+}
