@@ -18,7 +18,7 @@ $(document).ready(function() {
 
   setTimeout(function(){
     pagination(1);
-  }, 100);
+  }, 500);
 
   $("#showQtd").change(function(){
     pagination(1);
