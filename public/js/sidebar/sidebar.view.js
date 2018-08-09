@@ -4,7 +4,7 @@ $(document).ready(function() {
     loadProfilePhoto();
     userData();
     croppie();
-  }, 100);
+  }, 1000);
 
   $(".imagem-mascara").mouseenter(function(){
 		$(this).css("cursor", "pointer");
