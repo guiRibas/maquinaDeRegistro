@@ -18,7 +18,7 @@ $(document).ready(function() {
 
   setTimeout(function(){
     pagination(1);
-  }, 500);
+  }, 1000);
 
   $("#showQtd").change(function(){
     pagination(1);
@@ -111,6 +111,8 @@ function pagination(numberOfPage){
     }).fail(function (data) { 
       console.log(data.responseText); 
     });
+  } else {
+    console.log("Token Error!");
   }
 }
 
