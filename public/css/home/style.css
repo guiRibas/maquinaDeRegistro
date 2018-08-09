@@ -63,7 +63,7 @@ h1 {
 #banner {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(/maquinaDeRegistro/public/images/banner.jpg);
+  background-image: url(/images/banner.jpg);
   background-attachment: fixed;
 }
 
@@ -132,7 +132,7 @@ h1 {
 .img-bg {
   margin-right: 0px !important;
   height: 420px;
-  background: url(/maquinaDeRegistro/public/images/reuniao.jpg) no-repeat center center;
+  background: url(/images/reuniao.jpg) no-repeat center center;
   background-size: cover;
 }
 
