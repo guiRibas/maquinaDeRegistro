@@ -573,11 +573,11 @@ Footer
 ************************************/
 .footer {
     padding: 20px 0 20px 0;
-    background: white;
+    background: #076b6d;
 }
 
 #footer > div > div > p {
-    color: #076b6d;
+    color: #ffffff;
 }
 
 .footer a {

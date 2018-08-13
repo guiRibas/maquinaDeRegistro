@@ -159,6 +159,7 @@ h1 {
 
 #text-warranty {
   padding-top: 55px;
+  padding-bottom: 55px;
 }
 
 /*CERTIFICATE*/
@@ -262,7 +263,7 @@ audio {
 }
 
 #img-come-to > img{
-  height: 220px;
+  margin-top: 1.2em;
 }
 
 .img-responsive {

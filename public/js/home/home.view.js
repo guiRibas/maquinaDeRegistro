@@ -7,10 +7,12 @@ $(document).ready(function() {
       $("#bs-example-navbar-collapse-1").removeClass("our-navbar");
       $(".navbar-header").attr("style", "padding:0;");
       $("#logo-navbar").attr("style", "margin-top:0; width:225px;");
+      $("#menu").attr("style", "margin-top: 0.8em!important;");
     } else{
       $("#bs-example-navbar-collapse-1").addClass("our-navbar");
       $(".navbar-header").removeAttr("style");
       $("#logo-navbar").removeAttr("style");
+      $("#menu").removeAttr("style");
     }
   });
 

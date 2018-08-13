@@ -8,6 +8,11 @@
  
 @section('content')
   <section id="banner" class="section-padding">
+    @if (session()->exists('guest.message'))
+      <div class="container-fluid">
+        <div class="alert alert-warning" id="guestAlert" role="alert"><?php echo session()->get('guest.message'); session()->forget('guest.message'); ?></div>
+      </div>
+    @endif
     <div class="container cont-banner">
       <div class="row">
         <div class="col-lg-7 header-section">
@@ -138,21 +143,21 @@
       <div class="row">
         <div class="col-lg-4 img-bg-who-use">
           <img src="images/user1.png" alt="">
-          <div class="col-lg-6 col-lg-offset-3">
+          <div class="col-lg-11 col-lg-offset-1">
             <p>Á máquina de registro é fantástica, simples, rápida, minha obra está registrada.</p>
             <p><strong>Rodriggo Vivazs</strong></p>
           </div>
         </div>
         <div class="col-lg-4 img-bg-who-use">
           <img src="images/user2.png" alt="">
-          <div class="col-lg-6 col-lg-offset-3">
+          <div class="col-lg-11 col-lg-offset-1">
             <p>Á máquina de registro é fantástica, simples, rápida, minha obra está registrada.</p>
             <p><strong>Rodriggo Vivazs</strong></p>
           </div>
         </div>
         <div class="col-lg-4 img-bg-who-use">
           <img src="images/user3.png" alt="">
-          <div class="col-lg-6 col-lg-offset-3">
+          <div class="col-lg-11 col-lg-offset-1">
             <p>Á máquina de registro é fantástica, simples, rápida, minha obra está registrada.</p>
             <p><strong>Rodriggo Vivazs</strong></p>
           </div>
@@ -305,6 +310,23 @@
     </div>
   </section>
 
+  <section id="talk-with-us">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div id="text-talk-with-us" class="header-section">
+            <h1 id="header-title">Fale Conosco</h1>
+            <h5>Nosso suporte técnico estará sempre à disposição em nossos canais de atendimento.</h5>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-offset-3 col-lg-3 text-center"><img class="img-responsive" src="images/email.png" alt=""></div>
+        <div class="col-lg-3 text-center"><img class="img-responsive" src="images/balao.png" alt=""></div>
+      </div>
+    </div>
+  </section>
+
   <section id="come-to">
     <div class="container-fluid">
       <div class="row">
@@ -324,29 +346,6 @@
       </div>
     </div>
   </section>
-
-  <section id="talk-with-us">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-12">
-          <div id="text-talk-with-us" class="header-section">
-            <h1 id="header-title">Fale Conosco</h1>
-            <h5>Nosso suporte técnico estará sempre à disposição em nossos canais de atendimento.</h5>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-offset-3 col-lg-3 text-center"><img class="img-responsive" src="images/email.png" alt=""></div>
-        <div class="col-lg-3 text-center"><img class="img-responsive" src="images/balao.png" alt=""></div>
-      </div>
-    </div>
-  </section>
-
-  @if (session()->exists('guest.message'))
-    <div class="container-fluid">
-      <div class="alert alert-warning" id="guestAlert" role="alert"><?php echo session()->get('guest.message'); session()->forget('guest.message'); ?></div>
-    </div>
-  @endif
 @endsection
 
 @section('js-view')
