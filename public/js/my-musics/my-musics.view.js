@@ -20,6 +20,10 @@ $(document).ready(function() {
     pagination(1);
   }, 500);
 
+  setTimeout(function(){
+    loadFirstMusicInPlayer();
+  }, 1000);
+
   $("#showQtd").change(function(){
     pagination(1);
   });
@@ -72,6 +76,9 @@ function pagination(numberOfPage){
 
         cols += '<td>';
         cols += '<button onClick="loadMusic(this)">Ouvir!</button>';
+        if(response[i].id == $("#current_played_music").attr("value")){
+          cols += '<img class="speaker" src="/images/speaker.png"></img>';
+        }
         cols += '</td>';
       
         newRow.append(cols);
@@ -121,10 +128,26 @@ function loadMusic(button){
   var idMusic = $(button).parent().parent().attr("id");
   var mp3ToPlay = "http://www.brainsoftsistemas.com.br/Teste/api/musica/" + idMusic;
 
+  audio.attr("autoplay", "autoplay");
+  audio.attr("src", mp3ToPlay);
+
+  var audio = document.getElementById('audio');
+
+  addOrRemoveEvent(0);
+  addSpeaker(button);
+}
+
+function loadFirstMusicInPlayer(){
+  var audio = $("audio");
+  var idMusic = $("#example").children().eq(1).children().eq(0).attr("id");
+
+  var mp3ToPlay = "http://www.brainsoftsistemas.com.br/Teste/api/musica/" + idMusic;
+
   audio.attr("src", mp3ToPlay);
 
   var audio = document.getElementById('audio');
   audio.addEventListener('play', addRealejo, false);
+  addOrRemoveEvent(1);
   audio.addEventListener('pause', removeRealejo, false);
   audio.addEventListener('timeupdate', atualizar, false);
 }
@@ -176,6 +199,37 @@ function secToStr(sec_num) {
   var tempo = horas+':'+minutos+':'+segundos;
    
   return tempo;
+}
+
+function addOrRemoveEvent(status){
+  if(status == 1){
+    audio.addEventListener('play', toSpeaker, false);
+  } else {
+    audio.removeEventListener('play', toSpeaker, false);
+  }
+}
+
+function toSpeaker(){
+  var button = $("#example").children().eq(1).children().eq(0).children().eq(2).children();
+
+  addSpeaker(button);
+}
+
+function addSpeaker(button){
+  if($(".speaker").is(":visible")){
+    $(".speaker").remove();
+  }
+
+  var buttonP = $(button).parent();
+  var speaker = '<img class="speaker" src="/images/speaker.png"></img>';
+
+  buttonP.append(speaker);
+  
+  $("#playing").removeAttr("style");
+  var idMusic = $(button).parent().parent().attr("id");
+  var nameOfMusic = $(button).parent().parent().children().eq(0).html();
+  $("#current_played_music").html(nameOfMusic);
+  $("#current_played_music").attr("value", idMusic); 
 }
 
 function addRealejo(){

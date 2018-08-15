@@ -40,7 +40,9 @@
         <div id="pagination"></div>
         <div id="music-controls">
           <div id="div-audio" class="col-lg-12">
-            <audio id="audio" autoplay="autoplay" preload="none" controls="controls"></audio>
+            <audio id="audio" preload="none" controls="controls"></audio>
+            <span id="playing" style="display: none;">Ouvindo no momento: </span>
+            <span id="current_played_music"></span>
           </div>
           <span id="tempo_atual">00:00:00</span>
           <span id="tempo_total">00:00:00</span>
