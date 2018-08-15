@@ -177,13 +177,13 @@
       </div>
       <div class="row">
         <div class="col-lg-4 hidden-xs hidden-sm hidden-md img-bg-our-price">
-          <img src="images/moeda1.png" alt="">
+          <img class="img-responsive" src="images/moeda1.png" alt="">
         </div>
         <div class="col-lg-4 hidden-xs hidden-sm hidden-md img-bg-our-price">
-          <img src="images/moeda2.png" alt="">
+          <img class="img-responsive" src="images/moeda2.png" alt="">
         </div>
         <div class="col-lg-4 hidden-xs hidden-sm hidden-md img-bg-our-price">
-          <img src="images/moeda3.png" alt="">
+          <img class="img-responsive" src="images/moeda3.png" alt="">
         </div>
       </div>
     </div>
