@@ -82,6 +82,22 @@ h1 {
   margin-left: 0;
 }
 
+.header-section {
+  padding-right: 70px;
+  padding-left: 70px;
+}
+
+@media (max-width:500px){
+  #banner > div > div > div > #header-title {
+    font-size: 4em;
+  }
+
+  .header-section {
+    padding-right: 70px;
+    padding-left: 35px;
+  }
+}
+
 /*WHO ARE WE*/
 #text-who-are-we {
   padding-top: 55px;
@@ -268,6 +284,10 @@ audio {
 
 .img-responsive {
   display: inline-block!important;
+}
+
+#come-to > div > .row {
+  padding-top: 55px;
 }
 
 /*TALK WITH US*/

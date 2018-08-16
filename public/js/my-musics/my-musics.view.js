@@ -22,7 +22,7 @@ $(document).ready(function() {
 
   setTimeout(function(){
     loadFirstMusicInPlayer();
-  }, 1000);
+  }, 1500);
 
   $("#showQtd").change(function(){
     pagination(1);

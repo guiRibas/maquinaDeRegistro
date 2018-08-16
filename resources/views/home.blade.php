@@ -329,14 +329,14 @@
 
   <section id="come-to">
     <div class="container-fluid">
-      <div class="row">
+      <!--div class="row">
         <div class="col-lg-12">
           <div id="text-composers-panel" class="header-section">
             <h1 id="header-title">Venha para a Máquina</h1>
             <h5>Venha para a Máquina de Registro e conheça o método mais rápido e eficaz para o registro de obras.</h5>
           </div>
         </div>
-      </div>
+      </div-->
       <div class="row">
         <div class="col-sm-3 col-lg-3 text-center text-center-horizon"><img class="img-responsive" src="images/pague-veloz.png" alt=""></div>
         <div class="col-sm-1 col-lg-1 text-center text-center-horizon"><img class="img-responsive" src="images/bry.png" alt=""></div>

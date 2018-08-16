@@ -831,11 +831,6 @@ Responsive media queries
     margin-bottom: 3px;
 }
 
-.header-section {
-    padding-right: 70px;
-    padding-left: 70px;
-}
-
 #services .header-section, #services h2{
     color: #FFFFFF;
 }
