@@ -1,8 +1,8 @@
 #loading{
-    margin-bottom: 2%;
+  margin-bottom: 2%;
 }
 #helpMusicBlock {
-    margin-bottom: 2%;
+  margin-bottom: 2%;
 }
 
 /***
@@ -12,257 +12,272 @@ Licensed under MIT
 ***/
 
 body {
-  background: #f2f2f2;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  overflow-x: hidden;
+background: #f2f2f2;
+min-height: 100%;
+display: flex;
+flex-direction: column;
+overflow-x: hidden;
 }
 
 /* Profile container */
 html {
-  height: 100%;
+height: 100%;
 }
 
 .container-fluid {
-  flex: 1;
-  margin-right: 0;
-  margin-left: 0;
+flex: 1;
+margin-right: 0;
+margin-left: 0;
 }
 
 .profile {
-  margin-left: 20px;
-  margin-right: 20px;
+margin-left: 20px;
+margin-right: 20px;
+margin-bottom: 20px;
+}
+
+@media (max-width:445px){
+.profile {
+  margin-left: 0px;
+  margin-right: 0px;
   margin-bottom: 20px;
+}
 }
 
 /* Profile sidebar */
 .profile-sidebar {
-  padding: 20px 0 10px 0;
-  background: #fff;
+padding: 20px 0 10px 0;
+background: #fff;
 }
 
 .profile-userpic img {
-  float: none;
-  margin: 0 auto;
-  width: 100px;
-  height: 100px;
-  -webkit-border-radius: 50% !important;
-  -moz-border-radius: 50% !important;
-  border-radius: 50% !important;
+float: none;
+margin: 0 auto;
+width: 100px;
+height: 100px;
+-webkit-border-radius: 50% !important;
+-moz-border-radius: 50% !important;
+border-radius: 50% !important;
 }
 
 .profile-usertitle {
-  text-align: center;
-  margin-top: 20px;
+text-align: center;
+margin-top: 20px;
 }
 
 .profile-usertitle-name {
-  color: #076b6d;
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 7px;
+color: #076b6d;
+font-size: 16px;
+font-weight: 600;
+margin-bottom: 7px;
 }
 
 .profile-usertitle-job {
-  text-transform: uppercase;
-  color: #17A7A6;
-  font-size: 12px;
-  font-weight: 600;
-  margin-bottom: 15px;
+text-transform: uppercase;
+color: #17A7A6;
+font-size: 12px;
+font-weight: 600;
+margin-bottom: 15px;
 }
 
 .profile-userbuttons {
-  text-align: center;
-  margin-top: 10px;
+text-align: center;
+margin-top: 10px;
 }
 
 .profile-userbuttons .btn {
-  text-transform: uppercase;
-  font-size: 11px;
-  font-weight: 600;
-  padding: 6px 15px;
-  margin-right: 5px;
+text-transform: uppercase;
+font-size: 11px;
+font-weight: 600;
+padding: 6px 15px;
+margin-right: 5px;
 }
 
 .profile-userbuttons .btn:last-child {
-  margin-right: 0px;
+margin-right: 0px;
 }
-    
+  
 .profile-usermenu {
-  margin-top: 30px;
+margin-top: 30px;
 }
 
 .profile-usermenu ul li {
-  border-bottom: 1px solid #f0f4f7;
+border-bottom: 1px solid #f0f4f7;
 }
 
 .profile-usermenu ul li:last-child {
-  border-bottom: none;
+border-bottom: none;
 }
 
 .profile-usermenu ul li a {
-  color: #93a3b5;
-  font-size: 14px;
-  font-weight: 400;
+color: #93a3b5;
+font-size: 14px;
+font-weight: 400;
 }
 
 .profile-usermenu ul li a i {
-  margin-right: 8px;
-  font-size: 14px;
+margin-right: 8px;
+font-size: 14px;
 }
 
 .profile-usermenu ul li a:hover {
-  background-color: #fafcfd;
-  color: #076b6d;
+background-color: #fafcfd;
+color: #076b6d;
 }
 
 .profile-usermenu ul li.active {
-  border-bottom: none;
+border-bottom: none;
 }
 
 .profile-usermenu ul li.active a {
-  color: #076b6d;
-  background-color: #f6f9fb;
-  border-left: 2px solid #076b6d;
-  margin-left: -2px;
+color: #076b6d;
+background-color: #f6f9fb;
+border-left: 2px solid #076b6d;
+margin-left: -2px;
 }
 
 /* Profile Content */
 .profile-content {
-  padding: 20px;
-  background: #fff;
-  min-height: 460px;
+padding: 20px;
+background: #fff;
+min-height: 460px;
 }
 
 /*-------------*/
 
 audio {
-    width: 100%;
+  width: 100%;
 }
 
 #imageDemo {
-	width: 350px; 
-	margin-top: 30px;
+width: 350px; 
+margin-top: 30px;
 }
 
 #confirmButton {
-	padding-top: 23%;
-  margin-left: -27px;
+padding-top: 23%;
+margin-left: -27px;
 }
 
 .changePhoto {
-	display: none;
+display: none;
 }
 
 .profile-userpic {
-	position: relative;
-  width: 100px;
-  margin: 0 auto;
+position: relative;
+width: 100px;
+margin: 0 auto;
 }
 
 .profile-userpic:hover span{
-  display: block !important;
+display: block !important;
 }
 
 .imagem-mascara {
-  display: none !important;
-	width:100px; /* largura da imagem máscara */
-	height:100px; /* altura da imagem máscara */
-	position:absolute;
-	top:0;
-	left:0;
-	text-align: center;
-	padding-top: 80%;
-	background-color: grey;
-	-webkit-border-radius: 50% !important;
-	-moz-border-radius: 50% !important;
-	border-radius: 50% !important;
-	opacity:0.40;
+display: none !important;
+width:100px; /* largura da imagem máscara */
+height:100px; /* altura da imagem máscara */
+position:absolute;
+top:0;
+left:0;
+text-align: center;
+padding-top: 80%;
+background-color: grey;
+-webkit-border-radius: 50% !important;
+-moz-border-radius: 50% !important;
+border-radius: 50% !important;
+opacity:0.40;
 }
 
 .glyphicon-camera{
-  color: white;
+color: white;
 }
 
 #selectImageToUpload {
-  text-align: center;
-  padding: 0!important;
+text-align: center;
+padding: 0!important;
 }
 
 #selectImageToUpload:before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-  margin-right: -4px;
+content: '';
+display: inline-block;
+height: 100%;
+vertical-align: middle;
+margin-right: -4px;
 }
 
 #selectImageToUpload > .modal-dialog {
-  display: inline-block;
-  text-align: left;
-  vertical-align: middle;
+display: inline-block;
+text-align: left;
+vertical-align: middle;
 }
 
 #selectImageToUpload > .modal-dialog > .modal-content {
-  height: 200px;
+height: 200px;
 }
 
 /* Esconde o input */
 input[name="upload_image"] {
-  display: none
+display: none
 }
 
 /* Aparência que terá o seletor de arquivo */
 #choose_your_image {
-  background-color: #3498db;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-  margin: 10px;
-  padding: 6px 20px
+background-color: #3498db;
+border-radius: 5px;
+color: #fff;
+cursor: pointer;
+margin: 10px;
+padding: 6px 20px
 }
 
 #pagination {
-  text-align: center;
-  margin-bottom: 20px;
+text-align: center;
+margin-bottom: 20px;
 }
 
 #pagination > button{
-  margin-right: 10px;
+margin-right: 10px;
 }
 
 .filters {
-  margin-bottom: 20px;
+margin-bottom: 20px;
 }
 
 .center {
-  text-align: center;
+text-align: center;
 }
 
 li.nav-item.active > a{
-  color: #076b6d!important;
+color: #076b6d!important;
 }
 
 #submitNewEmail, #submitNewPassword, #submitNewContact {
-  background-color: #17a7a6;
-  border-color: #17a7a6;
+background-color: #17a7a6;
+border-color: #17a7a6;
 }
 
 #submitNewEmail:hover, #submitNewPassword:hover, #submitNewContact:hover {
-  background-color: #076b6d;
-    border-color: #076b6d;
+background-color: #076b6d;
+  border-color: #076b6d;
 }
 
 #container-margin {
-  width: 90%;
-  margin-left: 5%;
+width: 90%;
+margin-left: 5%;
+}
+
+@media (max-width:445px){
+#container-margin {
+  width: 100%;
+  margin-left: 0%;
+}
 }
 
 #container-margin > div.row.profile > div.col-md-3 {
-  margin-top: 20px;
+margin-top: 20px;
 }
 
 #container-margin > div.row.profile > div.col-md-9 {
-  margin-top: 20px;
+margin-top: 20px;
 }
