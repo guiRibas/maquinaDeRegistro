@@ -138,9 +138,9 @@ margin-left: -2px;
 
 /* Profile Content */
 .profile-content {
-padding: 20px;
-background: #fff;
-min-height: 460px;
+  padding: 20px 20px 10px 20px;
+  background: #fff;
+  min-height: 440px;
 }
 
 /*-------------*/

@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-  makeRoundBubble();
-
   $(document).on("scroll",function(){
     if($(document).scrollTop()>600){ //QUANDO O SCROLL PASSAR DOS 100px DO TOPO
       $("#bs-example-navbar-collapse-1").removeClass("our-navbar");
@@ -17,19 +15,24 @@ $(document).ready(function() {
   });
 
   $('.navbar-nav li a').click(function() {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: (target.offset().top - 80)
-        }, 1000, "easeInOutExpo");
-        return false;
+    console.log(this.hash);
+    if(!this.hash == "") {
+      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: (target.offset().top - 80)
+          }, 1000, "easeInOutExpo");
+          return false;
+        }
       }
     }
   });
   // Outras Animações
   // linear, swing, jswing, easeInQuad, easeInCubic, easeInQuart, easeInQuint, easeInSine, easeInExpo, easeInCirc, easeInElastic, easeInBack, easeInBounce, easeOutQuad, easeOutCubic, easeOutQuart, easeOutQuint, easeOutSine, easeOutExpo, easeOutCirc, easeOutElastic, easeOutBack, easeOutBounce, easeInOutQuad, easeInOutCubic, easeInOutQuart, easeInOutQuint, easeInOutSine, easeInOutExpo, easeInOutCirc, easeInOutElastic, easeInOutBack, easeInOutBounce
+
+  makeRoundBubble();
 });
 
 function makeRoundBubble(){

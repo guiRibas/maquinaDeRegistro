@@ -49,37 +49,36 @@
               @if (!session()->exists('user.token'))
                 <li class="menu"><a href="usuario/novo">CADASTRE-SE</a></li>
               @endif
+
+              <div class="side-menu-overlay" style="width: 0px; opacity: 0;"></div>
+              <div class="side-menu-wrapper">
+                <a href="#" class="menu-close">&times;</a>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div id="statusOfLogin" class="alert" style="display:none"></div>
+                    <form id="loginForm" name="loginForm" class="form" role="form" accept-charset="UTF-8" id="login-nav">
+                      <div class="form-group">
+                        <label for="userName">Usuário</label>
+                        <input type="text" class="form-control" id="userName" name="userName" placeholder="Informe seu usuário" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="password">Senha</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Informe sua senha" required>
+                      <div class="help-block text-right"><a href="">Esqueceu sua senha?</a></div>
+                      </div>
+                      <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block" id="btnDoLogin">Entrar</button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="bottom text-center">
+                    Novo aqui? <a href="usuario/novo"><b>Crie sua conta!</b></a>
+                  </div>
+                </div>
+              </div>
               <!--VERIFICANDO SE EXISTE TOKEN NA SESSÃO-->
               @if (!session()->exists('user.token'))
-                <li class="dropdown">
-                  <a id="btnLogin" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">LOGIN <span class="caret"></span></a>
-                  <ul id="login-dp" class="dropdown-menu">
-                    <li>
-                      <div class="row">
-                        <div class="col-md-12">
-                          <div id="statusOfLogin" class="alert" style="display:none"></div>
-                          <form id="loginForm" name="loginForm" class="form" role="form" accept-charset="UTF-8" id="login-nav">
-                            <div class="form-group">
-                              <label for="userName">Usuário</label>
-                              <input type="text" class="form-control" id="userName" name="userName" placeholder="Informe seu usuário" required>
-                            </div>
-                            <div class="form-group">
-                              <label for="password">Senha</label>
-                              <input type="password" class="form-control" id="password" name="password" placeholder="Informe sua senha" required>
-                            <div class="help-block text-right"><a href="">Esqueceu sua senha?</a></div>
-                            </div>
-                            <div class="form-group">
-                              <button type="submit" class="btn btn-primary btn-block" id="btnDoLogin">Entrar</button>
-                            </div>
-                          </form>
-                        </div>
-                        <div class="bottom text-center">
-                          Novo aqui? <a href="usuario/novo"><b>Crie sua conta!</b></a>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
+                <li class="menu"><a href="#" class="slide-menu-open">ENTRAR</a></li>
               @else
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MINHA CONTA<span class="caret"></span></a>
