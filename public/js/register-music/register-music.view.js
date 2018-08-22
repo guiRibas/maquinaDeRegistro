@@ -24,7 +24,6 @@ $(document).ready( function(){
 
 		$("input").each(function(){
 			if($(this).attr("id") != "upload_image" && $(this).attr("id") != undefined){
-				alert($(this).attr("id"));
 				isEmpty = verifyFields(this);
 
 				if(isEmpty){
@@ -105,7 +104,6 @@ $(document).ready( function(){
 	}
 
 	function sendForm() {
-		alert();
 		$("#statusOfSend").empty();
 		$.blockUI({ message: "<img src='/images/carregando.gif'>Aguarde! Cadastrando música..." });
 

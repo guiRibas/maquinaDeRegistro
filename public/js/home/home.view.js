@@ -15,7 +15,6 @@ $(document).ready(function() {
   });
 
   $('.navbar-nav li a').click(function() {
-    console.log(this.hash);
     if(!this.hash == "") {
       if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
         var target = $(this.hash);

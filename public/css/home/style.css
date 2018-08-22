@@ -55,6 +55,14 @@ h1 {
   padding-bottom: 0px;
 }
 
+.noMT {
+  margin-top: 0px;
+}
+
+.noMB {
+  margin-bottom: 0px;
+}
+
 /*BANNER*/
 .container {
   width: 100%!important;
@@ -183,8 +191,16 @@ h1 {
   background-color: #076b6d;
 }
 
+#certificate > div > .row {
+  padding-bottom: 0px!important;
+}
+
 #text-certificate > #header-title {
   padding-top: 50%;
+}
+
+#text-certificate {
+  padding: 0px!important;
 }
 
 #text-certificate > #header-title, #text-certificate > .header-subtitle{
@@ -192,11 +208,16 @@ h1 {
 }
 
 .img-bg-certificate {
+  margin-top: -75px;
   text-align: center;
+  overflow: hidden;
 }
 
 .img-bg-certificate > img {
   height: 530px;
+  transform: rotate(10deg);
+  margin-top: 56px;
+  margin-bottom: -68px;
 }
 
 #text-certificate > p:nth-child(1) {
@@ -242,7 +263,30 @@ h1 {
 }
 
 .img-bg-our-price > img {
-  height: 230px;
+  height: 160px;
+}
+
+.our-price-qtd {
+  color: #17a7a6;
+  font-family: 'Poppins', sans-serif;
+}
+
+.our-price-qtd > strong{
+  font-size: 72px;
+}
+
+.our-price-cost {
+  color: white;
+  font-size: 72px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.our-price-cost > strong, .our-price-comma{
+  font-size: 32px;
+}
+
+.our-price-comma {
+  vertical-align: 29px; 
 }
 
 /*COMPOSERS PANEL*/

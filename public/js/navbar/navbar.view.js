@@ -8,15 +8,20 @@ $(document).ready(function() {
   var overlay         = $(".side-menu-overlay"); //slidebar close btn
 
   slide_open_btn.click(function(e){
-      e.preventDefault();
-      slide_bar.css( {"right": "0px"}); //change to "right" for right positioned menu
-      overlay.css({"opacity":"1", "width":"100%"});
+    e.preventDefault();
+    slide_bar.css( {"right": "0px"}); //change to "right" for right positioned menu
+    overlay.css({"opacity":"1", "width":"100%"});
   });
   slide_close_btn.click(function(e){
-      e.preventDefault();
-      slide_bar.css({"right": "-"+ slidebar_width + "px"}); //change to "right" for right positioned menu
-      overlay.css({"opacity":"0", "width":"0"});  
-  }); 
+    e.preventDefault();
+    slide_bar.css({"right": "-"+ slidebar_width + "px"}); //change to "right" for right positioned menu
+    overlay.css({"opacity":"0", "width":"0"});  
+	}); 
+	overlay.click(function(e){
+		e.preventDefault();
+		slide_bar.css({"right": "-"+ slidebar_width + "px"}); //change to "right" for right positioned menu
+    overlay.css({"opacity":"0", "width":"0"}); 
+	});
 
   if(!$('#btnLogin').is(':visible')){
     verifyCurrentToken();
@@ -33,10 +38,11 @@ $(document).ready(function() {
 
 		var settingsToAuth = {
 		  "async": true,
-		  "crossDomain": true,
+			"crossDomain": true,
 		  "url": "http://www.brainsoftsistemas.com.br/Teste/token",
 		  "method": "POST",
 		  "headers": {
+				"x-my-custom-header": "some value",
 		    "content-type": "application/x-www-form-urlencoded"
 		  },
 		  "data": {

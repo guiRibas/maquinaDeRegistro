@@ -4,6 +4,7 @@
 
 @section('css-view')
     <link rel="stylesheet" type="text/css" href="{{asset('css/home/style.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:700" rel="stylesheet">
 @endsection
  
 @section('content')
@@ -99,17 +100,17 @@
   <section id="certificate">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-4">
+        <div class="col-lg-3">
           <div class="left">
             <div id="text-certificate" class="header-section">
               <h1 id="header-title">O nosso certificado</h1>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 hidden-xs hidden-sm hidden-md img-bg-certificate">
-          <img src="images/mini-logo.png" alt="">
+        <div class="col-lg-6 hidden-xs hidden-sm hidden-md img-bg-certificate">
+          <img src="images/certificado.jpg" alt="">
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-3">
           <div class="right">
             <div id="text-certificate" class="header-section">
               <p class="header-subtitle">
@@ -168,7 +169,7 @@
 
   <section id="our-price">
     <div class="container-fluid">
-      <div class="row">
+      <div class="row noPB">
         <div class="col-lg-12">
           <div id="text-our-price" class="header-section">
             <h1 id="header-title">Nossos Preços</h1>
@@ -177,13 +178,20 @@
       </div>
       <div class="row">
         <div class="col-lg-4 hidden-xs hidden-sm hidden-md img-bg-our-price">
-          <img class="img-responsive" src="images/moeda1.png" alt="">
+          <img class="img-responsive" src="images/moeda1.jpg" alt="">
+          <h1 class="our-price-qtd noMT noMB"><strong>1</strong> crédito</h1>
+          <h1 class="our-price-cost noMT noMB"><strong>R$</strong> 9
+            <strong class="our-price-comma">,90</strong></h1>
         </div>
         <div class="col-lg-4 hidden-xs hidden-sm hidden-md img-bg-our-price">
-          <img class="img-responsive" src="images/moeda2.png" alt="">
+          <img class="img-responsive" src="images/moeda3.jpg" alt="">
+          <h1 class="our-price-qtd noMT noMB"><strong>3</strong> créditos</h1>
+          <h1 class="our-price-cost noMT noMB"><strong>R$</strong> 26<strong class="our-price-comma">,73</strong></h1>
         </div>
         <div class="col-lg-4 hidden-xs hidden-sm hidden-md img-bg-our-price">
-          <img class="img-responsive" src="images/moeda3.png" alt="">
+          <img class="img-responsive" src="images/moeda5.jpg" alt="">
+          <h1 class="our-price-qtd noMT noMB"><strong>5</strong> créditos</h1>
+          <h1 class="our-price-cost noMT noMB"><strong>R$</strong> 42<strong class="our-price-comma">,08</strong></h1>
         </div>
       </div>
     </div>
@@ -200,7 +208,7 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row noPB">
         <div class="col-lg-8 col-lg-offset-2">
           <div class="cloud" style="height: 400px; display: flex;">
             <div class="round bloc1" style="flex:1 1 auto;">
