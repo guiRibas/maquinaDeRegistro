@@ -38,22 +38,19 @@ $(document).ready(function() {
 		var userName = $("#userName").val();
 		var password = $("#password").val();
 
-		console.log(userName + " " + password);
-
 		var settingsToAuth = {
-		  "async": true,
+			"async": true,
 			"crossDomain": true,
-		  "url": AUTHENTICATE_PATH + "/token",
+			"url": "http://10.1.1.208:82/homolog/token",
 			"method": "POST",
 			"headers": {
-				"content-type": "application/x-www-form-urlencoded",
-				"cache-control": "no-cache"
+				'content-type': "application/x-www-form-urlencoded"
 			},
-		  "data": {
-		    "grant_type": "password",
-		    "username": ""+userName+"",
-		    "password": ""+password+""
-		  }
+			"data": {
+			"grant_type": "password",
+			"username": userName,
+			"password": password
+			}
 		}
 
 		$.ajax(settingsToAuth).done(function(response){
@@ -71,7 +68,7 @@ $(document).ready(function() {
         "url": url,
         "method": "POST",
         "headers": {
-          'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+          'X-CSRF-TOKEN': $("meta[name='_csrf']").attr("content")
         },
         "data": {
           "token": token,
