@@ -1,3 +1,5 @@
+var REGISTER_PATH = "http://10.1.1.208:82/homolog";
+
 $(document).ready( function(){
 	jQuery("#formAdd").submit(function(){
 		return false;
@@ -440,7 +442,7 @@ function sendForm() {
 	var settingsToRegister = {
 	  "async": true,
 	  "crossDomain": true,
-	  "url": "http://www.brainsoftsistemas.com.br/Teste/api/pessoa/registrar",
+	  "url": REGISTER_PATH + "/api/pessoas/registrar",
 	  "method": "POST",
 	  "headers": {
 	    "content-type": "application/x-www-form-urlencoded",

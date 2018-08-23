@@ -1,3 +1,5 @@
+var AUTHENTICATE_PATH = "http://10.1.1.208:82/homolog";
+
 $(document).ready(function() {
 
 	/*SLIDE MENU*/
@@ -36,15 +38,17 @@ $(document).ready(function() {
 		var userName = $("#userName").val();
 		var password = $("#password").val();
 
+		console.log(userName + " " + password);
+
 		var settingsToAuth = {
 		  "async": true,
 			"crossDomain": true,
-		  "url": "http://www.brainsoftsistemas.com.br/Teste/token",
-		  "method": "POST",
-		  "headers": {
-				"x-my-custom-header": "some value",
-		    "content-type": "application/x-www-form-urlencoded"
-		  },
+		  "url": AUTHENTICATE_PATH + "/token",
+			"method": "POST",
+			"headers": {
+				"content-type": "application/x-www-form-urlencoded",
+				"cache-control": "no-cache"
+			},
 		  "data": {
 		    "grant_type": "password",
 		    "username": ""+userName+"",
@@ -116,6 +120,7 @@ $(document).ready(function() {
 					alert("Informações da requisição: \n" + request.getAllResponseHeaders());
 				}*/
 		}).fail(function(data) { 
+			console.log(data.responseText);
       if(data.responseText.indexOf("Usuário ou Senha inválido") != -1){
         $("#statusOfLogin").slideDown();
         $("#statusOfLogin").addClass('alert-danger');

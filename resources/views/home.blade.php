@@ -186,12 +186,12 @@
         <div class="col-lg-4 hidden-xs hidden-sm hidden-md img-bg-our-price">
           <img class="img-responsive" src="images/moeda3.jpg" alt="">
           <h1 class="our-price-qtd noMT noMB"><strong>3</strong> créditos</h1>
-          <h1 class="our-price-cost noMT noMB"><strong>R$</strong> 26<strong class="our-price-comma">,73</strong></h1>
+          <h1 class="our-price-cost noMT noMB"><strong>R$</strong> 26<strong class="our-price-comma">,90</strong></h1>
         </div>
         <div class="col-lg-4 hidden-xs hidden-sm hidden-md img-bg-our-price">
           <img class="img-responsive" src="images/moeda5.jpg" alt="">
           <h1 class="our-price-qtd noMT noMB"><strong>5</strong> créditos</h1>
-          <h1 class="our-price-cost noMT noMB"><strong>R$</strong> 42<strong class="our-price-comma">,08</strong></h1>
+          <h1 class="our-price-cost noMT noMB"><strong>R$</strong> 41<strong class="our-price-comma">,90</strong></h1>
         </div>
       </div>
     </div>
