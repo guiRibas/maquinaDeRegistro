@@ -297,12 +297,12 @@ function msgErro(msg, span) {
 
 /* INITIAL - CURRENT USERNAME FUNCTION*/
 function currentUserName(){
-  return $('meta[name="_currentUserName"]').attr('content');
+  return $('meta[name="currentUserName"]').attr('content');
 }
 /* FINAL - CURRENT USERNAME FUNCTION */
 
 /* INITIAL - CURRENT TOKEN FUNCTION*/
 function currentToken(){
-  return $('meta[name="_currentToken"]').attr('content');
+  return $('meta[name="currentToken"]').attr('content');
 }
 /* FINAL - CURRENT TOKEN FUNCTION */

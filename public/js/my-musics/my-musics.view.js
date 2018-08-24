@@ -153,11 +153,11 @@ function loadFirstMusicInPlayer(){
 }
 
 function currentToken(){
-  return $('meta[name="_currentToken"]').attr('content');
+  return $('meta[name="currentToken"]').attr('content');
 }
 
 function currentUserName(){
-  return $('meta[name="_currentUserName"]').attr('content');
+  return $('meta[name="currentUserName"]').attr('content');
 }
 
 function setCookie(name, exdays){    //função universal para criar cookie

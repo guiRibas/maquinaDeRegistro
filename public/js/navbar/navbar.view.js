@@ -68,7 +68,7 @@ $(document).ready(function() {
         "url": url,
         "method": "POST",
         "headers": {
-          'X-CSRF-TOKEN': $("meta[name='_csrf']").attr("content")
+          'X-CSRF-TOKEN': $("meta[name='csrf']").attr("content")
         },
         "data": {
           "token": token,
@@ -168,7 +168,7 @@ $(document).ready(function() {
 	
 		$.ajaxSetup({
 			headers: {
-				'X-CSRF-TOKEN': $('meta[name="_csrf"]').attr('content')
+				'X-CSRF-TOKEN': $('meta[name="csrf"]').attr('content')
 			}
 		});
 		$.ajax({
@@ -188,7 +188,7 @@ $(document).ready(function() {
 
     $.ajaxSetup({
 			headers: {
-				'X-CSRF-TOKEN': $('meta[name="_csrf"]').attr('content')
+				'X-CSRF-TOKEN': $('meta[name="csrf"]').attr('content')
 			}
 		});
 		$.ajax({

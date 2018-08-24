@@ -3,7 +3,6 @@
 	<head id="teste">
 		<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf" content="{{csrf_token()}}"/>
     <title>Brainsoft Sistemas - @yield('title')</title>
 		    
 		<!--link rel="shortcut icon" type="image/png" href="img/brain_icon.png"/-->
