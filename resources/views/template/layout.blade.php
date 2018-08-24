@@ -7,7 +7,7 @@
     <title>Brainsoft Sistemas - @yield('title')</title>
 		    
 		<!--link rel="shortcut icon" type="image/png" href="img/brain_icon.png"/-->
-    <link rel="stylesheet" href="/css/boot.min.css">
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Candal|Alegreya+Sans"> 
     <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
@@ -68,7 +68,6 @@
                       <div class="help-block text-right"><a href="">Esqueceu sua senha?</a></div>
                       </div>
                       <div class="form-group">
-												<input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <button type="submit" class="btn btn-primary btn-block" id="btnDoLogin">Entrar</button>
                       </div>
                     </form>
@@ -111,8 +110,8 @@
     </footer>
     <!--/ Footer-->
         
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/boot.min.js"></script>
+    <script src="/js/jquery/jquery.min.js"></script>
+    <script src="/js/bootstrap/bootstrap.min.js"></script>
     <script src="{{asset('js/navbar/navbar.view.js')}}"></script>
     <script src="{{asset('js/jquery.easing.min.js')}}"></script>
 		<script src="{{asset('js/jquery.mask.js')}}"></script>      

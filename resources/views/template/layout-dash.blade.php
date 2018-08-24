@@ -3,11 +3,11 @@
 	<head id="teste">
 		<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="_token" content="{{csrf_token()}}" />
+    <meta name="csrf" content="{{csrf_token()}}"/>
     <title>Brainsoft Sistemas - @yield('title')</title>
 		    
 		<!--link rel="shortcut icon" type="image/png" href="img/brain_icon.png"/-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Candal|Alegreya+Sans"> 
     <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
@@ -96,8 +96,8 @@
     </footer>
     <!--/ Footer-->
         
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/js/jquery/jquery.min.js"></script>
+    <script src="/js/bootstrap/bootstrap.min.js"></script>
     <script src="{{asset('js/navbar/navbar.view.js')}}"></script>
     <script src="{{asset('js/jquery.easing.min.js')}}"></script>
     <script src="{{asset('js/jquery.mask.js')}}"></script>

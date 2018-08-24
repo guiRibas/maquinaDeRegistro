@@ -41,7 +41,7 @@ $(document).ready(function() {
 		var settingsToAuth = {
 			"async": true,
 			"crossDomain": true,
-			"url": "http://10.1.1.208:82/homolog/token",
+			"url": "http://localhost:82/homolog/token",
 			"method": "POST",
 			"headers": {
 				'content-type': "application/x-www-form-urlencoded"
@@ -168,14 +168,14 @@ $(document).ready(function() {
 	
 		$.ajaxSetup({
 			headers: {
-				'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+				'X-CSRF-TOKEN': $('meta[name="_csrf"]').attr('content')
 			}
 		});
 		$.ajax({
 			url: url,
 			method: 'GET',
 			success: function(result){
-				var element = '<meta name="_currentToken" content="';
+				var element = '<meta name="currentToken" content="';
 				element += result.token;
 				element += '"/>';
 				$("head").append(element);
@@ -188,14 +188,14 @@ $(document).ready(function() {
 
     $.ajaxSetup({
 			headers: {
-				'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+				'X-CSRF-TOKEN': $('meta[name="_csrf"]').attr('content')
 			}
 		});
 		$.ajax({
 			url: url,
 			method: 'GET',
 			success: function(result){
-				var element = '<meta name="_currentUserName" content="';
+				var element = '<meta name="currentUserName" content="';
 				element += result.userName;
 				element += '"/>';
 				$("head").append(element);
