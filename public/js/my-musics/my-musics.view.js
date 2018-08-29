@@ -22,7 +22,7 @@ $(document).ready(function() {
 
   setTimeout(function(){
     loadFirstMusicInPlayer();
-  }, 1500);
+  }, 1700);
 
   $("#showQtd").change(function(){
     pagination(1);
@@ -42,7 +42,7 @@ function pagination(numberOfPage){
     var settingsToGetAllMusics = {
       "async": true,
       "crossDomain": true,
-      "url": "http://www.brainsoftsistemas.com.br/Teste/api/musica?username="+user+"&numeroPagina="+numberOfPage+"&registrosPorPagina="+qtdPerPage,
+      "url": "http://10.1.1.208:82/homolog/api/musicas?username="+user+"&numeroPagina="+numberOfPage+"&registrosPorPagina="+qtdPerPage,
       "method": "GET",
       "headers": {
         "authorization": "Bearer " + token
@@ -92,7 +92,7 @@ function pagination(numberOfPage){
     var settingsToGetTotal = {
       "async": true,
       "crossDomain": true,
-      "url": "http://www.brainsoftsistemas.com.br/Teste/api/musica/total?username="+user,
+      "url": "http://10.1.1.208:82/homolog/api/musicas/total/"+user,
       "method": "GET",
       "headers": {
         "authorization": "Bearer " + token
@@ -126,7 +126,7 @@ function pagination(numberOfPage){
 function loadMusic(button){
   var audio = $("audio");
   var idMusic = $(button).parent().parent().attr("id");
-  var mp3ToPlay = "http://www.brainsoftsistemas.com.br/Teste/api/musica/" + idMusic;
+  var mp3ToPlay = "http://10.1.1.208:82/homolog/api/musicas/" + idMusic;
 
   audio.attr("autoplay", "autoplay");
   audio.attr("src", mp3ToPlay);
@@ -141,7 +141,9 @@ function loadFirstMusicInPlayer(){
   var audio = $("audio");
   var idMusic = $("#example").children().eq(1).children().eq(0).attr("id");
 
-  var mp3ToPlay = "http://www.brainsoftsistemas.com.br/Teste/api/musica/" + idMusic;
+  console.log(idMusic);
+
+  var mp3ToPlay = "http://10.1.1.208:82/homolog/api/musicas/" + idMusic;
 
   audio.attr("src", mp3ToPlay);
 

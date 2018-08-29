@@ -2,7 +2,7 @@
 $(document).ready(function() {
   setTimeout(function(){
     loadProfilePhoto();
-    //userData();
+    userData();
     croppie();
   }, 500);
 
@@ -65,7 +65,7 @@ function croppie(){
       var settingsToSaveImage = {
         "async": true,
         "crossDomain": true,
-        "url": "http://localhost:82/homolog/api/pessoas/SalvarImagemPerfil",
+        "url": "http://10.1.1.208:82/homolog/api/pessoas/SalvarImagemPerfil",
         "method": "POST",
         "headers": {
           "authorization": "Bearer " + token,
@@ -93,7 +93,7 @@ function loadProfilePhoto(){
   var settingsToGetImage = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:82/homolog/api/pessoas/imagem/" + userName,
+    "url": "http://10.1.1.208:82/homolog/api/pessoas/imagem/" + userName,
     "method": "GET",
     "headers": {
       "content-type": "application/x-www-form-urlencoded"
@@ -101,7 +101,7 @@ function loadProfilePhoto(){
   }
 
   $.ajax(settingsToGetImage).done(function(response){
-    $("body > div > div.row.profile > div.col-md-3 > div > div.profile-userpic > img").attr("src", "http://localhost:82/homolog/api/pessoas/imagem/" + userName);
+    $("body > div > div.row.profile > div.col-md-3 > div > div.profile-userpic > img").attr("src", "http://10.1.1.208:82/homolog/api/pessoas/imagem/" + userName);
   }).fail(function (data) { 
     $("body > div > div.row.profile > div.col-md-3 > div > div.profile-userpic > img").attr("src", "https://thumbs.dreamstime.com/b/do-retrato-masculino-do-avatar-do-%C3%ADcone-do-perfil-pessoa-ocasional-46846325.jpg"); 
   });
@@ -117,7 +117,7 @@ function userData(){
     var settingsToGetData = {
       "async": true,
       "crossDomain": true,
-      "url": "http://10.1.1.101/RegistrarMusica/api/pessoas/imagem/" + user,
+      "url": "http://10.1.1.208:82/homolog/api/pessoas/" + user,
       "method": "GET",
       "headers": {
         "authorization": "Bearer " + token
