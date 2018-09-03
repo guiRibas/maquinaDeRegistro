@@ -110,8 +110,9 @@ $(document).ready(function(){
     var token = currentToken();
     var form = new FormData();
     form.append("Nome", $("#nameOfMusic").val());
-    form.append("Compositor", $("#composer").val());
+    form.append("CompositorMusical", $("#composer").val());
     form.append("Interprete", $("#interpreter").val());
+	form.append("Compositor", $("#autor-of-lyric").val());
     form.append("Letra", $("#lyrics").val());
     form.append("Genero", $("#genre option:selected").val());
     form.append("Arquivo", $("#file")[0].files[0]);
@@ -119,7 +120,7 @@ $(document).ready(function(){
     var settingsToRegisterMusic = {
       "async": true,
       "crossDomain": true,
-      "url": "http://10.1.1.208:82/homolog/api/musicas/registrar",
+      "url": API_ROOT_PATH_MUSIC + "/registrar",
       "method": "POST",
       "headers": {
         "authorization": "Bearer " + token

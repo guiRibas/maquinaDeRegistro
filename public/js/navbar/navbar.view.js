@@ -1,4 +1,7 @@
-var AUTHENTICATE_PATH = "http://10.1.1.208:82/homolog";
+var API_ROOT_PATH_TOKEN = "http://10.1.1.208:82/homolog/token";
+var API_ROOT_PATH_PEOPLE = "http://10.1.1.208:82/homolog/api/pessoas";
+var API_ROOT_PATH_MUSIC = "http://10.1.1.208:82/homolog/api/musicas";
+var API_ROOT_PATH_PAYMENT = "http://10.1.1.208:82/homolog/api/pagamentos";
 
 $(document).ready(function () {
 
@@ -42,7 +45,7 @@ $(document).ready(function () {
         var settingsToAuth = {
             "async": true,
             "crossDomain": true,
-            "url": "http://10.1.1.208:82/homolog/token",
+            "url": API_ROOT_PATH_TOKEN,
             "method": "POST",
             "headers": {
                 'content-type': "application/x-www-form-urlencoded"
@@ -94,6 +97,7 @@ $(document).ready(function () {
                 }
             });
         }).fail(function (data) {
+            console.log(data.responseText);
             if (data.responseText.indexOf("Usuário ou senha incorreto") !== -1) {
                 $("#statusOfLogin").empty();
 

@@ -142,21 +142,21 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-4 img-bg-who-use">
+        <div class="col-sm-4 col-md-4 col-lg-4 img-bg-who-use">
           <img class="img-responsive" src="images/user1.png" alt="">
           <div class="col-lg-11 col-lg-offset-1">
             <p>Á máquina de registro é fantástica, simples, rápida, minha obra está registrada.</p>
             <p><strong>Rodriggo Vivazs</strong></p>
           </div>
         </div>
-        <div class="col-lg-4 img-bg-who-use">
+        <div class="col-sm-4 col-md-4 col-lg-4 img-bg-who-use">
           <img class="img-responsive" src="images/user2.png" alt="">
           <div class="col-lg-11 col-lg-offset-1">
             <p>Á máquina de registro é fantástica, simples, rápida, minha obra está registrada.</p>
             <p><strong>Rodriggo Vivazs</strong></p>
           </div>
         </div>
-        <div class="col-lg-4 img-bg-who-use">
+        <div class="col-sm-4 col-md-4 col-lg-4 img-bg-who-use">
           <img class="img-responsive" src="images/user3.png" alt="">
           <div class="col-lg-11 col-lg-offset-1">
             <p>Á máquina de registro é fantástica, simples, rápida, minha obra está registrada.</p>

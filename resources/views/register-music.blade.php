@@ -36,6 +36,13 @@
                   </div>
 
                   <div class="form-group row">
+                      <label class="col-sm-3 form-control-label">Autor da Letra</label>
+                      <div class="col-sm-9">
+                          <input type="text" id="autor-of-lyric" name="autor-of-lyric" class="form-control" required="true" tabindex="3"><span class="help-block-none">Informe o autor da letra.</span>
+                      </div>
+                  </div>
+
+                  <div class="form-group row">
                       <label class="col-sm-3 form-control-label">Letra</label>
                       <div class="col-sm-9">
                           <textarea type="text" id="lyrics" name="lyrics" class="form-control" required="true" rows="9" tabindex="4"></textarea><span class="help-block-none">Informe a letra da música.</span>

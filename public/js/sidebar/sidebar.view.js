@@ -15,7 +15,7 @@ $(document).ready(function() {
     $("#upload_image").click();
   });
 
-  var hrefRaw = [location.pathname, location.search];
+  var hrefRaw = [location.pathname, location.search]
   var href = hrefRaw.toString().replace(',', '');
   $('.item-menu > a[href="' + href + '"]').parent().addClass('active');
 });
@@ -65,7 +65,7 @@ function croppie(){
       var settingsToSaveImage = {
         "async": true,
         "crossDomain": true,
-        "url": "http://10.1.1.208:82/homolog/api/pessoas/SalvarImagemPerfil",
+        "url": API_ROOT_PATH_PEOPLE + "/SalvarImagemPerfil",
         "method": "POST",
         "headers": {
           "authorization": "Bearer " + token,
@@ -93,7 +93,7 @@ function loadProfilePhoto(){
   var settingsToGetImage = {
     "async": true,
     "crossDomain": true,
-    "url": "http://10.1.1.208:82/homolog/api/pessoas/imagem/" + userName,
+    "url": API_ROOT_PATH_PEOPLE + "/imagem/" + userName,
     "method": "GET",
     "headers": {
       "content-type": "application/x-www-form-urlencoded"
@@ -117,7 +117,7 @@ function userData(){
     var settingsToGetData = {
       "async": true,
       "crossDomain": true,
-      "url": "http://10.1.1.208:82/homolog/api/pessoas/" + user,
+      "url": API_ROOT_PATH_PEOPLE + "/" + user,
       "method": "GET",
       "headers": {
         "authorization": "Bearer " + token

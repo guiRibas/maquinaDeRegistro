@@ -68,7 +68,7 @@ function changeEmail() {
             var settingsToChangeEmail = {
                 "async": true,
                 "crossDomain": true,
-                "url": "http://10.1.1.208:82/homolog/api/pessoas/alterar/email",
+                "url": API_ROOT_PATH_PEOPLE + "/alterar/email",
                 "method": "POST",
                 "headers": {
                     "authorization": "Bearer " + token
@@ -140,7 +140,7 @@ function changePassword() {
             var settingsToChangePassword = {
                 "async": true,
                 "crossDomain": true,
-                "url": "http://10.1.1.208:82/homolog/api/pessoas/alterar/senha",
+                "url": API_ROOT_PATH_PEOPLE + "/alterar/senha",
                 "method": "POST",
                 "headers": {
                     "authorization": "Bearer " + token
@@ -205,7 +205,7 @@ function changeContact() {
             var settingsToChangeContact = {
                 "async": true,
                 "crossDomain": true,
-                "url": "http://10.1.1.208:82/homolog/api/pessoas/alterar/endereco",
+                "url": API_ROOT_PATH_PEOPLE + "/alterar/endereco",
                 "method": "POST",
                 "headers": {
                     "authorization": "Bearer " + token

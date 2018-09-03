@@ -42,7 +42,7 @@ function pagination(numberOfPage){
     var settingsToGetAllMusics = {
       "async": true,
       "crossDomain": true,
-      "url": "http://10.1.1.208:82/homolog/api/musicas?username="+user+"&numeroPagina="+numberOfPage+"&registrosPorPagina="+qtdPerPage,
+      "url": API_ROOT_PATH_MUSIC + "?username="+user+"&numeroPagina="+numberOfPage+"&registrosPorPagina="+qtdPerPage,
       "method": "GET",
       "headers": {
         "authorization": "Bearer " + token
@@ -92,7 +92,7 @@ function pagination(numberOfPage){
     var settingsToGetTotal = {
       "async": true,
       "crossDomain": true,
-      "url": "http://10.1.1.208:82/homolog/api/musicas/total/"+user,
+      "url": API_ROOT_PATH_MUSIC + "/total/" + user,
       "method": "GET",
       "headers": {
         "authorization": "Bearer " + token
@@ -126,7 +126,7 @@ function pagination(numberOfPage){
 function loadMusic(button){
   var audio = $("audio");
   var idMusic = $(button).parent().parent().attr("id");
-  var mp3ToPlay = "http://10.1.1.208:82/homolog/api/musicas/" + idMusic;
+  var mp3ToPlay = API_ROOT_PATH_MUSIC + "/" + idMusic;
 
   audio.attr("autoplay", "autoplay");
   audio.attr("src", mp3ToPlay);
@@ -143,7 +143,7 @@ function loadFirstMusicInPlayer(){
 
   console.log(idMusic);
 
-  var mp3ToPlay = "http://10.1.1.208:82/homolog/api/musicas/" + idMusic;
+  var mp3ToPlay = API_ROOT_PATH_MUSIC + "/" + idMusic;
 
   audio.attr("src", mp3ToPlay);
 

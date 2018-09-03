@@ -336,7 +336,7 @@ function registerPurchase(idPagueVeloz, type, value, qtdOfParts, deadline, actua
   var settingsToRegiterPurchase = {
     "async": true,
     "crossDomain": true,
-    "url": "http://brainsoftsistemas.com.br/teste/api/pagamentos",
+    "url": API_ROOT_PATH_PAYMENT,
     "method": "POST",
     "headers": {
       "authorization": "Bearer " + token
@@ -367,7 +367,7 @@ function loadHistory(){
   var settingsToLoadHistory = {
     "async": true,
     "crossDomain": true,
-    "url": "http://www.brainsoftsistemas.com.br/Teste/api/pagamentos/"+username,
+    "url": API_ROOT_PATH_PAYMENT + "/" + username,
     "method": "GET",
     "headers": {
       "authorization": "Bearer " + token

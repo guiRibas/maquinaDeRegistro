@@ -442,7 +442,7 @@ function sendForm() {
 	var settingsToRegister = {
 	  "async": true,
 	  "crossDomain": true,
-	  "url": REGISTER_PATH + "/api/pessoas/registrar",
+	  "url": API_ROOT_PATH_PEOPLE + "/registrar",
 	  "method": "POST",
 	  "headers": {
 	    "content-type": "application/x-www-form-urlencoded",
@@ -471,7 +471,7 @@ function sendForm() {
 	$.ajax(settingsToRegister).done(function(response){
 		$.unblockUI();
 
-		if(response.indexOf('sucesso') != -1){
+		if(response.indexOf('Usuário criado') != -1){
 			$("#statusOfSend").slideDown();
 			$("#statusOfSend").addClass('alert-success');
 			$("#statusOfSend").append("<strong>Sucesso!</strong> Cadastro realizado com sucesso. Por gentileza verifique seu e-mail.");
