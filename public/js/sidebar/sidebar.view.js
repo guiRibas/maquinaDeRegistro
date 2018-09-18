@@ -101,7 +101,7 @@ function loadProfilePhoto(){
   }
 
   $.ajax(settingsToGetImage).done(function(response){
-    $("body > div > div.row.profile > div.col-md-3 > div > div.profile-userpic > img").attr("src", "http://10.1.1.208:82/homolog/api/pessoas/imagem/" + userName);
+    $("body > div > div.row.profile > div.col-md-3 > div > div.profile-userpic > img").attr("src", API_ROOT_PATH_PEOPLE + "/imagem/" + userName);
   }).fail(function (data) { 
     $("body > div > div.row.profile > div.col-md-3 > div > div.profile-userpic > img").attr("src", "https://thumbs.dreamstime.com/b/do-retrato-masculino-do-avatar-do-%C3%ADcone-do-perfil-pessoa-ocasional-46846325.jpg"); 
   });

@@ -284,35 +284,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 col-lg-6">
-          <div class="cod-md-12 col-lg-12">
-            <div class="col-lg-2"><img class="img-composer-of-music" src="images/banner.jpg" alt=""></div>
-            <div class="col-lg-offset-1 col-lg-9"><audio autoplay="autoplay" preload="none" controls="controls"></audio></div>
-          </div>
-          <div class="cod-md-12 col-lg-12">
-            <div class="col-lg-2"><img class="img-composer-of-music" src="images/banner.jpg" alt=""></div>
-            <div class="col-lg-offset-1 col-lg-9"><audio autoplay="autoplay" preload="none" controls="controls"></audio></div>
-          </div>
-          <div class="cod-md-12 col-lg-12">
-            <div class="col-lg-2"><img class="img-composer-of-music" src="images/banner.jpg" alt=""></div>
-            <div class="col-lg-offset-1 col-lg-9"><audio autoplay="autoplay" preload="none" controls="controls"></audio></div>
-          </div>
-          <div class="cod-md-12 col-lg-12">
-            <div class="col-lg-2"><img class="img-composer-of-music" src="images/banner.jpg" alt=""></div>
-            <div class="col-lg-offset-1 col-lg-9"><audio autoplay="autoplay" preload="none" controls="controls"></audio></div>
-          </div>
-          <div class="cod-md-12 col-lg-12">
-            <div class="col-lg-2"><img class="img-composer-of-music" src="images/banner.jpg" alt=""></div>
-            <div class="col-lg-offset-1 col-lg-9"><audio autoplay="autoplay" preload="none" controls="controls"></audio></div>
-          </div>
-          <div class="cod-md-12 col-lg-12">
-            <div class="col-lg-2"><img class="img-composer-of-music" src="images/banner.jpg" alt=""></div>
-            <div class="col-lg-offset-1 col-lg-9"><audio autoplay="autoplay" preload="none" controls="controls"></audio></div>
-          </div>
-          <div class="cod-md-12 col-lg-12">
-            <div class="col-lg-2"><img class="img-composer-of-music" src="images/banner.jpg" alt=""></div>
-            <div class="col-lg-offset-1 col-lg-9"><audio autoplay="autoplay" preload="none" controls="controls"></audio></div>
-          </div>
+        <div id="musicsInTop" class="col-md-4 col-lg-6">
         </div>
       </div>
     </div>
@@ -349,7 +321,7 @@
         <div class="col-sm-3 col-lg-3 text-center text-center-horizon"><img class="img-responsive" src="images/pague-veloz.png" alt=""></div>
         <div class="col-sm-1 col-lg-1 text-center text-center-horizon"><img class="img-responsive" src="images/bry.png" alt=""></div>
         <div id="img-come-to" class="col-sm-4 col-lg-4 text-center"><img class="img-responsive" src="images/logo.jpg" alt=""></div>
-        <div class="col-sm-1 col-lg-1 text-center text-center-horizon"><img class="img-responsive" src="images/bry.png" alt=""></div>
+        <div class="col-sm-1 col-lg-1 text-center text-center-horizon" style="margin-top: 3.4em;"><img class="img-responsive" src="images/logo-siatech.png" alt=""></div>
         <div class="col-sm-3 col-lg-3 text-center text-center-horizon"><img class="img-responsive" src="images/logo-brain.png" alt=""></div>
       </div>
     </div>

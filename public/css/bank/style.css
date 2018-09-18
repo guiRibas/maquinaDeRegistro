@@ -46,6 +46,14 @@
     padding: 0;
 }
 
+#divSubmitBuyCreditByCard > img, #divSubmitBuyCreditByTicket > img {
+    height: 70px;
+    margin-top: -15px;
+    position: relative;
+    margin-left: -38px;
+    transform: rotate(-10deg);
+}
+
 #submitBuyCreditByCard, #submitBuyCreditByTicket {
     width: 100%;
 
@@ -73,4 +81,12 @@ input[id=creditsToBuyByTicket]::-webkit-inner-spin-button,
 input[id=creditsToBuyByTicket]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
   margin: 0; 
+}
+
+.glyphicon-credit-card, .glyphicon-file {
+    margin-right: 5px;
+}
+
+.sale {
+    display: none;
 }

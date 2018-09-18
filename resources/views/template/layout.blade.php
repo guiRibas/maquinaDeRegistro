@@ -53,6 +53,13 @@
                         <li class="menu"><a href="usuario/novo">CADASTRE-SE</a></li>
                     @endif
 
+                    <!--VERIFICANDO SE EXISTE TOKEN NA SESSÃO-->
+                    @if (!session()->exists('user.token'))
+                        <li class="menu"><a href="#" class="slide-menu-open">ENTRAR</a></li>
+                    @else
+                        <li class="menu"><a href="/musicas" class="slide-menu-open-account">MINHA CONTA</a></li>
+                    @endif
+
                     <div class="side-menu-overlay" style="width: 0px; opacity: 0;"></div>
                     <div class="side-menu-wrapper">
                         <a href="#" class="menu-close">&times;</a>
@@ -84,21 +91,6 @@
                             </div>
                         </div>
                     </div>
-                    <!--VERIFICANDO SE EXISTE TOKEN NA SESSÃO-->
-                    @if (!session()->exists('user.token'))
-                        <li class="menu"><a href="#" class="slide-menu-open">ENTRAR</a></li>
-                    @else
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                               aria-haspopup="true" aria-expanded="false">MINHA CONTA<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/musicas">Minhas Músicas</a></li>
-                                <li><a href="/musica/nova">Cadastrar Música</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="/logout">Sair</a></li>
-                            </ul>
-                        </li>
-                @endif
                 <!--FIM DA VERIFICAÇÃO-->
                 </ul>
             </div><!-- /.navbar-collapse -->

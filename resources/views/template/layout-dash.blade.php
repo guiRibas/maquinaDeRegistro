@@ -31,55 +31,6 @@
                 <img class="img-responsive" id="logo-navbar" src="/images/logo.jpg" alt="logo">
             </a>
           </div>
-  
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse our-navbar" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-              <!--VERIFICANDO SE EXISTE TOKEN NA SESSÃO-->
-              @if (!session()->exists('user.token'))
-                <li class="dropdown">
-                  <a id="btnLogin" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">LOGIN <span class="caret"></span></a>
-                  <ul id="login-dp" class="dropdown-menu">
-                    <li>
-                      <div class="row">
-                        <div class="col-md-12">
-                          <div id="statusOfLogin" class="alert" style="display:none"></div>
-                          <form id="loginForm" name="loginForm" class="form" role="form" accept-charset="UTF-8" id="login-nav">
-                            <div class="form-group">
-                              <label for="userName">Usuário</label>
-                              <input type="text" class="form-control" id="userName" name="userName" placeholder="Informe seu usuário" required>
-                            </div>
-                            <div class="form-group">
-                              <label for="password">Senha</label>
-                              <input type="password" class="form-control" id="password" name="password" placeholder="Informe sua senha" required>
-                            <div class="help-block text-right"><a href="">Esqueceu sua senha?</a></div>
-                            </div>
-                            <div class="form-group">
-                              <button type="submit" class="btn btn-primary btn-block" id="btnDoLogin">Entrar</button>
-                            </div>
-                          </form>
-                        </div>
-                        <div class="bottom text-center">
-                          Novo aqui? <a href="usuario/novo"><b>Crie sua conta!</b></a>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-              @else
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MINHA CONTA<span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="/musicas">Minhas Músicas</a></li>
-                    <li><a href="/musica/nova">Cadastrar Música</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="/logout">Sair</a></li>
-                  </ul>
-                </li>
-              @endif
-              <!--FIM DA VERIFICAÇÃO-->
-            </ul>
-          </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
       </nav>
     </header>

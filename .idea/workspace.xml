@@ -2,21 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="792e0c14-e02f-4850-95bf-cc4b01ba31f1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/maquina-de-registro.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/maquina-de-registro.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/bank/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/bank/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/perfil/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/perfil/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/template/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/template/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/bank/bank.view.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/bank/bank.view.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/my-musics/my-musics.view.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/my-musics/my-musics.view.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/home/home.view.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/home/home.view.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/navbar/navbar.view.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/navbar/navbar.view.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/perfil/perfil.view.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/perfil/perfil.view.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/register-account/register-account.view.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/register-account/register-account.view.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/register-music/register-music.view.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/register-music/register-music.view.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/sidebar/sidebar.view.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/sidebar/sidebar.view.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/bank.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/bank.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/register-music.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/register-music.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/template/layout-dash.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/template/layout-dash.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/template/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/template/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/template/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/template/sidebar.blade.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,51 +35,58 @@
     <session id="-1507780213">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.20" value="3" />
+          <entry key="project.open.time.22" value="1" />
+          <entry key="project.open.time.28" value="1" />
+          <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="10" />
+          <entry key="css" value="20" />
           <entry key="exercicios" value="1" />
           <entry key="htaccess" value="1" />
           <entry key="html" value="13" />
-          <entry key="js" value="43" />
-          <entry key="php" value="11" />
+          <entry key="js" value="57" />
+          <entry key="php" value="25" />
           <entry key="ts" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Blade" value="8" />
-          <entry key="CSS" value="10" />
-          <entry key="HTML" value="13" />
-          <entry key="JavaScript" value="43" />
-          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="Blade" value="10" />
+          <entry key="CSS" value="20" />
+          <entry key="HTML" value="19" />
+          <entry key="JavaScript" value="57" />
+          <entry key="PHP" value="2" />
+          <entry key="PLAIN_TEXT" value="8" />
           <entry key="TypeScript" value="20" />
           <entry key="htaccess" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="6" />
+          <entry key="css" value="272" />
           <entry key="exercicios" value="11" />
           <entry key="html" value="11" />
-          <entry key="js" value="884" />
-          <entry key="php" value="62" />
+          <entry key="js" value="1518" />
+          <entry key="php" value="373" />
           <entry key="ts" value="95" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="49" />
-          <entry key="CSS" value="6" />
-          <entry key="HTML" value="11" />
-          <entry key="JavaScript" value="884" />
+          <entry key="Blade" value="165" />
+          <entry key="CSS" value="272" />
+          <entry key="HTML" value="196" />
+          <entry key="JavaScript" value="1517" />
+          <entry key="PHP" value="10" />
           <entry key="PLAIN_TEXT" value="24" />
+          <entry key="RegExp" value="1" />
           <entry key="TypeScript" value="95" />
         </counts>
       </usages-collector>
@@ -92,10 +100,14 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/navbar/navbar.view.js">
+        <entry file="file://$PROJECT_DIR$/resources/views/bank.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="25" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="25" />
+            <state relative-caret-position="240">
+              <caret line="67" column="100" selection-start-line="67" selection-start-column="100" selection-end-line="67" selection-end-column="100" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,28 +115,42 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/bank/bank.view.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="351" column="22" lean-forward="true" selection-start-line="351" selection-start-column="22" selection-end-line="351" selection-end-column="22" />
+            <state relative-caret-position="337">
+              <caret line="179" column="21" lean-forward="true" selection-start-line="179" selection-start-column="21" selection-end-line="179" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="XSLT Stylesheet" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>console</find>
       <find>API_</find>
+      <find>side-menu-overlay</find>
+      <find>glyphicons-halflings</find>
+      <find>divsubmitBuyCred</find>
+      <find>==3</find>
     </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/exercicios" />
-        <option value="$PROJECT_DIR$/public/css/template/style.css" />
         <option value="$USER_HOME$/Documents/angular-tour-of-heroes/src/app/app.component.ts" />
         <option value="$USER_HOME$/Documents/angular-tour-of-heroes/src/styles.css" />
         <option value="$USER_HOME$/Documents/angular-tour-of-heroes/src/app/hero.ts" />
@@ -133,7 +159,6 @@
         <option value="$USER_HOME$/Documents/angular-tour-of-heroes/src/app/hero-detail/hero-detail.component.ts" />
         <option value="$USER_HOME$/Documents/angular-tour-of-heroes/src/app/hero-detail/hero-detail.component.html" />
         <option value="$USER_HOME$/Documents/angular-tour-of-heroes/src/app/heroes/heroes.component.html" />
-        <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/register-music.blade.php" />
         <option value="$USER_HOME$/Documents/angular-tour-of-heroes/src/app/app.component.html" />
         <option value="$USER_HOME$/Documents/angular-tour-of-heroes/src/app/hero.service.ts" />
@@ -143,14 +168,21 @@
         <option value="$USER_HOME$/Documents/angular-tour-of-heroes/src/app/messages/messages.component.ts" />
         <option value="$USER_HOME$/Documents/angular-tour-of-heroes/src/app/messages/messages.component.html" />
         <option value="$USER_HOME$/Documents/angular-tour-of-heroes/src/app/messages/messages.component.css" />
-        <option value="$PROJECT_DIR$/resources/views/template/layout.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/template/layout-dash.blade.php" />
         <option value="$PROJECT_DIR$/public/js/perfil/perfil.view.js" />
         <option value="$PROJECT_DIR$/public/js/register-account/register-account.view.js" />
         <option value="$PROJECT_DIR$/public/js/register-music/register-music.view.js" />
+        <option value="$PROJECT_DIR$/public/css/template/style.css" />
+        <option value="$PROJECT_DIR$/resources/views/template/layout.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/template/layout-dash.blade.php" />
+        <option value="$PROJECT_DIR$/public/css/perfil/style.css" />
+        <option value="$PROJECT_DIR$/resources/views/template/sidebar.blade.php" />
+        <option value="$PROJECT_DIR$/public/css/bank/style.css" />
         <option value="$PROJECT_DIR$/public/js/my-musics/my-musics.view.js" />
-        <option value="$PROJECT_DIR$/public/js/sidebar/sidebar.view.js" />
         <option value="$PROJECT_DIR$/public/js/navbar/navbar.view.js" />
+        <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
+        <option value="$PROJECT_DIR$/public/js/home/home.view.js" />
+        <option value="$PROJECT_DIR$/public/js/sidebar/sidebar.view.js" />
+        <option value="$PROJECT_DIR$/resources/views/bank.blade.php" />
         <option value="$PROJECT_DIR$/public/js/bank/bank.view.js" />
       </list>
     </option>
@@ -163,8 +195,12 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$USER_HOME$/Documents/angular-tour-of-heroes/node_modules" />
+  </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
+      <path value="$USER_HOME$/Documents/angular-tour-of-heroes/package.json" />
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
@@ -244,10 +280,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="52" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="y" value="25" />
+    <option name="width" value="1280" />
+    <option name="height" value="999" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -255,7 +290,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -267,6 +301,19 @@
               <item name="maquina-de-registro" type="b2602c69:ProjectViewProjectNode" />
               <item name="maquina-de-registro" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="maquina-de-registro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="maquina-de-registro" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="maquina-de-registro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="maquina-de-registro" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="bank" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="maquina-de-registro" type="b2602c69:ProjectViewProjectNode" />
@@ -284,48 +331,6 @@
             <path>
               <item name="maquina-de-registro" type="b2602c69:ProjectViewProjectNode" />
               <item name="maquina-de-registro" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="my-musics" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="maquina-de-registro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="maquina-de-registro" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="navbar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="maquina-de-registro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="maquina-de-registro" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="perfil" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="maquina-de-registro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="maquina-de-registro" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="register-account" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="maquina-de-registro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="maquina-de-registro" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="register-music" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="maquina-de-registro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="maquina-de-registro" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="sidebar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="maquina-de-registro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="maquina-de-registro" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -338,13 +343,20 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/angular-tour-of-heroes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bank" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Other File Types" />
     <property name="ts.external.directory.path" value="$USER_HOME$/Documents/angular-tour-of-heroes/node_modules/typescript/lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/css/fonts" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -370,22 +382,26 @@
       <updated>1535377819964</updated>
       <workItem from="1535377825927" duration="18447000" />
       <workItem from="1535572294473" duration="33228000" />
+      <workItem from="1536064453263" duration="293000" />
+      <workItem from="1536065060857" duration="3439000" />
+      <workItem from="1536088498210" duration="2478000" />
+      <workItem from="1536147179067" duration="22922000" />
+      <workItem from="1536585744090" duration="4178000" />
+      <workItem from="1536847462019" duration="7744000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51675000" />
+    <option name="totallyTimeSpent" value="97411000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-12" width="1280" height="1036" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16882068" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19459888" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="TypeScript" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -396,12 +412,37 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.16868798" />
-      <window_info anchor="right" id="Database" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.23925027" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19459888" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.25027564" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TypeScript" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -419,13 +460,6 @@
         <state relative-caret-position="-11212" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/template/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="238" column="24" selection-start-line="238" selection-start-column="24" selection-end-line="238" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-991" />
@@ -437,9 +471,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/perfil.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/my-musics.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$USER_HOME$/Documents/angular-tour-of-heroes/src/styles.css">
@@ -495,21 +526,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/.htaccess">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="158" column="20" selection-start-line="158" selection-start-column="20" selection-end-line="158" selection-end-column="20" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/register-music.blade.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -529,9 +550,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -553,9 +571,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -570,9 +585,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -580,23 +592,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-          <folding>
-            <element signature="e#174#221#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/template/layout.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357">
-          <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/template/layout-dash.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-581">
-          <caret line="26" column="44" lean-forward="true" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -610,30 +605,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/my-musics/my-musics.view.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="94" column="47" selection-start-line="94" selection-start-column="47" selection-end-line="94" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/sidebar/sidebar.view.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="678">
-          <caret line="155" column="56" selection-start-line="155" selection-start-column="56" selection-end-line="155" selection-end-column="56" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/perfil/perfil.view.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2989">
           <caret line="72" column="25" lean-forward="true" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -644,17 +619,119 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/template/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1005">
+          <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/template-dash/style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/font-awesome.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/my-musics/style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/bootstrap/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="4" column="3074" selection-start-line="4" selection-start-column="3074" selection-end-line="4" selection-end-column="3074" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/template/sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="59" column="49" selection-start-line="59" selection-start-column="49" selection-end-line="59" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/perfil/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="290" column="20" selection-start-line="290" selection-start-column="20" selection-end-line="290" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/template/layout-dash.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/template/layout.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-140">
+          <caret line="69" column="32" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/my-musics.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-252" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/home/home.view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="56" column="58" lean-forward="true" selection-start-line="56" selection-start-column="58" selection-end-line="56" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/navbar/navbar.view.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="25" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="25" />
+        <state relative-caret-position="618">
+          <caret line="191" column="1" selection-start-line="191" selection-start-column="1" selection-end-line="191" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/my-musics/my-musics.view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="81" column="24" lean-forward="true" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="286" column="56" selection-start-line="286" selection-start-column="56" selection-end-line="286" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/sidebar/sidebar.view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="100" column="3" lean-forward="true" selection-start-line="100" selection-start-column="3" selection-end-line="100" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/bank/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="794">
+          <caret line="54" column="1" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/bank.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="67" column="100" selection-start-line="67" selection-start-column="100" selection-end-line="67" selection-end-column="100" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/bank/bank.view.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="351" column="22" lean-forward="true" selection-start-line="351" selection-start-column="22" selection-end-line="351" selection-end-column="22" />
+        <state relative-caret-position="337">
+          <caret line="179" column="21" lean-forward="true" selection-start-line="179" selection-start-column="21" selection-end-line="179" selection-end-column="21" />
         </state>
       </provider>
     </entry>

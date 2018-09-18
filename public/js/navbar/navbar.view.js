@@ -1,7 +1,7 @@
-var API_ROOT_PATH_TOKEN = "http://10.1.1.208:82/homolog/token";
-var API_ROOT_PATH_PEOPLE = "http://10.1.1.208:82/homolog/api/pessoas";
-var API_ROOT_PATH_MUSIC = "http://10.1.1.208:82/homolog/api/musicas";
-var API_ROOT_PATH_PAYMENT = "http://10.1.1.208:82/homolog/api/pagamentos";
+var API_ROOT_PATH_TOKEN = "http://maquinaderegistro.com.br:82/homolog/token";
+var API_ROOT_PATH_PEOPLE = "http://maquinaderegistro.com.br:82/homolog/api/pessoas";
+var API_ROOT_PATH_MUSIC = "http://maquinaderegistro.com.br:82/homolog/api/musicas";
+var API_ROOT_PATH_PAYMENT = "http://maquinaderegistro.com.br:82/homolog/api/pagamentos";
 
 $(document).ready(function () {
 
@@ -186,3 +186,7 @@ $(document).ready(function () {
     }
 
 });
+
+function currentToken(){
+    return $('meta[name="currentToken"]').attr('content');
+}
