@@ -1,17 +1,14 @@
 #loading {
     margin-bottom: 2%;
 }
-
 #helpMusicBlock {
     margin-bottom: 2%;
 }
-
 /***
 User Profile Sidebar by @keenthemes
 A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
 Licensed under MIT
 ***/
-
 body {
     background: #f2f2f2;
     min-height: 100%;
@@ -19,24 +16,20 @@ body {
     flex-direction: column;
     overflow-x: hidden;
 }
-
 /* Profile container */
 html {
     height: 100%;
 }
-
 .container-fluid {
     flex: 1;
     margin-right: 0;
     margin-left: 0;
 }
-
 .profile {
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
 }
-
 @media (max-width: 445px) {
     .profile {
         margin-left: 0px;
@@ -44,13 +37,11 @@ html {
         margin-bottom: 20px;
     }
 }
-
 /* Profile sidebar */
 .profile-sidebar {
     padding: 20px 0 10px 0;
     background: #fff;
 }
-
 .profile-userpic img {
     float: none;
     margin: 0 auto;
@@ -60,19 +51,16 @@ html {
     -moz-border-radius: 50% !important;
     border-radius: 50% !important;
 }
-
 .profile-usertitle {
     text-align: center;
     margin-top: 20px;
 }
-
 .profile-usertitle-name {
     color: #076b6d;
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 7px;
 }
-
 .profile-usertitle-job {
     text-transform: uppercase;
     color: #17A7A6;
@@ -80,12 +68,10 @@ html {
     font-weight: 600;
     margin-bottom: 15px;
 }
-
 .profile-userbuttons {
     text-align: center;
     margin-top: 10px;
 }
-
 .profile-userbuttons .btn {
     text-transform: uppercase;
     font-size: 11px;
@@ -93,87 +79,86 @@ html {
     padding: 6px 15px;
     margin-right: 5px;
 }
-
 .profile-userbuttons .btn:last-child {
     margin-right: 0px;
 }
-
+.user-balance {
+    background-color: #006b6c;
+    color: #ffffff;
+    padding: 18px;
+    font-size: 20px;
+}
+.user-balance > div > i {
+    margin-right: 5px;
+}
+.add-credits {
+    float: right;
+    margin-top: -10px;
+    font-size: 15px;
+}
+.add-credits > a {
+    color: #ffffff;
+}
 .profile-usermenu {
     margin-top: 30px;
 }
-
 .profile-usermenu ul li {
     border-bottom: 1px solid #f0f4f7;
 }
-
 .profile-usermenu ul li:last-child {
     border-bottom: none;
 }
-
 .profile-usermenu ul li a {
     color: #93a3b5;
     font-size: 14px;
     font-weight: 400;
 }
-
 .profile-usermenu ul li a i {
     margin-right: 8px;
     font-size: 14px;
 }
-
 .profile-usermenu ul li a:hover {
     background-color: #fafcfd;
     color: #076b6d;
 }
-
 .profile-usermenu ul li.active {
     border-bottom: none;
 }
-
 .profile-usermenu ul li.active a {
     color: #076b6d;
     background-color: #f6f9fb;
     border-left: 2px solid #076b6d;
     margin-left: -2px;
 }
-
 /* Profile Content */
 .profile-content {
     padding: 20px 20px 10px 20px;
     background: #fff;
     min-height: 440px;
 }
-
 /*-------------*/
-
 audio {
     width: 100%;
 }
-
 #imageDemo {
     width: 350px;
     margin-top: 30px;
 }
-
 #confirmButton {
     padding-top: 23%;
     margin-left: -27px;
 }
-
 .changePhoto {
     display: none;
 }
-
 .profile-userpic {
     position: relative;
     width: 100px;
     margin: 0 auto;
 }
-
 .profile-userpic:hover span {
     display: block !important;
 }
-
 .imagem-mascara {
     display: none !important;
     width: 100px; /* largura da imagem máscara */
@@ -189,16 +174,13 @@ audio {
     border-radius: 50% !important;
     opacity: 0.40;
 }
-
 .glyphicon-camera {
     color: white;
 }
-
 #selectImageToUpload {
     text-align: center;
     padding: 0 !important;
 }
-
 #selectImageToUpload:before {
     content: '';
     display: inline-block;
@@ -206,22 +188,18 @@ audio {
     vertical-align: middle;
     margin-right: -4px;
 }
-
 #selectImageToUpload > .modal-dialog {
     display: inline-block;
     text-align: left;
     vertical-align: middle;
 }
-
 #selectImageToUpload > .modal-dialog > .modal-content {
     height: 200px;
 }
-
 /* Esconde o input */
 input[name="upload_image"] {
     display: none
 }
-
 /* Aparência que terá o seletor de arquivo */
 #choose_your_image {
     background-color: #3498db;
@@ -231,62 +209,49 @@ input[name="upload_image"] {
     margin: 10px;
     padding: 6px 20px
 }
-
 #pagination {
     text-align: center;
     margin-bottom: 20px;
 }
-
 #pagination > button {
     margin-right: 10px;
 }
-
 .filters {
     margin-bottom: 20px;
 }
-
 .center {
     text-align: center;
 }
-
 li.nav-item.active > a {
     color: #076b6d !important;
 }
-
 #submitNewEmail, #submitNewPassword, #submitNewContact {
     background-color: #17a7a6;
     border-color: #17a7a6;
 }
-
 #submitNewEmail:hover, #submitNewPassword:hover, #submitNewContact:hover {
     background-color: #076b6d;
     border-color: #076b6d;
 }
-
 #container-margin {
     width: 90%;
     margin-left: 5%;
 }
-
 @media (max-width: 445px) {
     #container-margin {
         width: 100%;
         margin-left: 0%;
     }
 }
-
 #container-margin > div.row.profile > div.col-md-3 {
     margin-top: 20px;
 }
-
 #container-margin > div.row.profile > div.col-md-9 {
     margin-top: 20px;
 }
-
 #logout > a:hover {
     color: #ff352b;
 }
-
 #logout {
     margin-top: 15px;
 }

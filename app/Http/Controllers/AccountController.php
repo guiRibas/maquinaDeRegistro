@@ -26,4 +26,13 @@ class AccountController extends Controller{
             return redirect('/');
         }
     }
+
+    public function addCredits(){
+        if(session()->exists('user.token')){
+            return view('add-credits');
+        } else{
+            session(['guest.message' => "Alerta! Você precisa acessar o sistema para adicionar créditos!"]);
+            return redirect('/');
+        }
+    }
 }

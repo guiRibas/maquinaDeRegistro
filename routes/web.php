@@ -16,6 +16,7 @@ Route::get('/', 'IndexController@index');
 Route::get('/perfil', 'AccountController@index');
 Route::get('/usuario/novo', 'AccountController@register');
 Route::get('/conta-corrente', 'AccountController@bank');
+Route::get('/adicionar-creditos', 'AccountController@addCredits');
 
 Route::get('/musicas', 'MusicController@userMusics');
 Route::get('/musica/nova', 'MusicController@register');
