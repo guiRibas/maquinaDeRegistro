@@ -10,7 +10,8 @@
 @section('root-content')
   <div class="profile-content">
       <div id="mensagem" class="hide">Enviando...</div>
-      <div class="card" style="margin-top: 3%;">
+      <div id="sad"></div>
+      <div class="card">
           <div class="card-body">
               <div id="statusOfSend" class="alert" style="display:none"></div>
               <form class="form-horizontal" id="formAdd" name="formAdd" novalidate>

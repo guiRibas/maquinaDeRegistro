@@ -33,3 +33,13 @@
     background-color: #076b6d;
     border-color: #076b6d;
 }
+
+.card {
+    display: none;
+}
+
+#sad {
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 20px;
+}

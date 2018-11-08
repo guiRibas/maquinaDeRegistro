@@ -104,6 +104,7 @@ $(document).ready(function () {
     });
 
     $("#submitBuyCreditByTicket").click(function () {
+        var qtdCredits = $("#creditsToBuyByTicket").val();
         var completeName = $("#completeName").val();
         var cpf = $("#cpf").val();
         var email = $("#email").val();
@@ -111,17 +112,18 @@ $(document).ready(function () {
 
         modalLoading("formCreditsToBuyByTicket", "infoTicket", "Estamos gerando seu boleto, por gentileza aguarde...", "modalTicket");
 
-        ticketMethod(completeName, cpf, email, total);
+        ticketMethod(qtdCredits, completeName, cpf, email, total);
     });
 
     $("#submitBuyCreditByCard").click(function () {
+        var qtdCredits = $("#creditsToBuyByCard").val();
         var email = $("#emailByCard").val();
         var total = $("#totalByCard").val();
         var qtdOfParts = $("#qtdOfPartsByCard").val();
 
         modalLoading("formCreditsToBuyByCard", "infoCreditCard", "Estamos enviando um e-mail para você, por gentileza aguarde...", "modalCard");
 
-        creditCardMethod(email, total, qtdOfParts);
+        creditCardMethod(qtdCredits, email, total, qtdOfParts);
     });
 
     $("#cpf").mask("000.000.000-00");
@@ -195,7 +197,7 @@ function totalCreditUpdate(input, inputTotal, strong) {
     $("#" + strong).html(formatReal(total));
 }
 
-function ticketMethod(completeName, cpf, email, total) {
+function ticketMethod(qtdCredits, completeName, cpf, email, total) {
     var now = new Date();
     now.setMonth(now.getMonth() + 1);
     var fullActualDate = now.getDate() + "/" + now.getMonth() + "/" + now.getFullYear();
@@ -208,7 +210,7 @@ function ticketMethod(completeName, cpf, email, total) {
     var settingsTicketMethod = {
         "async": true,
         "crossDomain": true,
-        "url": "https://sandbox.pagueveloz.com.br/api/v4/Boleto",
+        "url": "https://sandbox2.pagueveloz.com.br/api/v4/Boleto",
         "method": "POST",
         "headers": {
             "Authorization": "Basic cmVnaXN0cm9lbGV0cm9uaWNvQGJyYWluc29mdHNpc3RlbWFzLmNvbS5icjo2YmNjODNhYS0zMjgwLTQ3MDgtYmI5NC0yOTIzODRkODhlNjU=",
@@ -248,7 +250,7 @@ function ticketMethod(completeName, cpf, email, total) {
 
         $("#modalTicket > div > div.modal-body > div > div").append(checked);
 
-        registerPurchase(response.Id, 1, total, fullDeadline, fullActualDate, response.Url);
+        registerPurchase(qtdCredits, response.Id, 1, total, 1, fullDeadline, fullActualDate, response.Url);
     }).fail(function (data) {
         console.log(data.responseText);
 
@@ -287,7 +289,7 @@ function ticketMethod(completeName, cpf, email, total) {
     });
 }
 
-function creditCardMethod(email, total, qtdOfParts) {
+function creditCardMethod(qtdCredits, email, total, qtdOfParts) {
     var now = new Date();
     now.setMonth(now.getMonth() + 1);
     var fullActualDate = now.getDate() + "/" + now.getMonth() + "/" + now.getFullYear();
@@ -295,7 +297,7 @@ function creditCardMethod(email, total, qtdOfParts) {
     var settingsCreditCardMethod = {
         "async": true,
         "crossDomain": true,
-        "url": "https://sandbox.pagueveloz.com.br/api/v1/PagamentoCartao/Solicitar",
+        "url": "https://sandbox2.pagueveloz.com.br/api/v1/PagamentoCartao/Solicitar",
         "method": "POST",
         "headers": {
             "Authorization": "Basic cmVnaXN0cm9lbGV0cm9uaWNvQGJyYWluc29mdHNpc3RlbWFzLmNvbS5icjo2YmNjODNhYS0zMjgwLTQ3MDgtYmI5NC0yOTIzODRkODhlNjU=",
@@ -332,7 +334,7 @@ function creditCardMethod(email, total, qtdOfParts) {
 
         $("#modalCard > div > div.modal-body > div > div").append(checked);
 
-        registerPurchase(response.Id, 0, total, qtdOfParts, fullActualDate, fullActualDate, "");
+        registerPurchase(qtdCredits, response.Id, 0, total, qtdOfParts, fullActualDate, fullActualDate, "");
     }).fail(function (data) {
         console.log(data.responseText);
 
@@ -349,7 +351,7 @@ function creditCardMethod(email, total, qtdOfParts) {
     });
 }
 
-function registerPurchase(idPagueVeloz, type, value, qtdOfParts, deadline, actualDate, url) {
+function registerPurchase(qtdCredits, idPagueVeloz, type, value, qtdOfParts, deadline, actualDate, url) {
     var username = currentUserName();
     var token = currentToken();
 
@@ -364,6 +366,7 @@ function registerPurchase(idPagueVeloz, type, value, qtdOfParts, deadline, actua
         "data": {
             "PagueVelozId": idPagueVeloz,
             "Tipo": type,
+            "QuantidadeCreditos": qtdCredits,
             "Valor": value,
             "QuantidadeDeParcelas": qtdOfParts,
             "DataVencimento": deadline,

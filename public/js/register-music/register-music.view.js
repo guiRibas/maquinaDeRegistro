@@ -1,158 +1,181 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
-	$("#formAdd").submit(function(){
-		return false;
-	});
+    $("#formAdd").submit(function () {
+        return false;
+    });
 
-	$(".chosen-container").addClass("block");
-	$(".chosen-container").removeAttr("style");
-	$(".chosen-search-input").attr("id", "inputGenre");
-	$(".chosen-search-input").next().attr("id", "genre");
+    setTimeout(function () {
+        verifyBalanceToRegisterMusic();
+    }, 1000);
 
-	$("[type=reset]").click(function() {
-		cleanAllInputs();
-	});
+    $(".chosen-container").addClass("block");
+    $(".chosen-container").removeAttr("style");
+    $(".chosen-search-input").attr("id", "inputGenre");
+    $(".chosen-search-input").next().attr("id", "genre");
 
-	//MOMENTO EM QUE O FORMULÁRIO É SUBMETIDO
-	$("#newMusic").click(function(e) {
-		e.preventDefault();
+    $("[type=reset]").click(function () {
+        cleanAllInputs();
+    });
 
-		var send = true;
-		var position = 0;
-		var order = 0;
-		var count = 0;
+    //MOMENTO EM QUE O FORMULÁRIO É SUBMETIDO
+    $("#newMusic").click(function (e) {
+        e.preventDefault();
 
-		$("input").each(function(){
-			if($(this).attr("id") != "upload_image" && $(this).attr("id") != undefined){
-				isEmpty = verifyFields(this);
+        var send = true;
+        var position = 0;
+        var order = 0;
+        var count = 0;
 
-				if(isEmpty){
-					if(position == 0){
-						$(this).focus();
-						order = count;
-					}
-					position = 1;
-					send = false;
-				}
-				count++;
-			}
-		});
+        $("input").each(function () {
+            if ($(this).attr("id") != "upload_image" && $(this).attr("id") != undefined) {
+                isEmpty = verifyFields(this);
 
-		$("textarea").each(function(){
-			isEmpty = verifyFields(this);
+                if (isEmpty) {
+                    if (position == 0) {
+                        $(this).focus();
+                        order = count;
+                    }
+                    position = 1;
+                    send = false;
+                }
+                count++;
+            }
+        });
 
-			if(isEmpty){
-				if(order > 2 && count > 4){
-					$(this).focus();
-				}
-				send = false;
-			}
-		});
+        $("textarea").each(function () {
+            isEmpty = verifyFields(this);
 
-		if (send) {
-			sendForm();
-		}
-	});
+            if (isEmpty) {
+                if (order > 2 && count > 4) {
+                    $(this).focus();
+                }
+                send = false;
+            }
+        });
 
-	//VERIFICANDO CADA INPUT REAL-TIME
-	$("input").bind("focus blur", function(){
-		verifyFields(this);
-	});
+        if (send) {
+            sendForm();
+        }
+    });
 
-	$("textarea").blur(function(){
-		verifyFields(this);
-	});
+    //VERIFICANDO CADA INPUT REAL-TIME
+    $("input").bind("focus blur", function () {
+        verifyFields(this);
+    });
 
-	function verifyFields(field){
-		input = $(field).attr("id");
+    $("textarea").blur(function () {
+        verifyFields(this);
+    });
 
-		if(input == "inputGenre"){
-			if ($("#genre option:selected").html() == "") {
-				$("#genre_chosen").addClass("required");
+    function verifyFields(field) {
+        input = $(field).attr("id");
 
-				return true;
-			} else{
-				$("#genre_chosen").removeClass("required");
-			
-				return false;
-			}
-		}
+        if (input == "inputGenre") {
+            if ($("#genre option:selected").html() == "") {
+                $("#genre_chosen").addClass("required");
 
-		if($(field).val() == ""){
-			$(field).addClass("required");
+                return true;
+            } else {
+                $("#genre_chosen").removeClass("required");
 
-			return true;
-		} else{
-			$(field).removeClass("required");
-		
-			return false;
-		}
-	}
+                return false;
+            }
+        }
 
-	function cleanAllInputs(){
-		$("input").each(function(){
-			input = $(this).attr("id");
+        if ($(field).val() == "") {
+            $(field).addClass("required");
 
-			$("#"+input).removeClass("verified");
-			$("#"+input).removeClass("required");
-			$("#"+input).removeAttr("style");
-		});
+            return true;
+        } else {
+            $(field).removeClass("required");
 
-		$("#genre").parent().parent().removeClass("required");
-		$("textarea").removeClass("required");
-		$("#nameOfMusic").focus();
-	}
+            return false;
+        }
+    }
 
-	function sendForm() {
-		$("#statusOfSend").empty();
-		$.blockUI({ message: "<img src='/images/carregando.gif'>Aguarde! Cadastrando música..." });
+    function cleanAllInputs() {
+        $("input").each(function () {
+            input = $(this).attr("id");
 
-		var token = currentToken();
-		var form = new FormData();
-		form.append("Nome", $("#nameOfMusic").val());
-		form.append("CompositorMusical", $("#composer").val());
-		form.append("Interprete", $("#interpreter").val());
-		form.append("Compositor", $("#autor-of-lyric").val());
-		form.append("Letra", $("#lyrics").val());
-		form.append("Genero", $("#genre option:selected").val());
-		form.append("Arquivo", $("#file")[0].files[0]);
+            $("#" + input).removeClass("verified");
+            $("#" + input).removeClass("required");
+            $("#" + input).removeAttr("style");
+        });
 
-		var settingsToRegisterMusic = {
-		  "async": true,
-		  "crossDomain": true,
-		  "url": API_ROOT_PATH_MUSIC + "/registrar",
-		  "method": "POST",
-		  "headers": {
-			"authorization": "Bearer " + token
-		  },
-		  "processData": false,
-		  "contentType": false,
-		  "mimeType": "multipart/form-data",
-		  "data": form
-		}
+        $("#genre").parent().parent().removeClass("required");
+        $("textarea").removeClass("required");
+        $("#nameOfMusic").focus();
+    }
 
-		$.ajax(settingsToRegisterMusic).done(function(response){
-		  $.unblockUI();
+    function sendForm() {
+        $("#statusOfSend").empty();
+        $.blockUI({message: "<img src='/images/carregando.gif'>Aguarde! Cadastrando música..."});
 
-		  if(response.indexOf('sucesso') != -1){
-			$("#statusOfSend").slideDown();
-			$("#statusOfSend").addClass('alert-success');
-			$("#statusOfSend").append("<strong>Sucesso!</strong> Música cadastrada com sucesso. Aguarde seu certificado.");
+        var token = currentToken();
+        var form = new FormData();
+        form.append("Nome", $("#nameOfMusic").val());
+        form.append("CompositorMusical", $("#composer").val());
+        form.append("Interprete", $("#interpreter").val());
+        form.append("Compositor", $("#autor-of-lyric").val());
+        form.append("Letra", $("#lyrics").val());
+        form.append("Genero", $("#genre option:selected").val());
+        form.append("Arquivo", $("#file")[0].files[0]);
 
-			cleanAllInputs();
-		  } else{
-			$("#statusOfSend").slideDown();
-			$("#statusOfSend").addClass('alert-danger');
-			$("#statusOfSend").append("<strong>Erro!</strong> Ocorreu um problema ao cadastrar a música. Por gentileza tente novamente! </br>");
-		  }
+        var settingsToRegisterMusic = {
+            "async": true,
+            "crossDomain": true,
+            "url": API_ROOT_PATH_MUSIC + "/registrar",
+            "method": "POST",
+            "headers": {
+                "authorization": "Bearer " + token
+            },
+            "processData": false,
+            "contentType": false,
+            "mimeType": "multipart/form-data",
+            "data": form
+        }
 
-		  $('html, body').animate({scrollTop:0}, 'slow');
-		}).fail(function (data) {
+        $.ajax(settingsToRegisterMusic).done(function (response) {
+            $.unblockUI();
+
+            if (response.indexOf('sucesso') != -1) {
+                $("#statusOfSend").slideDown();
+                $("#statusOfSend").addClass('alert-success');
+                $("#statusOfSend").append("<strong>Sucesso!</strong> Música cadastrada com sucesso. Aguarde seu certificado.");
+
+                cleanAllInputs();
+            } else {
+                $("#statusOfSend").slideDown();
+                $("#statusOfSend").addClass('alert-danger');
+                $("#statusOfSend").append("<strong>Erro!</strong> Ocorreu um problema ao cadastrar a música. Por gentileza tente novamente! </br>");
+            }
+
+            $('html, body').animate({scrollTop: 0}, 'slow');
+        }).fail(function (data) {
             console.log(data.responseText);
-        });;
-	};	
+        });
+        ;
+    };
 
-	function currentToken(){
-		return $('meta[name="currentToken"]').attr('content');
-	}
+    function currentToken() {
+        return $('meta[name="currentToken"]').attr('content');
+    }
 });
+
+function verifyBalanceToRegisterMusic() {
+    var actualBalance = currentBalane();
+    console.log(actualBalance);
+
+    if (actualBalance > 0) {
+        $("#sad").remove();
+        $(".card").show();
+    } else {
+        $("#sad").append("<img src='../images/sad.png'>");
+        $(".profile-content")
+            .append("<p class='center'>Saldo insuficiente! Infelizmente até o momento você não possui créditos. <a href='/adicionar-creditos'>Adquira aqui!</a> e registre suas músicas!</p>");
+    }
+}
+
+function currentBalane() {
+    return $('meta[name="currentBalance"]').attr('content');
+}

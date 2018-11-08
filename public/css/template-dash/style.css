@@ -43,3 +43,9 @@
 .dropdown > a {
     font-size: 1em!important;
 }
+
+#piggy-bank {
+    float: left;
+    margin-top: 2.57px;
+    margin-right: 10px;
+}

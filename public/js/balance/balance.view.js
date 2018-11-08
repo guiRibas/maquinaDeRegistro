@@ -73,8 +73,8 @@ function verifyCurrentBalance() {
 function setBalanceInView(balance) {
     var sentence = verifyQtdBalance(balance);
 
-    $(".user-balance > .user-actual-balance > balance").empty();
-    $(".user-balance > .user-actual-balance > balance").html("SALDO: " + balance + " " + sentence);
+    $(".user-balance > .user-actual-balance > div > balance").empty();
+    $(".user-balance > .user-actual-balance > div > balance").html("SALDO: " + balance + " " + sentence);
 }
 
 function verifyQtdBalance(balance) {
