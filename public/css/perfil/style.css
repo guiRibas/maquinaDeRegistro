@@ -85,8 +85,8 @@ html {
 .user-balance {
     background-color: #006b6c;
     color: #ffffff;
-    padding: 18px;
-    font-size: 20px;
+    padding: 16px;
+    font-size: 18px;
 }
 .user-balance > div > i {
     margin-right: 5px;
@@ -94,7 +94,7 @@ html {
 .add-credits {
     float: right;
     margin-top: -10px;
-    font-size: 15px;
+    font-size: 14px;
 }
 .add-credits > a {
     color: #ffffff;

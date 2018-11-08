@@ -15,7 +15,7 @@ $(document).ready(function() {
     $("#upload_image").click();
   });
 
-  var hrefRaw = [location.pathname, location.search]
+  var hrefRaw = [location.pathname, location.search];
   var href = hrefRaw.toString().replace(',', '');
   $('.item-menu > a[href="' + href + '"]').parent().addClass('active');
 });

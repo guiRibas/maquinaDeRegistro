@@ -1,3 +1,15 @@
+#example {
+    display: none;
+}
+
+#pagination {
+    display: none;
+}
+
+#music-controls {
+    display: none;
+}
+
 #realejo {
     height: 63px;
 }

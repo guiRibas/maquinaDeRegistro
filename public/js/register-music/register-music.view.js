@@ -107,47 +107,49 @@ $(document).ready(function(){
 		$("#statusOfSend").empty();
 		$.blockUI({ message: "<img src='/images/carregando.gif'>Aguarde! Cadastrando música..." });
 
-    var token = currentToken();
-    var form = new FormData();
-    form.append("Nome", $("#nameOfMusic").val());
-    form.append("CompositorMusical", $("#composer").val());
-    form.append("Interprete", $("#interpreter").val());
-	form.append("Compositor", $("#autor-of-lyric").val());
-    form.append("Letra", $("#lyrics").val());
-    form.append("Genero", $("#genre option:selected").val());
-    form.append("Arquivo", $("#file")[0].files[0]);
+		var token = currentToken();
+		var form = new FormData();
+		form.append("Nome", $("#nameOfMusic").val());
+		form.append("CompositorMusical", $("#composer").val());
+		form.append("Interprete", $("#interpreter").val());
+		form.append("Compositor", $("#autor-of-lyric").val());
+		form.append("Letra", $("#lyrics").val());
+		form.append("Genero", $("#genre option:selected").val());
+		form.append("Arquivo", $("#file")[0].files[0]);
 
-    var settingsToRegisterMusic = {
-      "async": true,
-      "crossDomain": true,
-      "url": API_ROOT_PATH_MUSIC + "/registrar",
-      "method": "POST",
-      "headers": {
-        "authorization": "Bearer " + token
-      },
-      "processData": false,
-      "contentType": false,
-      "mimeType": "multipart/form-data",
-      "data": form
-    }
+		var settingsToRegisterMusic = {
+		  "async": true,
+		  "crossDomain": true,
+		  "url": API_ROOT_PATH_MUSIC + "/registrar",
+		  "method": "POST",
+		  "headers": {
+			"authorization": "Bearer " + token
+		  },
+		  "processData": false,
+		  "contentType": false,
+		  "mimeType": "multipart/form-data",
+		  "data": form
+		}
 
-    $.ajax(settingsToRegisterMusic).done(function(response){
-      $.unblockUI();
+		$.ajax(settingsToRegisterMusic).done(function(response){
+		  $.unblockUI();
 
-      if(response.indexOf('sucesso') != -1){
-        $("#statusOfSend").slideDown();
-        $("#statusOfSend").addClass('alert-success');
-        $("#statusOfSend").append("<strong>Sucesso!</strong> Música cadastrada com sucesso. Aguarde seu certificado.");
-      
-        cleanAllInputs();
-      } else{
-        $("#statusOfSend").slideDown();
-        $("#statusOfSend").addClass('alert-danger');
-        $("#statusOfSend").append("<strong>Erro!</strong> Ocorreu um problema ao cadastrar a música. Por gentileza tente novamente! </br>");
-      }
+		  if(response.indexOf('sucesso') != -1){
+			$("#statusOfSend").slideDown();
+			$("#statusOfSend").addClass('alert-success');
+			$("#statusOfSend").append("<strong>Sucesso!</strong> Música cadastrada com sucesso. Aguarde seu certificado.");
 
-      $('html, body').animate({scrollTop:0}, 'slow');
-    });
+			cleanAllInputs();
+		  } else{
+			$("#statusOfSend").slideDown();
+			$("#statusOfSend").addClass('alert-danger');
+			$("#statusOfSend").append("<strong>Erro!</strong> Ocorreu um problema ao cadastrar a música. Por gentileza tente novamente! </br>");
+		  }
+
+		  $('html, body').animate({scrollTop:0}, 'slow');
+		}).fail(function (data) {
+            console.log(data.responseText);
+        });;
 	};	
 
 	function currentToken(){

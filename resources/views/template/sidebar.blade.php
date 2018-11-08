@@ -23,7 +23,7 @@
                     <div class="user-balance">
                         <div class="user-actual-balance">
                             <i class="glyphicon glyphicon-piggy-bank"></i>
-                            SALDO: 1 Crédito
+                            <balance></balance>
                         </div>
                         <div class="add-credits">
                             <a href="/adicionar-creditos">Adicionar</a>

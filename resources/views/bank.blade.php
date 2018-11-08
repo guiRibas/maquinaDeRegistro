@@ -14,10 +14,10 @@
 
                 <ul class="nav nav-tabs menu-users">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#first-tab" data-toggle="tab">Histórico</a>
+                        <a class="nav-link" href="#first-tab" data-toggle="tab">Histórico de Pagamentos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#second-tab" data-toggle="tab">Balanço</a>
+                        <a class="nav-link" href="#second-tab" data-toggle="tab">Uso dos créditos</a>
                     </li>
                 </ul>
 

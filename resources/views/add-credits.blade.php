@@ -175,5 +175,5 @@
 @section('js-view')
     <script src="{{asset('js/sidebar/sidebar.view.js')}}"></script>
     <script src="{{asset('js/sidebar/croppie.js')}}"></script>
-    <script src="{{asset('js/bank/bank.view.js')}}"></script>
+    <script src="{{asset('js/add-credits/add-credits.view.js')}}"></script>
 @endsection

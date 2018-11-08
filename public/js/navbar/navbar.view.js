@@ -2,9 +2,9 @@ var API_ROOT_PATH_TOKEN = "http://maquinaderegistro.com.br:82/homolog/token";
 var API_ROOT_PATH_PEOPLE = "http://maquinaderegistro.com.br:82/homolog/api/pessoas";
 var API_ROOT_PATH_MUSIC = "http://maquinaderegistro.com.br:82/homolog/api/musicas";
 var API_ROOT_PATH_PAYMENT = "http://maquinaderegistro.com.br:82/homolog/api/pagamentos";
+var API_ROOT_PATH_BALANCE = "http://maquinaderegistro.com.br:82/homolog/api/contas";
 
 $(document).ready(function () {
-
     /*SLIDE MENU*/
     var slidebar_width = 290; //slidebar width + padding size
     var slide_bar = $(".side-menu-wrapper"); //slidebar
@@ -184,7 +184,6 @@ $(document).ready(function () {
             }
         });
     }
-
 });
 
 function currentToken(){
