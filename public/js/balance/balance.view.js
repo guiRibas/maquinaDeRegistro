@@ -2,50 +2,45 @@ $(document).ready(function () {
     setTimeout(function () {
         setActualBalance();
         verifyCurrentBalance();
-        setBalanceInView();
-    }, 500);
+    }, 1000);
 });
 
 function setActualBalance() {
-    if (currentBalane() == "null") {
-        console.log("logg");
-        var token = currentToken();
+    var token = currentToken();
 
-        var settingsToGetBalance = {
+    var settingsToGetBalance = {
+        "async": true,
+        "crossDomain": true,
+        "url": API_ROOT_PATH_BALANCE + "/saldo",
+        "method": "GET",
+        "headers": {
+            "authorization": "Bearer " + token,
+            "cache-control": "no-cache"
+        }
+    }
+
+    $.ajax(settingsToGetBalance).done(function (response) {
+        var url = "/user/balance/set/actual";
+
+        var settingsToPutBalanceInSesssion = {
             "async": true,
             "crossDomain": true,
-            "url": API_ROOT_PATH_BALANCE + "/saldo",
-            "method": "GET",
+            "url": url,
+            "method": "POST",
             "headers": {
-                "authorization": "Bearer " + token,
-                "cache-control": "no-cache"
+                'X-CSRF-TOKEN': $("meta[name='csrf']").attr("content")
+            },
+            "data": {
+                "balance": response
             }
         }
 
-        $.ajax(settingsToGetBalance).done(function (response) {
-
-            var url = "/user/balance/set/actual";
-
-            var settingsToPutBalanceInSesssion = {
-                "async": true,
-                "crossDomain": true,
-                "url": url,
-                "method": "POST",
-                "headers": {
-                    'X-CSRF-TOKEN': $("meta[name='csrf']").attr("content")
-                },
-                "data": {
-                    "balance": response
-                }
-            }
-
-            $.ajax(settingsToPutBalanceInSesssion).done(function (response) {
-            });
-
-        }).fail(function (data) {
-            console.log(data.responseText);
+        $.ajax(settingsToPutBalanceInSesssion).done(function (response) {
         });
-    }
+
+    }).fail(function (data) {
+        console.log(data.responseText);
+    });
 }
 
 function verifyCurrentBalance() {
@@ -89,6 +84,6 @@ function currentToken() {
     return $('meta[name="currentToken"]').attr('content');
 }
 
-function currentBalane() {
+function currentBalance() {
     return $('meta[name="currentBalance"]').attr('content');
 }

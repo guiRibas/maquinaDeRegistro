@@ -46,6 +46,10 @@
 
 #piggy-bank {
     float: left;
-    margin-top: 2.57px;
     margin-right: 10px;
+}
+
+#piggy-bank > img {
+    height: 20px;
+    margin-bottom: 9px;
 }

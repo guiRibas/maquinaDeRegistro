@@ -6,7 +6,7 @@ $(document).ready(function () {
 
     setTimeout(function () {
         verifyBalanceToRegisterMusic();
-    }, 1000);
+    }, 1500);
 
     $(".chosen-container").addClass("block");
     $(".chosen-container").removeAttr("style");

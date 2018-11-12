@@ -23,7 +23,7 @@
                     <div class="user-balance">
                         <div class="user-actual-balance">
                             <div id="piggy-bank">
-                                <i class="glyphicon glyphicon-piggy-bank"></i>
+                                <img src="{!! asset('images/piggy-bank.png') !!}">
                             </div>
                             <div>
                                 <balance></balance>

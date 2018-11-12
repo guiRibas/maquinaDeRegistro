@@ -127,10 +127,6 @@ $(document).ready(function () {
     });
 
     $("#cpf").mask("000.000.000-00");
-
-    setTimeout(function () {
-        loadHistory();
-    }, 100);
 });
 
 function modalLoading(form, info, message, modal) {
@@ -378,71 +374,6 @@ function registerPurchase(qtdCredits, idPagueVeloz, type, value, qtdOfParts, dea
 
     $.ajax(settingsToRegiterPurchase).done(function (response) {
         console.log(response);
-    }).fail(function (data) {
-        console.log(data.responseText);
-    });
-}
-
-function loadHistory() {
-    var username = currentUserName();
-    var token = currentToken();
-
-    var settingsToLoadHistory = {
-        "async": true,
-        "crossDomain": true,
-        "url": API_ROOT_PATH_PAYMENT + "/" + username,
-        "method": "GET",
-        "headers": {
-            "authorization": "Bearer " + token
-        }
-    }
-
-    $.ajax(settingsToLoadHistory).done(function (response) {
-        console.log(response);
-        $.each(response, function (i) {
-            var newRow = $("<tr id='" + response[i].id + "'>");
-            var cols = "";
-
-            cols += '<td>';
-            cols += 'teste';
-            cols += '</td>';
-
-            cols += '<td>';
-            cols += response[i].tipo;
-            cols += '</td>';
-
-            cols += '<td>';
-            cols += 'R$ ' + response[i].valor;
-            cols += '</td>';
-
-            cols += '<td>';
-            cols += response[i].valor / 16.90;
-            cols += '</td>';
-
-            cols += '<td>';
-            cols += response[i].dataEmissao;
-            cols += '</td>';
-
-            if (response[i].tipo == "BOLETO") {
-                cols += '<td>';
-                cols += response[i].dataVencimento;
-                cols += '</td>';
-
-                cols += '<td>';
-                cols += '<a href="';
-                cols += response[i].urlBoleto;
-                cols += '"download="Boleto Máquina de Registro">Boleto</a>';
-                cols += '</td>';
-            } else {
-                cols += '<td></td>';
-
-                cols += '<td></td>';
-            }
-
-            newRow.append(cols);
-
-            $("#history").append(newRow);
-        })
     }).fail(function (data) {
         console.log(data.responseText);
     });

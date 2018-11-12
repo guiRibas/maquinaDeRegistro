@@ -1,7 +1,6 @@
 var API_ROOT_PATH_TOKEN = "http://maquinaderegistro.com.br:82/homolog/token";
 var API_ROOT_PATH_PEOPLE = "http://maquinaderegistro.com.br:82/homolog/api/pessoas";
 var API_ROOT_PATH_MUSIC = "http://maquinaderegistro.com.br:82/homolog/api/musicas";
-var API_ROOT_PATH_PAYMENT = "http://maquinaderegistro.com.br:82/homolog/api/pagamentos";
 var API_ROOT_PATH_BALANCE = "http://maquinaderegistro.com.br:82/homolog/api/contas";
 
 $(document).ready(function () {

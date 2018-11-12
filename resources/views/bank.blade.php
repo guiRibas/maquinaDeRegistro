@@ -17,19 +17,20 @@
                         <a class="nav-link" href="#first-tab" data-toggle="tab">Histórico de Pagamentos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#second-tab" data-toggle="tab">Uso dos créditos</a>
+                        <a class="nav-link" href="#second-tab" data-toggle="tab">Extrato dos créditos</a>
                     </li>
                 </ul>
 
                 <div class="tab-content" style="margin-top: 2%">
                     <div class="tab-pane active in" id="first-tab">
-                        <table id="history" class="table table-striped table-bordered" style="width:100%">
+                        <table id="payment-history" class="table table-striped table-bordered" style="width:100%">
                             <thead>
                             <tr>
                                 <th>Situação</th>
-                                <th>Método de Pagamento</th>
+                                <th>Método</th>
+                                <th>Créditos</th>
                                 <th>Valor</th>
-                                <th>Quantidade de Créditos</th>
+                                <th>Parcelas</th>
                                 <th>Solicitado em</th>
                                 <th>Vencimento em</th>
                                 <th>Arquivo</th>
@@ -40,11 +41,11 @@
                     </div>
 
                     <div class="tab-pane" id="second-tab">
-                        <table id="history" class="table table-striped table-bordered" style="width:100%">
+                        <table id="use-of-credits" class="table table-striped table-bordered" style="width:100%">
                             <thead>
                             <tr>
                                 <th>Tipo</th>
-                                <th>Quando utilizou</th>
+                                <th>Data</th>
                                 <th>Quantidade de Créditos</th>
                             </tr>
                             </thead>
