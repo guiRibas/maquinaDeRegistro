@@ -87,38 +87,39 @@
                 @yield('root-content')
             </div>
         </div>
-        <!--div id="selectImageToUpload" class="modal" role="dialog">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h5 class="modal-title">Selecione uma nova foto para o seu perfil.</h5>
-              </div>
-              <div class="modal-body">
-                <div class="row">
-                  <div class="col-md-6 col-md-offset-4">
-                    <label id="choose_your_image" for='upload_image'>Selecionar foto &#187;</label>
-                    <input type="file" name="upload_image" id="upload_image" accept="image" />
-                  </div>
+        <div id="status-of-upload-image" class="modal" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Foto de Perfil</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <h3 id="message-status"></h3>
+                                <button type="button" id="confirm-message-status" class="btn btn-success">Tudo bem!</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </div-->
+        </div>
         <input type="file" name="upload_image" id="upload_image" accept="image"/>
         <div id="uploadimageModal" class="modal" role="dialog">
             <div class="modal-dialog">
-                <div class="modal-content">
+                <div class="modal-content" style="height: 500px;">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                         <h5 class="modal-title">Alterar foto de perfil</h5>
                     </div>
                     <div class="modal-body">
                         <div class="row">
-                            <div class="col-md-8 text-center">
+                            <div class="col-md-12 text-center">
                                 <div id="imageDemo"></div>
                             </div>
-                            <div id="confirmButton" class="col-md-4">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 text-center">
                                 <button class="btn btn-success crop_image">Salvar nova foto!</button>
                             </div>
                         </div>

@@ -20,7 +20,6 @@ function setActualBalance() {
     }
 
     $.ajax(settingsToGetBalance).done(function (response) {
-        console.log(response);
         var url = "/user/balance/set/actual";
 
         var settingsToPutBalanceInSesssion = {

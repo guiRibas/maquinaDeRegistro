@@ -9,7 +9,7 @@ $(document).ready(function () {
 $("[name=emailAccount]").focusout(function () {
     var statusEmail = isEmail(this.value, "emailAccount");
 
-    if(statusEmail){
+    if (statusEmail) {
         isUniqueEmail(this.value, "emailAccount");
     }
 });
@@ -27,13 +27,19 @@ $("[name=confirmPassword]").blur(function () {
 });
 
 $("[name=cpf]").blur(function () {
-    if ($(".cpfInput").is(':visible')) {
-        checkCPF(this.value, this.name);
+    var statusCPF = checkCPF(this.value, this.name);
+
+    if(statusCPF){
+        isUniqueCpf(this.value, this.name);
     }
 });
 
 $("[name=cep]").blur(function () {
     findAddress();
+});
+
+$("[name=userNameProfile]").blur(function () {
+    isUniqueUsername(this.value, this.name);
 });
 
 var SPMaskBehavior = function (val) {
@@ -87,12 +93,12 @@ $("[name=submitNewUser]").click(function (e) {
         var email = $("#emailAccount").val();
         var statusEmail = isEmail(email, "emailAccount");
 
-        if(statusEmail){
-            var uniqueEmail = isUniqueEmail(this.value, "emailAccount");
+        if (statusEmail) {
+            isUniqueEmail(email, "emailAccount");
+            var status = $("#status-email").val();
 
-            console.log(uniqueEmail);
-
-            if (!uniqueEmail) {
+            if (status == "true") {
+                console.log(status);
                 $("#emailAccount").val("");
                 $("#confirmEmail").val("");
 
@@ -194,6 +200,8 @@ function checkCPF(strCPF, inputValue) {
     } else {
         checkInput(inputValue, "");
         msgErro("Sucesso! CPF válido.", "spanCpf");
+
+        return true;
     }
 }
 
@@ -321,49 +329,88 @@ function findAddress() {
     }
 }
 
-function callBackResponse(response){
-}
-
 function isUniqueEmail(email, input) {
-    $.ajax({
-        url: API_ROOT_PATH_VERIFY + "/email",
-        data: "email=" + email,
-        success: function(response){
-            if(response){
-                var status = $.trim(response);
-
-                callBackResponse(status);
-            }
-        },
-    });
-    /*var settingsToVerifyIfEmailIsUnique = {
+    var settingsToVerifyIfEmailIsUnique = {
         "async": true,
         "crossDomain": true,
-        "url":
+        "url": API_ROOT_PATH_VERIFY + "/email?email=" + email,
         "method": "GET"
     };
 
     $.ajax(settingsToVerifyIfEmailIsUnique).done(function (response) {
-        var status = "";
         if (response) {
             msgErro("Erro! E-mail inválido e/ou já está em uso.", "spanEmail");
             document.getElementById(input).style.boxShadow = "0 0 5px #ff0000";
             document.getElementById(input).style.border = "1px solid #ff0000";
             $("#" + input + "").focus();
-
-            status = 0;
         } else {
             msgErro("Sucesso! E-mail válido.", "spanEmail");
             document.getElementById(input).style.boxShadow = "0 0 5px #179e27";
             document.getElementById(input).style.border = "1px solid #179e27";
-
-            status = 1;
         }
 
-        returnResponse(response);
+        $("#status-email").remove();
+        var div = "<input type='hidden' id='status-email' value='" + response + "'>";
+        $(".rowForm").append(div);
     }).fail(function (data) {
         console.log(data.responseText);
-    });*/
+    });
+}
+
+function isUniqueCpf(cpf, input) {
+    var settingsToVerifyIfCpfIsUnique = {
+        "async": true,
+        "crossDomain": true,
+        "url": API_ROOT_PATH_VERIFY + "/cpf?cpf=" + cpf,
+        "method": "GET"
+    };
+
+    $.ajax(settingsToVerifyIfCpfIsUnique).done(function (response) {
+        if (response) {
+            msgErro("Erro! CPF inválido e/ou já está em uso.", "spanCpf");
+            document.getElementById(input).style.boxShadow = "0 0 5px #ff0000";
+            document.getElementById(input).style.border = "1px solid #ff0000";
+            $("#" + input + "").focus();
+        } else {
+            msgErro("Sucesso! CPF válido.", "spanCpf");
+            document.getElementById(input).style.boxShadow = "0 0 5px #179e27";
+            document.getElementById(input).style.border = "1px solid #179e27";
+        }
+
+        $("#status-cpf").remove();
+        var div = "<input type='hidden' id='status-cpf' value='" + response + "'>";
+        $(".rowForm").append(div);
+    }).fail(function (data) {
+        console.log(data.responseText);
+    });
+}
+
+function isUniqueUsername(username, input) {
+    var settingsToVerifyIfEmailIsUnique = {
+        "async": true,
+        "crossDomain": true,
+        "url": API_ROOT_PATH_VERIFY + "/username?username=" + username,
+        "method": "GET"
+    };
+
+    $.ajax(settingsToVerifyIfEmailIsUnique).done(function (response) {
+        if (response) {
+            msgErro("Erro! Nome de Usuário inválido e/ou já está em uso.", "spanuserNameProfile");
+            document.getElementById(input).style.boxShadow = "0 0 5px #ff0000";
+            document.getElementById(input).style.border = "1px solid #ff0000";
+            $("#" + input + "").focus();
+        } else {
+            msgErro("Sucesso! Nome de Usuário válido.", "spanuserNameProfile");
+            document.getElementById(input).style.boxShadow = "0 0 5px #179e27";
+            document.getElementById(input).style.border = "1px solid #179e27";
+        }
+
+        $("#status-username").remove();
+        var div = "<input type='hidden' id='status-username' value='" + response + "'>";
+        $(".rowForm").append(div);
+    }).fail(function (data) {
+        console.log(data.responseText);
+    });
 }
 
 function isEmail(email, input) {
@@ -390,7 +437,6 @@ function compareEmail() {
         msgErro('Erro! Os emails devem ser iguais.', "spanConfirmEmail");
         document.getElementById("confirmEmail").style.boxShadow = "0 0 5px #ff0000";
         document.getElementById("confirmEmail").style.border = "1px solid #ff0000";
-        $("#confirmEmail").focus();
 
         return false;
     } else {
