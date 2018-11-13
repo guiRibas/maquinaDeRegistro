@@ -1,7 +1,9 @@
-var API_ROOT_PATH_TOKEN = "http://maquinaderegistro.com.br:82/homolog/token";
-var API_ROOT_PATH_PEOPLE = "http://maquinaderegistro.com.br:82/homolog/api/pessoas";
-var API_ROOT_PATH_MUSIC = "http://maquinaderegistro.com.br:82/homolog/api/musicas";
+var API_ROOT_PATH_TOKEN   = "http://maquinaderegistro.com.br:82/homolog/token";
+var API_ROOT_PATH_PEOPLE  = "http://maquinaderegistro.com.br:82/homolog/api/pessoas";
+var API_ROOT_PATH_MUSIC   = "http://maquinaderegistro.com.br:82/homolog/api/musicas";
 var API_ROOT_PATH_BALANCE = "http://maquinaderegistro.com.br:82/homolog/api/contas";
+var API_ROOT_PATH_VERIFY  = "http://maquinaderegistro.com.br:82/homolog/api/verificar";
+var API_ROOT_PATH_PAYMENT = "http://maquinaderegistro.com.br:82/homolog/api/pagamentos";
 
 $(document).ready(function () {
     /*SLIDE MENU*/
@@ -88,7 +90,7 @@ $(document).ready(function () {
                 if (data.responseText.indexOf("Usuário ou Senha inválido") !== -1) {
                     $("#statusOfLogin").slideDown();
                     $("#statusOfLogin").addClass('alert-danger');
-                    $("#statusOfLogin").append("<strong>Erro!</strong> Usuário ou Senha inválido!");
+                    $("#statusOfLogin").append("<strong>Erro!</strong> Usuário e/ou Senha inválido!");
                     document.getElementById("userName").style.boxShadow = "0 0 5px #ff0000";
                     document.getElementById("userName").style.border = "1px solid #ff0000";
                     document.getElementById("password").style.boxShadow = "0 0 5px #ff0000";
@@ -102,39 +104,13 @@ $(document).ready(function () {
 
                 $("#statusOfLogin").slideDown();
                 $("#statusOfLogin").addClass('alert-danger');
-                $("#statusOfLogin").append("<strong>Erro!</strong> Usuário ou Senha inválido!");
+                $("#statusOfLogin").append("<strong>Erro!</strong> Usuário e/ou Senha inválido!");
                 document.getElementById("userName").style.boxShadow = "0 0 5px #ff0000";
                 document.getElementById("userName").style.border = "1px solid #ff0000";
                 document.getElementById("password").style.boxShadow = "0 0 5px #ff0000";
                 document.getElementById("password").style.border = "1px solid #ff0000";
             }
         });
-    });
-
-    $('#btnLogin').on('scroll', function () {
-        $('#login-dp').slideUp("slow");
-    });
-    $('#btnLogin').on('click', function () {
-        if ($('#login-dp').is(':visible')) {
-            $('#login-dp').slideUp("slow");
-        } else {
-            $('#login-dp').slideDown("slow");
-        }
-    });
-    $('#btnLogin').click(function (e) {
-        e.stopPropagation();
-    });
-    $('#email').click(function (e) {
-        e.stopPropagation();
-    });
-    $('#password').click(function (e) {
-        e.stopPropagation();
-    });
-    $('#login-dp').click(function (e) {
-        e.stopPropagation();
-    });
-    $('body').click(function () {
-        $('#login-dp').slideUp("slow");
     });
 
     $("#guestAlert").fadeTo(5000, 500).slideDown(500, function () {
@@ -184,7 +160,3 @@ $(document).ready(function () {
         });
     }
 });
-
-function currentToken(){
-    return $('meta[name="currentToken"]').attr('content');
-}

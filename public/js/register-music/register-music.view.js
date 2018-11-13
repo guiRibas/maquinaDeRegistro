@@ -28,7 +28,7 @@ $(document).ready(function () {
 
         $("input").each(function () {
             if ($(this).attr("id") != "upload_image" && $(this).attr("id") != undefined) {
-                isEmpty = verifyFields(this);
+                var isEmpty = verifyFields(this);
 
                 if (isEmpty) {
                     if (position == 0) {
@@ -43,7 +43,7 @@ $(document).ready(function () {
         });
 
         $("textarea").each(function () {
-            isEmpty = verifyFields(this);
+            var isEmpty = verifyFields(this);
 
             if (isEmpty) {
                 if (order > 2 && count > 4) {
@@ -68,7 +68,7 @@ $(document).ready(function () {
     });
 
     function verifyFields(field) {
-        input = $(field).attr("id");
+        var input = $(field).attr("id");
 
         if (input == "inputGenre") {
             if ($("#genre option:selected").html() == "") {
@@ -95,7 +95,7 @@ $(document).ready(function () {
 
     function cleanAllInputs() {
         $("input").each(function () {
-            input = $(this).attr("id");
+            var input = $(this).attr("id");
 
             $("#" + input).removeClass("verified");
             $("#" + input).removeClass("required");
@@ -163,8 +163,7 @@ $(document).ready(function () {
 });
 
 function verifyBalanceToRegisterMusic() {
-    var actualBalance = currentBalane();
-    console.log(actualBalance);
+    var actualBalance = currentBalance();
 
     if (actualBalance > 0) {
         $("#sad").remove();
@@ -176,6 +175,6 @@ function verifyBalanceToRegisterMusic() {
     }
 }
 
-function currentBalane() {
+function currentBalance() {
     return $('meta[name="currentBalance"]').attr('content');
 }

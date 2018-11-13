@@ -59,7 +59,8 @@ function pagination(numberOfPage) {
                 $("#showQtd").prop("disabled", true);
                 $("#searchMusic").prop("disabled", true);
 
-                $("body > div > div.row.profile > div.col-md-9 > div > div > div.card-body").append("<p class='center'>Você ainda não possui músicas registradas. <a href='/musica/nova'>Registre aqui</a>, a primeira de muitas!</p>");
+                $("body > div > div.row.profile > div.col-md-9 > div > div > div.card-body")
+                    .append("<p class='center'>Você ainda não possui músicas registradas. <a href='/musica/nova'>Registre aqui</a>, a primeira de muitas!</p>");
             } else {
                 $("#example").show();
                 $("#pagination").show();
@@ -164,27 +165,6 @@ function currentToken() {
 
 function currentUserName() {
     return $('meta[name="currentUserName"]').attr('content');
-}
-
-function setCookie(name, exdays) {    //função universal para criar cookie
-    var value;
-
-    value = "profileImagePath";
-    document.cookie = name + "=" + value + "; path=/";
-}
-
-function getCookie() {
-    var c_name = document.cookie; // listando o nome de todos os cookies
-
-    if (c_name != undefined && c_name.length > 0) { // verificando se o mesmo existe
-        var posCookie = c_name.indexOf(cookieSeuNome); // checando se existe o cookieSeuNome
-
-        if (posCookie >= 0) { //se existir o cookie mostra um alert no browser
-            alert("Cookie Existe!!!");
-        } else {
-            alert("Cookie não existe!!!");
-        }
-    }
 }
 
 function atualizar() {

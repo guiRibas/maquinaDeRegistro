@@ -53,6 +53,7 @@
 <script src="/js/jquery/jquery.min.js"></script>
 <script src="/js/bootstrap/bootstrap.min.js"></script>
 <script src="{{asset('js/balance/balance.view.js')}}"></script>
+<script src="{{asset('js/sidebar/croppie.js')}}"></script>
 <script src="{{asset('js/navbar/navbar.view.js')}}"></script>
 <script src="{{asset('js/jquery.easing.min.js')}}"></script>
 <script src="{{asset('js/jquery.mask.js')}}"></script>

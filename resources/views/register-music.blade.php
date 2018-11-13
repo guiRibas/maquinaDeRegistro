@@ -95,7 +95,6 @@
 
 @section('js-view')
   <script src="{{asset('js/sidebar/sidebar.view.js')}}"></script>
-  <script src="{{asset('js/sidebar/croppie.js')}}"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.js"></script>  
   <script src="{{asset('js/register-music/register-music.view.js')}}"></script>

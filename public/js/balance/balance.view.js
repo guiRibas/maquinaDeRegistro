@@ -20,6 +20,7 @@ function setActualBalance() {
     }
 
     $.ajax(settingsToGetBalance).done(function (response) {
+        console.log(response);
         var url = "/user/balance/set/actual";
 
         var settingsToPutBalanceInSesssion = {
@@ -35,7 +36,8 @@ function setActualBalance() {
             }
         }
 
-        $.ajax(settingsToPutBalanceInSesssion).done(function (response) {
+        $.ajax(settingsToPutBalanceInSesssion).done(function () {
+            setBalanceInView(response);
         });
 
     }).fail(function (data) {
@@ -59,8 +61,6 @@ function verifyCurrentBalance() {
             element += result.balance;
             element += '"/>';
             $("head").append(element);
-
-            setBalanceInView(result.balance);
         }
     });
 }
@@ -82,8 +82,4 @@ function verifyQtdBalance(balance) {
 
 function currentToken() {
     return $('meta[name="currentToken"]').attr('content');
-}
-
-function currentBalance() {
-    return $('meta[name="currentBalance"]').attr('content');
 }

@@ -54,6 +54,5 @@
 
 @section('js-view')
   <script src="{{asset('js/sidebar/sidebar.view.js')}}"></script>
-  <script src="{{asset('js/sidebar/croppie.js')}}"></script>
   <script src="{{asset('js/my-musics/my-musics.view.js')}}"></script>
 @endsection

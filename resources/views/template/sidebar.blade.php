@@ -55,7 +55,7 @@
                             </li>
                             <li class="item-menu">
                                 <a href="/musica/nova">
-                                    <i class="glyphicon glyphicon-ok"></i>
+                                    <i class="glyphicon glyphicon-pencil"></i>
                                     Cadastrar Música </a>
                             </li>
                             <li class="item-menu">

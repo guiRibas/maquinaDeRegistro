@@ -1,4 +1,3 @@
-/* INITIAL - DOCUMENT READY*/
 $(document).ready(function () {
     $("#formChangeEmail").submit(function () {
         return false;
@@ -25,17 +24,14 @@ $(document).ready(function () {
     });
 
     applyMask();
-
 });
-
-/* FINAL - DOCUMENT READY */
 
 function changeEmail() {
     var send = true;
 
     if (send) {
-        email = $("#emailAccount").val();
-        emailValidate = isEmail(email, "emailAccount");
+        var email = $("#emailAccount").val();
+        var emailValidate = isEmail(email, "emailAccount");
 
         if (!emailValidate) {
             $("#emailAccount").val("");
@@ -49,7 +45,7 @@ function changeEmail() {
 
     if (send) {
         if ($('#confirmEmail').val() != $('#emailAccount').val()) {
-            emailCompare = compareEmail();
+            var emailCompare = compareEmail();
 
             if (!emailCompare) {
                 $("#emailAccount").addClass("required");
@@ -297,16 +293,10 @@ function msgErro(msg, span) {
     $("#" + span).html(msg);
 }
 
-/* INITIAL - CURRENT USERNAME FUNCTION*/
 function currentUserName() {
     return $('meta[name="currentUserName"]').attr('content');
 }
 
-/* FINAL - CURRENT USERNAME FUNCTION */
-
-/* INITIAL - CURRENT TOKEN FUNCTION*/
 function currentToken() {
     return $('meta[name="currentToken"]').attr('content');
 }
-
-/* FINAL - CURRENT TOKEN FUNCTION */

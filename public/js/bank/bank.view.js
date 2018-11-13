@@ -69,7 +69,6 @@ function loadPaymentHistory() {
                 cols += '</td>';
             } else {
                 cols += '<td></td>';
-
                 cols += '<td></td>';
             }
 
