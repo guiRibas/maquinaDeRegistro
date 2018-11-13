@@ -144,6 +144,10 @@ $(document).ready(function () {
                 $("#statusOfSend").append("<strong>Sucesso!</strong> Música cadastrada com sucesso. Aguarde seu certificado.");
 
                 cleanAllInputs();
+
+                setTimeout(function () {
+                    location.reload();
+                }, 5000);
             } else {
                 $("#statusOfSend").slideDown();
                 $("#statusOfSend").addClass('alert-danger');
