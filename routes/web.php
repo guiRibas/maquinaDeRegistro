@@ -23,7 +23,10 @@ Route::get('/musica/nova', 'MusicController@register');
 
 Route::post('/login', 'SessionController@login');
 Route::get('/logout', 'SessionController@logout');
+
 Route::get('/user/auth/token/current', 'SessionController@getCurrentToken');
 Route::get('/user/auth/username/current', 'SessionController@getCurrentUserName');
 Route::post('/user/balance/set/actual', 'SessionController@setCurrentBalance');
 Route::get('/user/balance/get/actual', 'SessionController@getCurrentBalance');
+
+Route::post('/user/message/set/status', 'SessionController@setMessageStatus');

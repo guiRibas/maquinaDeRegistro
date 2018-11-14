@@ -32,6 +32,12 @@ class SessionController extends Controller{
         return;
     }
 
+    public function setMessageStatus(Request $request){
+        session(['user.statusMessage' => $request->statusMessage]);
+        session(['user.textMessage' => $request->textMessage]);
+        return;
+    }
+
     public function login(Request $request){
         session(['user.token' => $request->token]);
         session(['user.userName' => $request->userName]);

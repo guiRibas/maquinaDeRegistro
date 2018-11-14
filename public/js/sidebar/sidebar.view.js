@@ -1,5 +1,7 @@
-/* INITIAL - DOCUMENT READY*/
 $(document).ready(function () {
+
+    showMessage();
+
     setTimeout(function () {
         loadProfilePhoto();
         userData();
@@ -17,14 +19,8 @@ $(document).ready(function () {
     var hrefRaw = [location.pathname, location.search];
     var href = hrefRaw.toString().replace(',', '');
     $('.item-menu > a[href="' + href + '"]').parent().addClass('active');
-
-    $("#confirm-message-status").click(function () {
-        location.reload();
-    })
 });
-/* FINAL - DOCUMENT READY */
 
-/* INITIAL - CROPPIE FUNCTION*/
 function croppie() {
     $image_crop = $('#imageDemo').croppie({
         enableExif: true,
@@ -81,8 +77,7 @@ function croppie() {
             $.ajax(settingsToSaveImage).done(function (response) {
                 $('#uploadimageModal').modal('hide');
 
-                $("#message-status").html("Sucesso! Foto de perfil salva com êxito.");
-                $("#status-of-upload-image").modal('show');
+                setChangePhoto("success", "Sucesso! Foto de perfil salva com êxito.");
             }).fail(function (data) {
                 $('#uploadimageModal').modal('hide');
 
@@ -94,9 +89,6 @@ function croppie() {
     })
 }
 
-/* FINAL - CROPPIE FUNCTION */
-
-/* INITIAL - LOAD PROFILE PHOTO FUNCTION*/
 function loadProfilePhoto() {
     var userName = currentUserName();
 
@@ -117,9 +109,6 @@ function loadProfilePhoto() {
     });
 }
 
-/* FINAL - LOAD PROFILE PHOTO FUNCTION */
-
-/* INITIAL - USERDATA FUNCTION*/
 function userData() {
     var user = currentUserName();
     var token = currentToken();
@@ -155,18 +144,44 @@ function userData() {
     }
 }
 
-/* FINAL - USERDATA FUNCTION */
+function setChangePhoto(status, message){
+    var url = "/user/message/set/status";
 
-/* INITIAL - CURRENT USERNAME FUNCTION*/
+    var statusOfChangePhotoToPutInSesssion = {
+        "async": true,
+        "crossDomain": true,
+        "url": url,
+        "method": "POST",
+        "headers": {
+            'X-CSRF-TOKEN': $("meta[name='csrf']").attr("content")
+        },
+        "data": {
+            "statusMessage": status,
+            "textMessage": message
+        }
+    }
+
+    $.ajax(statusOfChangePhotoToPutInSesssion).done(function (response) {
+        window.location.replace("/musicas");
+    }).fail(function (data) {
+        console.log(data);
+    });
+}
+
+function showMessage(){
+    $("#message").fadeIn(700);
+
+    setTimeout(function() {
+        $('#message').fadeOut(300, function(){
+            $(this).remove();
+        });
+    }, 4300);
+}
+
 function currentUserName() {
     return $('meta[name="currentUserName"]').attr('content');
 }
 
-/* FINAL - CURRENT USERNAME FUNCTION*/
-
-/* INITIAL - CURRENT TOKEN FUNCTION*/
 function currentToken() {
     return $('meta[name="currentToken"]').attr('content');
 }
-
-/* FINAL - CURRENT TOKEN FUNCTION */

@@ -43,7 +43,7 @@
 <footer id="footer" class="footer">
     <div class="container text-center">
         <div class="top-bar">
-            <p>Brainsoft Sistemas | Rua Dezessete de Julho, 1051 - Trianon - Guarapuava - PR | (42) 3622-6733 |
+            <p>Desenvolvido por: Brainsoft Sistemas | Rua Dezessete de Julho, 1051 - Trianon - Guarapuava - PR | (42) 3622-6733 |
                 www.brainsoftsistemas.com.br</p>
         </div>
     </div>

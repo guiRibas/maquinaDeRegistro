@@ -6,6 +6,15 @@
 @yield('specify-css')
 @section('content')
     <div id="container-margin" class="container-fluid">
+        @if (session()->exists('user.statusMessage'))
+            <div id="message" style="display: none; position: fixed; top: 0; left: 20%; right: 20%; width: 60%; padding-top: 10px; z-index: 9999">
+                <div class="alert alert-{{session()->get('user.statusMessage')}}" style="margin: 0 auto; margin-top: 160px!important; box-shadow: 1px 1px 5px black;">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                    {{session()->get('user.textMessage')}}
+                </div>
+            </div>
+            {{session()->forget('user.statusMessage')}}
+        @endif
         <div class="row profile">
             <div class="col-md-3">
                 <div class="profile-sidebar">
@@ -87,25 +96,8 @@
                 @yield('root-content')
             </div>
         </div>
-        <div id="status-of-upload-image" class="modal" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Foto de Perfil</h5>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <h3 id="message-status"></h3>
-                                <button type="button" id="confirm-message-status" class="btn btn-success">Tudo bem!</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <input type="file" name="upload_image" id="upload_image" accept="image"/>
-        <div id="uploadimageModal" class="modal" role="dialog">
+        <div id="uploadimageModal" class="modal" role="dialog" data-keyboard="false">
             <div class="modal-dialog">
                 <div class="modal-content" style="height: 500px;">
                     <div class="modal-header">
