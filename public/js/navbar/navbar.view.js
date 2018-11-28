@@ -7,7 +7,7 @@ var API_ROOT_PATH_PAYMENT = "http://maquinaderegistro.com.br:82/homolog/api/paga
 
 $(document).ready(function () {
     /*SLIDE MENU*/
-    var slidebar_width = 290; //slidebar width + padding size
+    var slidebar_width = 300; //slidebar width + padding size
     var slide_bar = $(".side-menu-wrapper"); //slidebar
     var slide_open_btn = $(".slide-menu-open"); //slidebar close btn
     var slide_close_btn = $(".menu-close"); //slidebar close btn

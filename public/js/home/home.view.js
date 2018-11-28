@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+    window.onresize=function() {
+        getDimensions()
+    }
+
     $(document).on("scroll", function () {
         if ($(document).scrollTop() > 600) { //QUANDO O SCROLL PASSAR DOS 100px DO TOPO
             $("#bs-example-navbar-collapse-1").removeClass("our-navbar");
@@ -35,6 +39,8 @@ $(document).ready(function () {
         //getAllMusicTop();
         makeRoundBubble();
     }, 400);
+
+    getDimensions();
 });
 
 function getAllMusicTop() {
@@ -91,4 +97,10 @@ function makeRoundBubble() {
 
 function switchElements($ele1, $ele2) {
     $ele1.after($ele2);
+}
+
+function getDimensions() {
+    var divHeigth = $("#banner > div > div").height() + 55;
+    var height = window.innerHeight - divHeigth;
+    $(".cont-banner").css("margin-top", (height));
 }

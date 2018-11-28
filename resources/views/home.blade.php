@@ -75,7 +75,7 @@
     <section id="warranty">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-3 col-lg-3 hidden-xs hidden-sm img-bg-warranty">
+                <div class="col-md-3 col-lg-3 hidden-xs hidden-sm img-bg-warranty text-center">
                     <img src="images/medalha.png" alt="">
                 </div>
                 <div class="col-md-9 col-lg-9">
@@ -151,21 +151,21 @@
             <div class="row">
                 <div class="col-sm-4 col-md-4 col-lg-4 img-bg-who-use">
                     <img class="img-responsive" src="images/user1.png" alt="">
-                    <div class="col-lg-11 col-lg-offset-1">
+                    <div class="col-xs-8 col-lg-9 col-xs-offset-2 col-lg-offset-2 mt-1">
                         <p>Á máquina de registro é fantástica, simples, rápida, minha obra está registrada.</p>
                         <p><strong>Rodriggo Vivazs</strong></p>
                     </div>
                 </div>
                 <div class="col-sm-4 col-md-4 col-lg-4 img-bg-who-use">
                     <img class="img-responsive" src="images/user2.png" alt="">
-                    <div class="col-lg-11 col-lg-offset-1">
+                    <div class="col-xs-8 col-lg-9 col-xs-offset-2 col-lg-offset-2 mt-1">
                         <p>Á máquina de registro é fantástica, simples, rápida, minha obra está registrada.</p>
                         <p><strong>Rodriggo Vivazs</strong></p>
                     </div>
                 </div>
                 <div class="col-sm-4 col-md-4 col-lg-4 img-bg-who-use">
                     <img class="img-responsive" src="images/user3.png" alt="">
-                    <div class="col-lg-11 col-lg-offset-1">
+                    <div class="col-xs-8 col-lg-9 col-xs-offset-2 col-lg-offset-2 mt-1">
                         <p>Á máquina de registro é fantástica, simples, rápida, minha obra está registrada.</p>
                         <p><strong>Rodriggo Vivazs</strong></p>
                     </div>
@@ -184,98 +184,23 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 hidden-xs hidden-sm hidden-md img-bg-our-price">
+                <div class="col-lg-4 col-md-4 img-bg-our-price">
                     <img class="img-responsive" src="images/moeda1.jpg" alt="">
                     <h1 class="our-price-qtd noMT noMB"><strong>1</strong> crédito</h1>
                     <h1 class="our-price-cost noMT noMB"><strong>R$</strong> 9
                         <strong class="our-price-comma">,90</strong></h1>
                 </div>
-                <div class="col-lg-4 hidden-xs hidden-sm hidden-md img-bg-our-price">
+                <div class="col-lg-4 col-md-4 img-bg-our-price">
                     <img class="img-responsive" src="images/moeda3.jpg" alt="">
                     <h1 class="our-price-qtd noMT noMB"><strong>3</strong> créditos</h1>
                     <h1 class="our-price-cost noMT noMB"><strong>R$</strong> 26<strong
                                 class="our-price-comma">,90</strong></h1>
                 </div>
-                <div class="col-lg-4 hidden-xs hidden-sm hidden-md img-bg-our-price">
+                <div class="col-lg-4 col-md-4 img-bg-our-price">
                     <img class="img-responsive" src="images/moeda5.jpg" alt="">
                     <h1 class="our-price-qtd noMT noMB"><strong>5</strong> créditos</h1>
                     <h1 class="our-price-cost noMT noMB"><strong>R$</strong> 41<strong
                                 class="our-price-comma">,90</strong></h1>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id=" ">
-        <div class="container-fluid">
-            <div class="row noPB">
-                <div class="col-lg-12">
-                    <div id="text-composers-panel" class="header-section">
-                        <h1 id="header-title">Painel dos Compositores</h1>
-                        <h5>Estes são os artistas mais acessados na Máquina até o momento.</h5>
-                        <h5>Clique para explorar o seu acervo.</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="row noPB">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <div class="cloud" style="height: 400px; display: flex;">
-                        <div class="round bloc1" style="flex:1 1 auto;">
-                            <a href="#" title="Teste1">
-                                <div style="background-image: url('http://f.i.uol.com.br/fotografia/2014/11/28/461482-970x600-1.jpeg');"></div>
-                            </a>
-                        </div>
-
-                        <div class="round bloc2" style="flex:1 1 auto;">
-                            <a href="#" title="Teste1">
-                                <div style="background-image: url('http://static1.purepeople.com.br/articles/0/73/76/0/@/1006610-cantor-faleceu-no-dia-24-de-junho-950x0-2.jpg');"></div>
-                            </a>
-                        </div>
-                        <div class="round bloc3" style="flex:1 1 auto;">
-                            <a href="#" title="Teste1">
-                                <div style="background-image: url('http://musica.culturamix.com/blog/wp-content/gallery/cantores-solo-de-rock-5/cantores-solo-de-rock-13.jpg');"></div>
-                            </a>
-                        </div>
-
-                        <div class="round bloc4" style="flex:1 1 auto;;">
-                            <a href="#" title="Teste1">
-                                <div style="background-image: url('https://www.blink102.com.br/wp-content/uploads/2016/04/eduardo-costa.jpg');"></div>
-                            </a>
-                        </div>
-                        <div class="round bloc5" style="flex:1 1 auto;">
-                            <a href="#" title="Teste1">
-                                <div style="background-image: url('http://cdn.ofuxico.com.br/img/upload/noticias/2016/08/30/273816_36.jpg');"></div>
-                            </a>
-                        </div>
-
-                        <div class="round bloc6" style="flex:1 1 auto;">
-                            <a href="#" title="Teste1">
-                                <div style="background-image: url('http://www.todosinstrumentosmusicais.com.br/wp-content/uploads/2013/08/Cantora-Famosa-4.jpg');"></div>
-                            </a>
-                        </div>
-                        <div class="round bloc7" style="flex:1 1 auto;">
-                            <a href="#" title="Teste1">
-                                <div style="background-image: url('https://www.otvfoco.com.br/wp-content/uploads/2017/07/simone-e-simaria2.jpg');"></div>
-                            </a>
-                        </div>
-
-                        <div class="round bloc8" style="flex:1 1 auto;">
-                            <a href="#" title="Teste1">
-                                <div style="background-image: url('http://www.blogdomarioadolfo.com.br/wp-content/uploads/2017/12/Captura-de-Tela-2017-12-19-%C3%A0s-11.09.49.png');"></div>
-                            </a>
-                        </div>
-                        <div class="round bloc9" style="flex:1 1 auto;">
-                            <a href="#" title="Teste1">
-                                <div style="background-image: url('https://lista10.org/wp-content/uploads/2015/09/cantores-queridos-7.jpg');"></div>
-                            </a>
-                        </div>
-
-                        <div class="round bloc10" style="flex:1 1 auto;">
-                            <a href="#" title="Teste1">
-                                <div style="background-image: url('http://cdn.gunsnroses.com/site/chamber-logo.png');"></div>
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
