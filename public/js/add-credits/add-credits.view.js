@@ -53,7 +53,7 @@ $(document).ready(function () {
         totalCreditUpdate("creditsToBuyByTicket", "totalByTicket", "strongTotalByTicket");
     });
 
-    $("#qtdOfPartsByCard").on("keyup change click focus", function () {
+    $("#qtdOfPartsByCard").on("blur", function () {
         if ($(this).val() < 1) {
             $(this).val(1);
         }
@@ -168,22 +168,31 @@ function totalCreditUpdate(input, inputTotal, strong) {
     var total;
     var totalToPrintTicket;
 
+    $(".totalDiscount").html("");
+
     if ($("#" + input).val() == 3) {
         total = 2690;
         totalToPrintTicket = 26.90;
         $(".sale").show();
+        $(".totalDiscount").append("Econômia de: R$2,80");
+        $(".totalDiscount").show();
+
         $("#submitBuyCreditByCard").css("margin-top", "-30");
         $("#submitBuyCreditByTicket").css("margin-top", "-30");
     } else if ($("#" + input).val() == 5) {
         total = 4190;
         totalToPrintTicket = 41.90;
         $(".sale").show();
+        $(".totalDiscount").append("Econômia de: R$7,60");
+        $(".totalDiscount").show();
+
         $("#submitBuyCreditByCard").css("margin-top", "-30");
         $("#submitBuyCreditByTicket").css("margin-top", "-30");
     } else {
         total = $("#" + input).val() * 990;
         totalToPrintTicket = $("#" + input).val() * 9.90;
         $(".sale").hide();
+        $(".totalDiscount").hide();
         $("#submitBuyCreditByCard").css("margin-top", "0");
         $("#submitBuyCreditByTicket").css("margin-top", "0");
     }
@@ -198,10 +207,9 @@ function ticketMethod(qtdCredits, completeName, cpf, email, total) {
     now.setMonth(now.getMonth() + 1);
     var fullActualDate = now.getDate() + "/" + now.getMonth() + "/" + now.getFullYear();
 
-    var deadline = new Date();
-    deadline.setDate(now.getDate() + 3);
-    deadline.setMonth(deadline.getMonth() + 1);
-    var fullDeadline = deadline.getDate() + "/" + deadline.getMonth() + "/" + deadline.getFullYear();
+    const agora = moment();
+
+    var fullDeadline = agora.add(3, "days").format("DD/MM/YYYY");
 
     var settingsTicketMethod = {
         "async": true,
@@ -250,7 +258,7 @@ function ticketMethod(qtdCredits, completeName, cpf, email, total) {
     }).fail(function (data) {
         console.log(data.responseText);
 
-        if (data.responseText.indexOf("Documento inválido") != -1) {
+        /*if (data.responseText.indexOf("Documento inválido") != -1) {
             $("#sending-information").remove();
             $("#info-sending-information").remove();
 
@@ -281,7 +289,7 @@ function ticketMethod(qtdCredits, completeName, cpf, email, total) {
             $("#infoTicket").show();
         } else {
             $("#completeName").removeClass("required");
-        }
+        }*/
     });
 }
 

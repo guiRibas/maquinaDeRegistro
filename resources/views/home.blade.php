@@ -235,9 +235,12 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-offset-3 col-lg-3 text-center"><img class="img-responsive" src="images/email.png"
-                                                                       alt=""></div>
-                <div class="col-lg-3 text-center"><img class="img-responsive" src="images/balao.png" alt=""></div>
+                <div class="col-xs-offset-2 col-md-offset-3 col-lg-offset-3 col-xs-4 col-md-3 col-lg-3" style="text-align: center">
+                    <img class="img-responsive" src="images/email.png" alt="">
+                </div>
+                <div class="col-xs-4 col-md-3 col-lg-3" style="text-align: center">
+                    <img class="img-responsive" src="images/balao.png" alt="">
+                </div>
             </div>
         </div>
     </section>

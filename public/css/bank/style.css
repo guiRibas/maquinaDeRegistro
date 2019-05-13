@@ -90,3 +90,24 @@ input[id=creditsToBuyByTicket]::-webkit-outer-spin-button {
 .sale {
     display: none;
 }
+
+.totalDiscount {
+    text-align: center;
+    color: red;
+    margin-top: -10px;
+    font-size: 12px;
+}
+
+.btn-action-up {
+    height: 30px !important;
+    padding: 4px !important;
+}
+
+.btn-action-down {
+    height: 30px !important;
+    padding: 4px !important;
+}
+
+#btnUpByCard, #btnUpByTicket {
+    box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.4) !important;
+}

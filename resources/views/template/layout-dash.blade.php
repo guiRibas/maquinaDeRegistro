@@ -29,7 +29,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/musicas">
+                <a class="navbar-brand" href="/">
                     <img class="img-responsive" id="logo-navbar" src="/images/logo.jpg" alt="logo">
                 </a>
             </div>
