@@ -33,12 +33,10 @@
 @yield('content')
 
 <!--Footer-->
-<footer id="footer" class="footer">
+<footer id="footer" class="footer mt-auto py-3">
     <div class="container text-center">
-        <div class="top-bar">
-            <p>Desenvolvido por: Brainsoft Sistemas | Rua Dezessete de Julho, 1051 - Trianon - Guarapuava - PR | (42) 3622-6733 |
-                www.brainsoftsistemas.com.br</p>
-        </div>
+        <span class="text-muted">Desenvolvido por: Brainsoft Sistemas | Rua Dezessete de Julho, 1051 - Trianon - Guarapuava - PR | (42) 3622-6733 |
+                www.brainsoftsistemas.com.br</span>
     </div>
 </footer>
 <!--/ Footer-->

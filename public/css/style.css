@@ -576,8 +576,8 @@ Footer
     background: #076b6d;
 }
 
-#footer > div > div > p {
-    color: #ffffff;
+#footer > div > span {
+    color: #ffffff!important;
 }
 
 .footer a {
@@ -592,8 +592,8 @@ Footer
     color: white;
 }
 
-#footer > div > div > p {
-    margin: 0px;
+#footer > div > span {
+    margin: 0px!important;
 }
 
 .btnClientArea {
