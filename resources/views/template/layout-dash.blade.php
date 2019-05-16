@@ -6,7 +6,7 @@
     <title>Brainsoft Sistemas - @yield('title')</title>
 
     <!--link rel="shortcut icon" type="image/png" href="img/brain_icon.png"/-->
-    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap-4-3-1.min.css">
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Open+Sans|Candal|Alegreya+Sans">
     <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
@@ -22,15 +22,8 @@
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" id="btn-toggle" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
                 <a class="navbar-brand" href="/">
-                    <img class="img-responsive" id="logo-navbar" src="/images/logo.jpg" alt="logo">
+                    <img class="img-responsive" id="logo-navbar-dashboard" src="/images/logo.jpg" alt="logo">
                 </a>
             </div>
         </div><!-- /.container-fluid -->
