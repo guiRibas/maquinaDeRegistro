@@ -9,16 +9,15 @@
     <link rel="stylesheet" href="/css/bootstrap/bootstrap-4-3-1.min.css">
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Open+Sans|Candal|Alegreya+Sans">
-    <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
-    <link rel="stylesheet" href="{{asset('css/custom.css')}}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('css/template-dash/style.css')}}">
 
     @yield('css-view')
 </head>
+
 <body>
 <header>
-    <nav class="navbar navbar-default">
+    <nav class="navbar fixed-top navbar-default">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -35,7 +34,7 @@
 <!--Footer-->
 <footer id="footer" class="footer mt-auto py-3">
     <div class="container text-center">
-        <span class="text-muted">Desenvolvido por: Brainsoft Sistemas | Rua Dezessete de Julho, 1051 - Trianon - Guarapuava - PR | (42) 3622-6733 |
+        <span>Desenvolvido por: Brainsoft Sistemas | Rua Dezessete de Julho, 1051 - Trianon - Guarapuava - PR | (42) 3622-6733 |
                 www.brainsoftsistemas.com.br</span>
     </div>
 </footer>

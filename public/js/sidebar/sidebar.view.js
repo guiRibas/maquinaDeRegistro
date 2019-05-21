@@ -18,7 +18,8 @@ $(document).ready(function () {
 
     var hrefRaw = [location.pathname, location.search];
     var href = hrefRaw.toString().replace(',', '');
-    $('.item-menu > a[href="' + href + '"]').parent().addClass('active');
+
+    $('#container-margin > div.row.profile.mt-9 > nav > a[href="' + href + '"]').addClass('current-link-active');
 });
 
 function croppie() {
@@ -103,9 +104,9 @@ function loadProfilePhoto() {
     }
 
     $.ajax(settingsToGetImage).done(function (response) {
-        $("body > div > div.row.profile > div.col-md-3 > div > div.profile-userpic > img").attr("src", API_ROOT_PATH_PEOPLE + "/imagem/" + userName);
+        $("#container-margin > div.row.profile > nav > div.profile-userpic > img").attr("src", API_ROOT_PATH_PEOPLE + "/imagem/" + userName);
     }).fail(function (data) {
-        $("body > div > div.row.profile > div.col-md-3 > div > div.profile-userpic > img").attr("src", "https://thumbs.dreamstime.com/b/do-retrato-masculino-do-avatar-do-%C3%ADcone-do-perfil-pessoa-ocasional-46846325.jpg");
+        $("#container-margin > div.row.profile > nav > div.profile-userpic > img").attr("src", "https://thumbs.dreamstime.com/b/do-retrato-masculino-do-avatar-do-%C3%ADcone-do-perfil-pessoa-ocasional-46846325.jpg");
     });
 }
 

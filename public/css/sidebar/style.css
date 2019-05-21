@@ -25,11 +25,7 @@ html {
     margin-right: 0;
     margin-left: 0;
 }
-.profile {
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-}
+
 @media (max-width: 445px) {
     .profile {
         margin-left: 0px;
@@ -95,6 +91,7 @@ html {
     color: #ffffff;
     padding: 16px 16px 0 16px;
     font-size: 18px;
+    height: 3.5em;
 }
 
 .user-balance > div > i {
@@ -108,36 +105,39 @@ html {
 }
 
 .add-credits > a {
-    color: #ffffff;
+    color: #ffffff!important;
 }
 
-nav {
+.nav {
     background-color: #ffffff;
-    padding: 20px 0 10px 0;
+    padding: 20px 0 0 0;
 }
 
-nav a {
+.nav a {
     border-bottom: 1px solid #f0f4f7;
     color: #93a3b5;
     font-size: 14px;
     font-weight: 400;
 }
 
-nav a:last-child {
+.nav a:last-child {
     border-bottom: none;
 }
 
-nav a:hover {
+.nav a:hover {
     background-color: #fafcfd;
     color: #076b6d;
 }
 
-#container-margin > div.row.profile > nav > a.nav-link.active {
-    border-bottom: none;
-    color: #076b6d;
-    background-color: #f6f9fb;
-    border-left: 2px solid #076b6d;
-    margin-left: -2px;
+.list-group-item {
+    border: none!important;
+}
+
+.current-link-active {
+    border-bottom: none!important;
+    color: #076b6d!important;
+    background-color: #f6f9fb!important;
+    border-left: 2px solid #076b6d!important;
 }
 
 /* Profile Content */
@@ -154,6 +154,68 @@ audio {
 #confirmButton {
     padding-top: 23%;
     margin-left: -27px;
+}
+
+.changePhoto {
+    display: none;
+}
+
+.profile-userpic {
+    position: relative;
+    width: 100px;
+    margin: 0 auto;
+}
+
+.profile-userpic:hover span {
+    display: block !important;
+}
+
+.imagem-mascara {
+    display: none !important;
+    width: 100px; /* largura da imagem máscara */
+    height: 100px; /* altura da imagem máscara */
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding-top: 80%;
+    background-color: grey;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+    opacity: 0.40;
+}
+
+.glyphicon-camera {
+    color: white;
+}
+
+#selectImageToUpload {
+    text-align: center;
+    padding: 0 !important;
+}
+
+#selectImageToUpload:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px;
+}
+
+#selectImageToUpload > .modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+#selectImageToUpload > .modal-dialog > .modal-content {
+    height: 200px;
+}
+
+/* Esconde o input */
+input[name="upload_image"] {
+    display: none
 }
 
 /* Aparência que terá o seletor de arquivo */
@@ -197,11 +259,6 @@ li.nav-item.active > a {
     border-color: #076b6d;
 }
 
-#container-margin {
-    width: 90%;
-    margin-left: 5%;
-}
-
 @media (max-width: 445px) {
     #container-margin {
         width: 100%;
@@ -209,10 +266,28 @@ li.nav-item.active > a {
     }
 }
 
-#container-margin > div.row.profile > div.col-md-3 {
-    margin-top: 20px;
+#logout:hover {
+    color: #ff352b;
 }
 
-#container-margin > div.row.profile > div.col-md-9 {
-    margin-top: 20px;
+.nav-icon {
+    float: left;
+    margin-right: 10px;
+}
+
+.nav-icon > img {
+    height: 20px;
+    margin-bottom: 9px;
+}
+
+#piggy-bank {
+    float: left;
+}
+
+.line {
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+    margin: 20px 0 20px;
 }

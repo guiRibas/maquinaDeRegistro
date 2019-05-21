@@ -1,30 +1,19 @@
-.our-navbar {
-    padding-top: 55px;
-    padding-bottom: 0.5em!important;
+.navbar {
+    margin-bottom: 0px;
+    box-shadow: 5px 0.5px 3px #000;
 }
 
-.navbar-header {
-    padding: 20px;
+.navbar-default {
+    background-color: #ffffff;
+    border-color: #e7e7e7;
 }
 
-.navbar-brand {
-    padding: 0!important;
+.profile {
+    margin: 20px;
 }
 
-#btn-toggle {
-    margin-top: 17px;
-}
-
-.navbar-default .navbar-nav > li > a {
-    color: #717f86;
-    font-size: 14px;
-}
-
-#logo-navbar {
-    /*margin-top: 1.4em;*/
-    width: 325px;
-    height: auto;
-    margin-left: 1.5em;
+.mt-9 {
+    margin-top: 9rem!important;
 }
 
 @media (max-width:767px){
@@ -44,16 +33,15 @@
     font-size: 1em!important;
 }
 
-#piggy-bank {
-    float: left;
-    margin-right: 10px;
-}
-
-#piggy-bank > img {
-    height: 20px;
-    margin-bottom: 9px;
-}
-
 #logo-navbar-dashboard {
     width: 250px;
+}
+
+.footer {
+    padding: 20px 0 20px 0;
+    background: #076b6d;
+}
+
+#footer > div > span {
+    color: #ffffff;
 }
