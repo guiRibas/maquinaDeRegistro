@@ -22,7 +22,7 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <a class="navbar-brand" href="/">
-                    <img class="img-responsive" id="logo-navbar-dashboard" src="/images/logo.jpg" alt="logo">
+                    <img class="img-responsive" id="logo-navbar-dashboard" src="/images/logo.png" alt="logo">
                 </a>
             </div>
         </div><!-- /.container-fluid -->

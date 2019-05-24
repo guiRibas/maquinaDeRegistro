@@ -7,14 +7,22 @@ $(document).ready(function () {
         return false;
     });
 
-    $(".card-type-pgto").mouseenter(function () {
+    $(".pay-type").mouseenter(function () {
         $(this).css("cursor", "pointer");
     });
 
-    $(".card-type-pgto").click(function () {
-        var typeOfPayment = $(this).attr("name");
+    $(".pay-type").click(function () {
+        var payTypeName = $(this).attr("name");
 
-        if (typeOfPayment == "credit-card") {
+        $("#info-choose-pay-type").slideUp(600);
+
+        removeAllSuccessClass(payTypeName);
+        addAllSuccessClass(payTypeName);
+        enableInputs(payTypeName);
+        disableInputs(payTypeName);
+        enableCheckout();
+
+        /*if (typeOfPayment == "credit-card") {
             verifyActualCredits("creditsToBuyByCard", "btnDownByCard", "btnUpByCard");
             totalCreditUpdate("creditsToBuyByCard", "totalByCard", "strongTotalByCard");
             $("#putYourDataToCreditCard").modal("show");
@@ -24,7 +32,7 @@ $(document).ready(function () {
             verifyActualCredits("creditsToBuyByTicket", "btnDownByTicket", "btnUpByTicket");
             totalCreditUpdate("creditsToBuyByTicket", "totalByTicket", "strongTotalByTicket");
             $("#putYourDataToTicket").modal("show");
-        }
+        }*/
     });
 
     $("#creditsToBuyByCard").on("keyup change click focus", function () {
@@ -384,6 +392,56 @@ function registerPurchase(qtdCredits, idPagueVeloz, type, value, qtdOfParts, dea
         console.log(response);
     }).fail(function (data) {
         console.log(data.responseText);
+    });
+}
+
+function removeAllSuccessClass(currentPayTypeName) {
+    if (currentPayTypeName == "credit-card") {
+        $("[name=barcode]").removeClass("border-success");
+        $("[name=barcode] > .card-header").removeClass("text-white bg-success");
+    } else {
+        $("[name=credit-card]").removeClass("border-success");
+        $("[name=credit-card] > .card-header").removeClass("text-white bg-success");
+    }
+}
+
+function addAllSuccessClass(currentPayTypeName) {
+    $("[name=" + currentPayTypeName + "]").addClass("border-success");
+    $("[name=" + currentPayTypeName + "] > .card-header").addClass("text-white bg-success");
+}
+
+function enableInputs(currentPayTypeName) {
+    var inputs = $("[name=" + currentPayTypeName + "]").find("input");
+
+    inputs.each(function (index, element) {
+        $(element).removeAttr("disabled");
+    });
+}
+
+function disableInputs(currentPayTypeName) {
+    var inputs;
+
+    if (currentPayTypeName == "credit-card") {
+        inputs = $("[name=barcode]").find("input");
+    } else {
+        inputs = $("[name=credit-card]").find("input");
+    }
+
+    inputs.each(function (index, element) {
+        $(element).attr("disabled", true);
+    });
+}
+
+function enableCheckout() {
+    var inputs = $("[name=checkout]").find("input");
+    var buttons = $("[name=checkout]").find("button");
+
+    inputs.each(function (index, element) {
+        $(element).removeAttr("disabled");
+    });
+
+    buttons.each(function (index, element) {
+        $(element).removeAttr("disabled");
     });
 }
 

@@ -111,3 +111,11 @@ input[id=creditsToBuyByTicket]::-webkit-outer-spin-button {
 #btnUpByCard, #btnUpByTicket {
     box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.4) !important;
 }
+
+.pl-30 {
+    padding-left: 1.9rem!important;
+}
+
+.pr-30 {
+    padding-right: 1.9rem!important;
+}
