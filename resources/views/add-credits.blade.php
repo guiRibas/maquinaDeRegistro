@@ -1,12 +1,12 @@
-@extends('template.sidebar')
+@extends('layouts.layout-dash')
 
-@section('title', 'Meus Dados')
+@section('page-title', 'Adicionar Créditos')
 
 @section('specify-css')
-<link rel="stylesheet" type="text/css" href="{{asset('css/bank/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/bank/style.css')}}">
 @endsection
 
-@section('root-content')
+@section('content')
 <div class="profile-content">
     <div id="info-choose-pay-type" class="alert alert-info" role="alert">
         Selecione um método de pagamento: <strong>CARTÃO DE CRÉDITO</strong> ou <strong>BOLETO</strong>.
@@ -108,7 +108,7 @@
                                        value="{{session()->get('user.email')}}" @endif disabled><small
                                         class="form-text text-muted">E-mail para prosseguir com o pagamento.</small>
                             </div>
-                            <p id="pTotalOrderByCard">Total do pedido: <strong>R$</strong><strong
+                            <p id="pTotalOrderByCard">Total do pedido: <strong>R$9,90</strong><strong
                                         id="strongTotalByCard"></strong></p>
                             <p class="totalDiscount"></p>
                             <div class="form-group row">

@@ -1,12 +1,13 @@
-@extends('template.sidebar')
+@extends('layouts.layout-dash')
 
-@section('title', 'Minhas Músicas')
+@section('page-title', 'Minhas Músicas')
 
 @section('specify-css')
-    <link rel="stylesheet" type="text/css" href="{{asset('css/my-musics/style.css')}}">
+    <link href="{{asset('css/my-musics/style.css')}}" rel="stylesheet">
+    <link href="template/dashboard/data-tables/dataTables.bootstrap4.min.css" rel="stylesheet">
 @endsection
 
-@section('root-content')
+@section('content')
     <div class="profile-content">
         <div class="card">
             <div class="row filters">

@@ -3,10 +3,13 @@ $(document).ready(function () {
     showMessage();
 
     setTimeout(function () {
+    }, 1500);
+
+    setTimeout(function () {
         loadProfilePhoto();
         userData();
-        croppie();
-    }, 500);
+        //croppie();
+    }, 700);
 
     $(".imagem-mascara").mouseenter(function () {
         $(this).css("cursor", "pointer");
@@ -18,77 +21,10 @@ $(document).ready(function () {
 
     var hrefRaw = [location.pathname, location.search];
     var href = hrefRaw.toString().replace(',', '');
+    var targetPath = '#accordionSidebar > li.nav-item > a[href="' + href + '"]';
 
-    $('#container-margin > div.row.profile.mt-9 > nav > a[href="' + href + '"]').addClass('current-link-active');
+    $(targetPath).parent().addClass('active');
 });
-
-function croppie() {
-    $image_crop = $('#imageDemo').croppie({
-        enableExif: true,
-        viewport: {
-            width: 150,
-            height: 150,
-            type: 'circle'
-        },
-        boundary: {
-            width: 300,
-            height: 300
-        }
-    });
-
-    $('#upload_image').on('change', function () {
-        var reader = new FileReader();
-
-        reader.onload = function (event) {
-            $image_crop.croppie('bind', {
-                url: event.target.result
-            })
-        }
-
-        reader.readAsDataURL(this.files[0]);
-
-        $('#uploadimageModal').modal('show');
-    });
-
-    $('.crop_image').click(function (event) {
-        $image_crop.croppie('result', {
-            type: 'canvas',
-            size: 'viewport'
-        }).then(function (response) {
-            var token = currentToken();
-            var rawBase64 = response;
-
-            var image_array_1 = rawBase64.split(",");
-            var imageInBase64 = image_array_1[1];
-
-            var settingsToSaveImage = {
-                "async": true,
-                "crossDomain": true,
-                "url": API_ROOT_PATH_PEOPLE + "/SalvarImagemPerfil",
-                "method": "POST",
-                "headers": {
-                    "authorization": "Bearer " + token,
-                    "content-type": "application/x-www-form-urlencoded"
-                },
-                "data": {
-                    "Base64Image": imageInBase64
-                }
-            }
-
-            $.ajax(settingsToSaveImage).done(function (response) {
-                $('#uploadimageModal').modal('hide');
-
-                setChangePhoto("success", "Sucesso! Foto de perfil salva com êxito.");
-            }).fail(function (data) {
-                $('#uploadimageModal').modal('hide');
-
-                $("#message-status").html("Erro! Por gentileza, tente novamente.");
-                $("#status-of-upload-image").modal('show');
-                console.log(data.responseText);
-            });
-        });
-    })
-}
 
 function loadProfilePhoto() {
     var userName = currentUserName();

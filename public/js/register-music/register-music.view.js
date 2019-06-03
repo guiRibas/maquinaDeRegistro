@@ -175,7 +175,7 @@ function verifyBalanceToRegisterMusic() {
     } else {
         $("#sad").append("<img src='../images/sad.png'>");
         $(".profile-content")
-            .append("<p class='center'>Saldo insuficiente! Infelizmente até o momento você não possui créditos. <a href='/adicionar-creditos'>Adquira aqui!</a> e registre suas músicas!</p>");
+            .append("<p class='text-center'>Saldo insuficiente! Infelizmente até o momento você não possui créditos. <a href='/adicionar-creditos'>Adquira aqui!</a> e registre suas músicas!</p>");
     }
 }
 

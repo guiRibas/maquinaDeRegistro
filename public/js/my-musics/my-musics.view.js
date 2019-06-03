@@ -22,7 +22,7 @@ $(document).ready(function () {
 
     setTimeout(function () {
         pagination(1);
-    }, 500);
+    }, 1000);
 
     setTimeout(function () {
         loadFirstMusicInPlayer();
@@ -59,7 +59,7 @@ function pagination(numberOfPage) {
                 $("#showQtd").prop("disabled", true);
                 $("#searchMusic").prop("disabled", true);
 
-                $("body > div > div.row.profile > div.col-md-9 > div > div > div.card-body")
+                $("#content > div > div.profile-content > div > div.card-body")
                     .append("<p class='center'>Você ainda não possui músicas registradas. <a href='/musica/nova'>Registre aqui</a>, a primeira de muitas!</p>");
             } else {
                 $("#example").show();
@@ -159,14 +159,6 @@ function loadFirstMusicInPlayer() {
     audio.addEventListener('timeupdate', atualizar, false);
 }
 
-function currentToken() {
-    return $('meta[name="currentToken"]').attr('content');
-}
-
-function currentUserName() {
-    return $('meta[name="currentUserName"]').attr('content');
-}
-
 function atualizar() {
     document.getElementById('tempo_atual').innerHTML = secToStr(audio.currentTime);
     document.getElementById('tempo_total').innerHTML = secToStr(audio.duration);
@@ -236,4 +228,12 @@ function removeRealejo() {
 
     $("#div-audio").removeClass("col-lg-11");
     $("#div-audio").addClass("col-lg-12");
+}
+
+function currentToken() {
+    return $('meta[name="currentToken"]').attr('content');
+}
+
+function currentUserName() {
+    return $('meta[name="currentUserName"]').attr('content');
 }

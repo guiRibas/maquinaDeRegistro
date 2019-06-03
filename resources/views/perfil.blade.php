@@ -1,8 +1,8 @@
-@extends('template.sidebar')
+@extends('layouts.layout-dash')
  
-@section('title', 'Meus Dados')
+@section('page-title', 'Meus Dados')
 
-@section('root-content')
+@section('content')
   <div class="profile-content">
     <div class="card">
         <div class="card-body">

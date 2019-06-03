@@ -1,13 +1,13 @@
-@extends('template.sidebar')
+@extends('layouts.layout-dash')
  
-@section('title', 'Cadastrar Música')
+@section('page-title', 'Cadastrar Música')
 
 @section('specify-css')
     <link rel="stylesheet" href="{{asset('css/chosen/chosen.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/register-music/style.css')}}">
 @endsection()
 
-@section('root-content')
+@section('content')
   <div class="profile-content">
       <div id="mensagem" class="hide">Enviando...</div>
       <div id="sad"></div>

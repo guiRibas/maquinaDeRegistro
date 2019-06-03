@@ -1,4 +1,3 @@
-
 # Created by https://www.gitignore.io/api/phpstorm
 # Edit at https://www.gitignore.io/?templates=phpstorm
 
@@ -85,3 +84,6 @@ fabric.properties
 .idea/sonarlint
 
 # End of https://www.gitignore.io/api/phpstorm
+
+# Ignore node_modules
+node_modules

@@ -1,4 +1,4 @@
-@extends('template.layout')
+@extends('layouts.layout')
 
 @section('title', 'Home')
 
@@ -262,7 +262,7 @@
                 <div class="col-sm-1 col-lg-1 text-center text-center-horizon"><img class="img-responsive"
                                                                                     src="images/bry.png" alt=""></div>
                 <div id="img-come-to" class="col-sm-4 col-lg-4 text-center"><img class="img-responsive"
-                                                                                 src="images/logo.jpg" alt=""></div>
+                                                                                 src="images/logo.png" alt=""></div>
                 <div class="col-sm-1 col-lg-1 text-center text-center-horizon" style="margin-top: 3.4em;"><img
                             class="img-responsive" src="images/logo-siatech.png" alt=""></div>
                 <div class="col-sm-3 col-lg-3 text-center text-center-horizon"><img class="img-responsive"

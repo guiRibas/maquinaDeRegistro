@@ -1,4 +1,4 @@
-@extends('template.layout')
+@extends('layouts.layout')
  
 @section('title', 'Cadastro')
 

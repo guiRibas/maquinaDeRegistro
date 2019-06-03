@@ -1,12 +1,12 @@
-@extends('template.sidebar')
+@extends('layouts.layout-dash')
 
-@section('title', 'Meus Dados')
+@section('page-title', 'Conta Corrente')
 
 @section('specify-css')
     <link rel="stylesheet" type="text/css" href="{{asset('css/bank/style.css')}}">
 @endsection
 
-@section('root-content')
+@section('content')
     <div class="profile-content">
         <div class="card">
             <div class="card-body">
