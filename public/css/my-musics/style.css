@@ -21,3 +21,49 @@
 .speaker {
     margin-left: 5px;
 }
+
+/* PLAYER */
+.container-player {
+    max-width: 70%;
+}
+
+.plSel, .plSel:hover {
+    color: #000000!important;
+    font-weight: bold;
+}
+
+.fixed-bottom {
+    left: 224px!important;
+}
+
+#nowPlay {
+    color: #FFFFFF;
+}
+
+#btnPrev, #btnNext{
+    margin-bottom: 0px!important;
+    padding-bottom: 0px!important;
+}
+
+#npAction, #npTitle {
+    width: 40%!important;
+    padding: 6px!important;
+}
+
+#npAction {
+    text-align: left;
+}
+
+.plyr__controls {
+    padding-top: 0px!important;
+}
+
+.bg-highlight-brain {
+    background-color: #ffffff;
+    box-shadow: 5px 5px 15px 0.1px grey;
+    color: #000000;
+}
+
+.bg-gray-brain {
+    background-color: #373435;
+}

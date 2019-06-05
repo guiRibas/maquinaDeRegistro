@@ -3,50 +3,38 @@
 @section('page-title', 'Minhas Músicas')
 
 @section('specify-css')
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.5.3/plyr.css" />
+    <link href="{{asset('css/my-musics/player.css')}}" rel="stylesheet">
     <link href="{{asset('css/my-musics/style.css')}}" rel="stylesheet">
-    <link href="template/dashboard/data-tables/dataTables.bootstrap4.min.css" rel="stylesheet">
 @endsection
 
 @section('content')
-    <div class="profile-content">
-        <div class="card">
-            <div class="row filters">
-                <div class="col-lg-3">
-                    <select class="form-control" id="showQtd">
-                        <option>5</option>
-                        <option>10</option>
-                        <option>15</option>
-                        <option>20</option>
-                        <option>Todas</option>
-                    </select>
-                    <span>Exibir por página</span>
-                </div>
-                <div class="col-lg-offset-4 col-lg-5">
-                    <input type="text" id="searchMusic" autofocus style="width: 100%"/>
-                    <span>Pesquisa</span>
+    <div class="container-player bg-highlight-brain">
+        <div class="column add-bottom">
+            <div class="input-group mb-3 pl-3 pr-3">
+                <input id="search" name="search" placeholder="Informe o nome da música..." type="text" data-list=".list" class="form-control" autocomplete="off">
+                <div class="input-group-append">
+                    <span class="input-group-text"><i class="fas fa-search"></i></span>
                 </div>
             </div>
-            <div class="card-body">
-                <table id="example" class="table table-striped table-bordered" style="width:100%">
-                    <div id="loading"></div>
-                    <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Compositor</th>
-                        <th>Música</th>
-                    </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-                <div id="pagination"></div>
-                <div id="music-controls">
-                    <div id="div-audio" class="col-lg-12">
-                        <audio id="audio" preload="none" controls="controls"></audio>
-                        <span id="playing" style="display: none;">Ouvindo no momento: </span>
-                        <span id="current_played_music"></span>
+            <div id="mainwrap">
+                <div id="plwrap">
+                    <ul class="list" id="plList"></ul>
+                </div>
+            </div>
+        </div>
+        <div class="fixed-bottom bg-gray-brain">
+            <div class="copyright text-center my-auto">
+                <div id="audiowrap">
+                    <div id="nowPlay">
+                        <span id="npAction" title="Situação">Pausado...</span>
+                        <a id="btnPrev" title="Anterior">&larr;</a>
+                        <a id="btnNext" title="Próxima">&rarr;</a>
+                        <span id="npTitle" title="Música atual"></span>
                     </div>
-                    <span id="tempo_atual">00:00:00</span>
-                    <span id="tempo_total">00:00:00</span>
+                    <div id="audio0">
+                        <audio id="audio1" preload controls>Your browser does not support HTML5 Audio! 😢</audio>
+                    </div>
                 </div>
             </div>
         </div>
@@ -54,6 +42,8 @@
 @endsection
 
 @section('js-view')
-    <script src="{{asset('js/sidebar/sidebar.view.js')}}"></script>
+    <script src="{{asset('js/hideseek/hideseek.js')}}"></script>
+    <script src="https://cdn.plyr.io/3.5.3/plyr.js"></script>
+    <script src="{{asset('js/my-musics/player.js')}}"></script>
     <script src="{{asset('js/my-musics/my-musics.view.js')}}"></script>
 @endsection

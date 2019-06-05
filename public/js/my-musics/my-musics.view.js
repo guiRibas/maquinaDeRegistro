@@ -1,36 +1,9 @@
 $(document).ready(function () {
 
-    $("#example").hide();
-    $("#pagination").hide();
-    $("#music-controls").hide();
-
-    $("#searchMusic").keyup(function () {
-        var index = $(this).parent().index();
-        var nth = "#example td:nth-child(" + (index).toString() + ")";
-        var valor = $(this).val().toUpperCase();
-        $("#example tbody tr").show();
-        $(nth).each(function () {
-            if ($(this).text().toUpperCase().indexOf(valor) < 0) {
-                $(this).parent().hide();
-            }
-        });
+    $('#search').hideseek({
+        nodata: 'Nenhuma música encontrada!'
     });
 
-    $("#searchMusic").blur(function () {
-        $(this).val("");
-    });
-
-    setTimeout(function () {
-        pagination(1);
-    }, 1000);
-
-    setTimeout(function () {
-        loadFirstMusicInPlayer();
-    }, 1700);
-
-    $("#showQtd").change(function () {
-        pagination(1);
-    });
 });
 
 function pagination(numberOfPage) {
@@ -59,7 +32,8 @@ function pagination(numberOfPage) {
                 $("#showQtd").prop("disabled", true);
                 $("#searchMusic").prop("disabled", true);
 
-                $("#content > div > div.profile-content > div > div.card-body")
+                $("#content > div > div.profile-content > div > div.card-body" +
+                    "")
                     .append("<p class='center'>Você ainda não possui músicas registradas. <a href='/musica/nova'>Registre aqui</a>, a primeira de muitas!</p>");
             } else {
                 $("#example").show();
