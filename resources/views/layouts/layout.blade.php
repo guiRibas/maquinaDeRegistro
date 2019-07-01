@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="_csrf" content="{{csrf_token()}}"/>
-    <title>Brainsoft Sistemas - @yield('title')</title>
+    <title>Máquina de Registro | @yield('page-title')</title>
 
     <!--link rel="shortcut icon" type="image/png" href="img/brain_icon.png"/-->
     <link rel="stylesheet" type="text/css"

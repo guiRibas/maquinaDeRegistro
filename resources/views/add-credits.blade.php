@@ -20,7 +20,7 @@
                     </div>
                     <div class="row no-gutters">
                         <div class="d-flex align-items-center col-md-4 p-3">
-                            <img src="images/credit-card.png" class="card-img" alt="...">
+                            <img src="/images/credit-card.png" class="card-img" alt="...">
                         </div>
                         <div class="d-flex align-items-center col-md-8 p-3">
                             <div class="card-body">
@@ -46,7 +46,7 @@
                     </div>
                     <div class="row no-gutters">
                         <div class="d-flex align-items-center col-md-4 p-3">
-                            <img src="images/barcode.png" class="card-img" alt="...">
+                            <img src="/images/barcode.png" class="card-img" alt="...">
                         </div>
                         <div class="d-flex align-items-center col-md-8 p-3">
                             <div class="card-body">

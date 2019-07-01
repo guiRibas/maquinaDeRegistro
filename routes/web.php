@@ -15,8 +15,10 @@ Route::get('/', 'IndexController@index');
 
 Route::get('/perfil', 'AccountController@index');
 Route::get('/usuario/novo', 'AccountController@register');
-Route::get('/conta-corrente', 'AccountController@bank');
-Route::get('/adicionar-creditos', 'AccountController@addCredits');
+
+Route::get('/conta-corrente/creditos/adicionar', 'BankController@add');
+Route::get('/conta-corrente/historico', 'BankController@history');
+Route::get('/conta-corrente/extrato', 'BankController@statement');
 
 Route::get('/musicas', 'MusicController@userMusics');
 Route::get('/musica/nova', 'MusicController@register');

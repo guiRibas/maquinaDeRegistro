@@ -3,6 +3,14 @@ $(document).ready(function () {
         loadPaymentHistory();
         loadUseOfCredits();
     }, 1000);
+
+    setTimeout(function () {
+        $('#payment-history').DataTable({
+            "language": {
+                "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese-Brasil.json",
+            }
+        });
+    }, 1500);
 });
 
 function loadPaymentHistory() {
@@ -21,9 +29,9 @@ function loadPaymentHistory() {
     $.ajax(settingsToLoadPaymentHistory).done(function (response) {
         $.each(response, function (i) {
             var payd = "";
-            if(response[i].pago){
+            if (response[i].pago) {
                 payd = "Pago";
-            } else{
+            } else {
                 payd = "Em aberto";
             }
 
@@ -95,12 +103,11 @@ function loadUseOfCredits() {
     }
 
     $.ajax(settingsToUseOfCredits).done(function (response) {
-        console.log(response);
         $.each(response, function (i) {
             var theStyle = "";
-            if(response[i].valor > 0){
+            if (response[i].valor > 0) {
                 theStyle = "background-color: #D2ECDA;";
-            } else{
+            } else {
                 theStyle = "background-color: #FFF1CF";
             }
 

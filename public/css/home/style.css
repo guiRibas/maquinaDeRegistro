@@ -337,20 +337,22 @@ audio {
     text-align: center;
 }
 
-.text-center-horizon {
-    margin-top: 4em;
-}
-
-#img-come-to > img {
-    margin-top: 1.2em;
-}
-
 .img-responsive {
     display: inline-block !important;
 }
 
 #come-to > div > .row {
     padding-top: 55px;
+}
+
+#logo-pague-veloz, #logo-brain {
+    min-height: 57px;
+    margin-top: 15%;
+}
+
+#logo-bry, #logo-siatech {
+    max-height: 57px;
+    margin-top: 50%;
 }
 
 /*TALK WITH US*/
@@ -375,6 +377,10 @@ audio {
     height: 140px;
 }
 
-.mt-1{
+.mt-1 {
     margin-top: 10px;
+}
+
+#footer > div > div > p {
+    color: #ffffff !important;
 }

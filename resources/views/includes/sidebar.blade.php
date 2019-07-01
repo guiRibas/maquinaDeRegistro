@@ -32,17 +32,22 @@
                 </a>
             </li>
 
-            <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="/conta-corrente">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-wallet"></i>
                     <span>Conta Corrente</span>
                 </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="/conta-corrente/historico">Histórico</a>
+                        <a class="collapse-item" href="/conta-corrente/extrato">Extrato</a>
+                    </div>
+                </div>
             </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="/adicionar-creditos">
+                <a class="nav-link" href="/conta-corrente/creditos/adicionar">
                     <i class="fas fa-fw fa-dollar-sign"></i>
                     <span>Adicionar Créditos</span>
                 </a>

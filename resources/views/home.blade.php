@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title', 'Home')
+@section('page-title', 'Página Inicial')
 
 @section('css-view')
     <link rel="stylesheet" type="text/css" href="{{asset('css/home/style.css')}}">
@@ -256,17 +256,18 @@
               </div>
             </div-->
             <div class="row">
-                <div class="col-sm-3 col-lg-3 text-center text-center-horizon"><img class="img-responsive"
-                                                                                    src="images/pague-veloz.png" alt="">
+                <div class="col-sm-3 col-lg-3 text-center text-center-horizon">
+                    <img id="logo-pague-veloz" class="img-responsive" src="images/pague-veloz.png" alt="">
                 </div>
-                <div class="col-sm-1 col-lg-1 text-center text-center-horizon"><img class="img-responsive"
-                                                                                    src="images/bry.png" alt=""></div>
-                <div id="img-come-to" class="col-sm-4 col-lg-4 text-center"><img class="img-responsive"
-                                                                                 src="images/logo.png" alt=""></div>
-                <div class="col-sm-1 col-lg-1 text-center text-center-horizon" style="margin-top: 3.4em;"><img
-                            class="img-responsive" src="images/logo-siatech.png" alt=""></div>
-                <div class="col-sm-3 col-lg-3 text-center text-center-horizon"><img class="img-responsive"
-                                                                                    src="images/logo-brain.png" alt="">
+                <div class="col-sm-1 col-lg-1 text-center text-center-horizon">
+                    <img id="logo-bry" class="img-responsive" src="images/bry.png" alt=""></div>
+                <div id="img-come-to" class="col-sm-4 col-lg-4 text-center">
+                    <img id="logo-machine" class="img-responsive" src="images/logo.png" alt=""></div>
+                <div class="col-sm-1 col-lg-1 text-center text-center-horizon">
+                    <img id="logo-siatech" class="img-responsive" src="images/logo-siatech.png" alt="">
+                </div>
+                <div class="col-sm-3 col-lg-3 text-center text-center-horizon">
+                    <img id="logo-brain" class="img-responsive" src="images/logo-brain.png" alt="">
                 </div>
             </div>
         </div>
